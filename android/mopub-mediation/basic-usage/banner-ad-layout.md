@@ -10,7 +10,7 @@ Step 1: [Create Banner Ad Layout](banner-ad-layout.md#step-1-create-banner-ad-la
 Step 2: [Initialize Configuration](banner-ad-layout.md#step-2-initialize-configuration)\
 Step 3: [Set Ad Unit Id](banner-ad-layout.md#step-3-set-ad-unit-id)\
 Optional: [Set Category](banner-ad-layout.md#optional-set-category)\
-Step 4:** **[Load Ads](banner-ad-layout.md#step-4-load-ads)
+Step 4: **** [Load Ads](banner-ad-layout.md#step-4-load-ads)
 
 ### Step 1: Create Banner Ad Layout
 

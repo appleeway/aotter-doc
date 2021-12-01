@@ -15,7 +15,7 @@ Step 2: [Initiation & Settings](installation.md#step-2-initialzation-and-setting
 pod 'AotterTrek-iOS-SDK', '3.6.4'
 ```
 
-2\.  Run `pod install `&#x20;
+2\.  Run `pod install`&#x20;
 
 #### - Manually Install
 
@@ -37,7 +37,7 @@ Please use **your client id** for initialization which can be found in the [appl
 We also provide test client id for receiving test ads only.
 
 {% hint style="success" %}
-Note: You can switch** test / production** mode by changing **test client id to your own client id.**
+Note: You can switch **test / production** mode by changing **test client id to your own client id.**
 {% endhint %}
 
 * Test Client ID: `21tgwWwuzFYiD4ko5Klr`
@@ -73,7 +73,7 @@ Enable logger if you needed. There are three different levels of logger:
 
 * `TKLoggerLevelNone`: No log will be shown.
 * `TKLoggerLevelNormal`: Necessary logs or warning/error logs will be shown.
-* `TKLoggerLevelDetail`: All logs will be shown. (** include verbose logs **)
+* `TKLoggerLevelDetail`: All logs will be shown. ( **include verbose logs** )
 
 \- **Audio Session**
 

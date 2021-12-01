@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_END
 {% tab title="TrekNativeAdTableViewCell.m" %}
 ### Declare data method
 
-#### - **GoogleMobileAds SDK version 8 and above** <a href="declare-a-gadunifiednativead-data-method" id="declare-a-gadunifiednativead-data-method"></a>
+#### - **GoogleMobileAds SDK version 8 and above** <a href="#declare-a-gadunifiednativead-data-method" id="declare-a-gadunifiednativead-data-method"></a>
 
 ```swift
 // Google Mediation NativeAd
@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_END
 {% endtab %}
 {% endtabs %}
 
-\-** YourViewController**
+\- **YourViewController**
 
 {% tabs %}
 {% tab title="YourViewController.m" %}

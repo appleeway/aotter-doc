@@ -32,7 +32,7 @@ pod 'AotterTrek-iOS-SDK', '~> 3.1'
 |   | AVKit                    | AVFoundation        | Foundation    |
 |   | UIKit                    |                     |               |
 
-## Initiation & Settings <a href="initial-sdk" id="initial-sdk"></a>
+## Initiation & Settings <a href="#initial-sdk" id="initial-sdk"></a>
 
 Initial MyApp Service in _AppDelegate.m_
 
@@ -63,7 +63,7 @@ Native ad `TKMyAppAdNative` usage is the same as `TKAdNative`. See[ Native Ad](a
   [self.nativeAd fetchAd];
 ```
 
-## Overwrite Click Event for MyApp Ads <a href="overwrite-click-event-for-myapp-ads" id="overwrite-click-event-for-myapp-ads"></a>
+## Overwrite Click Event for MyApp Ads <a href="#overwrite-click-event-for-myapp-ads" id="overwrite-click-event-for-myapp-ads"></a>
 
 Implement `TKAdNativeDelegate` ->`TKMyAppAdNativeOnClicked:(TKMyAppAdNative *)ad`
 

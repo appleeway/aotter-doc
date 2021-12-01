@@ -8,7 +8,7 @@ You can download the MoPub mediation from the link in the following table.
 
 | MoPub SDK Version                | Download Link                                                                                                            |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| MoPub SDK **5.10.0 and above **⇧ | Mediation-files [here](https://github.com/aotter/AotterTrek-iOS-SDK/releases/download/3.6.2/MoPub.Mediation\_5.10.0.zip) |
+| MoPub SDK **5.10.0 and above** ⇧ | Mediation-files [here](https://github.com/aotter/AotterTrek-iOS-SDK/releases/download/3.6.2/MoPub.Mediation\_5.10.0.zip) |
 
 After you download the MoPub mediation, do the following steps to complete the integration:
 

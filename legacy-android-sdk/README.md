@@ -1,11 +1,11 @@
 # Legacy Android SDK
 
-## Guide <a href="guide" id="guide"></a>
+## Guide <a href="#guide" id="guide"></a>
 
 * AotterTrek Android SDK contains tracking and native advertising service.
 * Minimum SDK Version: 16&#x20;
 
-## Install SDK <a href="install-sdk" id="install-sdk"></a>
+## Install SDK <a href="#install-sdk" id="install-sdk"></a>
 
 In order to use that repository, you need to refer to it in the app's project-level `build.gradle` file. Open yours and looking for an `allprojects` section:
 
@@ -37,7 +37,7 @@ dependencies {
 
 Pull in the latest version of the AotterTrek-Android-SDK and additional related dependencies.
 
-## Update your AndroidManifest.xml and Application <a href="update-your-androidmanifestxml-and-application" id="update-your-androidmanifestxml-and-application"></a>
+## Update your AndroidManifest.xml and Application <a href="#update-your-androidmanifestxml-and-application" id="update-your-androidmanifestxml-and-application"></a>
 
 Declare the following permissions:
 

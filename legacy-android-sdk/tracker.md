@@ -1,6 +1,6 @@
 # Tracker
 
-### TKTracker Integration Code <a href="tktracker-integration-code" id="tktracker-integration-code"></a>
+### TKTracker Integration Code <a href="#tktracker-integration-code" id="tktracker-integration-code"></a>
 
 ```java
   TKTracker tkTracker = new TKTracker(this);
@@ -9,7 +9,7 @@
           .send();
 ```
 
-### Custom Options <a href="custom-optional" id="custom-optional"></a>
+### Custom Options <a href="#custom-optional" id="custom-optional"></a>
 
 ```java
 tkTracker.setID("a4a3cd56-a584-4fa4-8973-1120d14b18b7")

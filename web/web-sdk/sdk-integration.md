@@ -13,7 +13,7 @@ Note: AotterTrek SDK only supports displaying Ads on **mobile and tablet website
 
 ### Step 1: Including the SDK
 
-Please copy the following code snippet then paste it within the`  <body>  `section of your pages. It's better to put it right before the closing tag.
+Please copy the following code snippet then paste it within the `<body>` section of your pages. It's better to put it right before the closing tag.
 
 ```markup
 <!-- start: trek sdk -->
@@ -41,12 +41,12 @@ We also provide test client id for receiving test ads only.
 * **Test Client ID:**`yEFcFoJaruNorh5RqtuR`
 
 {% hint style="success" %}
-Note: You can switch** test / production** mode by changing **test client id to your own client id.**
+Note: You can switch **test / production** mode by changing **test client id to your own client id.**
 {% endhint %}
 
 ### Step 2: Execute AotterTrek()
 
-To displaying Ads, you need to invoke` AotterTrek()`. Put the following code snippet after trek SDK.
+To displaying Ads, you need to invoke `AotterTrek()`. Put the following code snippet after trek SDK.
 
 ```markup
 <script>
@@ -68,7 +68,7 @@ You can also pass different Ad formats and options to AotterTrek(). For example,
 
 ### Step 3: Insert \<div>\</div> tag with trek-ad attribute
 
-Insert the following` <div>` tag to the place you want to display Ad.
+Insert the following `<div>` tag to the place you want to display Ad.
 
 ```markup
 <div id="adContainer" data-place="placement_UUID"></div>

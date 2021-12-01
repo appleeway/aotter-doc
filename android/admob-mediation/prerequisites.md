@@ -8,7 +8,7 @@ Before you can integrate mediation that **AotterTrek Network as a third-party ad
 If you don't familiar with AdMob, please refer to the links below:
 
 * **New to Google AdMob? Read** [**Admob - Get Started**](https://developers.google.com/admob/android/quick-start)****
-* **New to mediation? Read **[**AdMob mediation - Overview**](https://developers.google.com/admob/android/mediate)****
+* **New to mediation? Read** [**AdMob mediation - Overview**](https://developers.google.com/admob/android/mediate)****
 
 ### Configure AdMob Ad Units
 

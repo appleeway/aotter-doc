@@ -1,11 +1,11 @@
 # MyApp Ads Integration
 
-## Guide <a href="guide" id="guide"></a>
+## Guide <a href="#guide" id="guide"></a>
 
 * AotterTrek Android SDK contains tracking and native advertising service.
 * Minimum sdk Version: 16
 
-## Install SDK <a href="install-sdk" id="install-sdk"></a>
+## Install SDK <a href="#install-sdk" id="install-sdk"></a>
 
 In order to use that repository, you need to refer to it in the app's project-level `build.gradle` file. Open yours and looking for an `allprojects` section:
 
@@ -37,7 +37,7 @@ dependencies {
 
 Pull in the latest version of the AotterTrek-Android-SDK and additional related dependencies.
 
-## Update your AndroidManifest.xml and Application <a href="update-your-androidmanifestxml-and-application" id="update-your-androidmanifestxml-and-application"></a>
+## Update your AndroidManifest.xml and Application <a href="#update-your-androidmanifestxml-and-application" id="update-your-androidmanifestxml-and-application"></a>
 
 Declare the following permissions:
 
@@ -65,7 +65,7 @@ public class MyApplication extends Application {
 | CLIENT\_ID     | `DNgNhOwfbUkOqcQFI+uD`                                                     |
 | CLIENT\_SECRET | `1k+sYKMLZrclCRmgw/esYNZbjAhArT7Vn42cxfn3f/tgmT0XJZI4mNiNwBYLu9GOet7YtiT6` |
 
-## Overwrite click event for MyApp ads <a href="overwrite-click-event-for-myapp-ads" id="overwrite-click-event-for-myapp-ads"></a>
+## Overwrite click event for MyApp ads <a href="#overwrite-click-event-for-myapp-ads" id="overwrite-click-event-for-myapp-ads"></a>
 
 `setAdTKMyAppListener`(boolean isCustomClick, TKAdListener adapter)
 

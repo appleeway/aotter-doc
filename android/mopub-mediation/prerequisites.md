@@ -13,9 +13,9 @@ Step 5: [Configure ad units in your app](https://developers.mopub.com/publishers
 You can find "**App & ad unit setup**" in Networks and fill in **Custom event class** & **Custom event class**
 
 *   **Custom event class**\
-    **- **Native Ads:** **
+    **-** Native Ads: ****&#x20;
 
-    * _com.mopub.mediation.kotlin.ads.TrekMoPubCustomEventNative _
+    * _com.mopub.mediation.kotlin.ads.TrekMoPubCustomEventNative_&#x20;
 
     \- Banner Ads:
 

@@ -1,6 +1,6 @@
 # User Setting
 
-## User Setting <a href="user-setting" id="user-setting"></a>
+## User Setting <a href="#user-setting" id="user-setting"></a>
 
 ```java
 //Register user info anywhere

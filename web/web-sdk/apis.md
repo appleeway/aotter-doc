@@ -12,7 +12,7 @@ The tab below explains different kinds of AotterTrek Web APIs. Please take a loo
 
 | order | name       | type     | note                           |
 | ----- | ---------- | -------- | ------------------------------ |
-| 1     | init       | `string` | Accept "**init**"** **only     |
+| 1     | init       | `string` | Accept "**init**" **** only    |
 | 2     | CLIENT\_ID | `string` | Your client id from AotterTrek |
 
 #### Example
@@ -71,10 +71,10 @@ AotterTrek('suprAd', {
 
 #### Arguments
 
-| order | name    | type     | note                          |
-| ----- | ------- | -------- | ----------------------------- |
-| 1     | setUser | `string` | Accept "**setUser**"** **only |
-| 2     | USER    | `object` | See User below                |
+| order | name    | type     | note                           |
+| ----- | ------- | -------- | ------------------------------ |
+| 1     | setUser | `string` | Accept "**setUser**" **** only |
+| 2     | USER    | `object` | See User below                 |
 
 #### User
 
@@ -110,10 +110,10 @@ AotterTrek('suprAd', {
 
 #### Arguments
 
-| order | name  | type     | note                         |
-| ----- | ----- | -------- | ---------------------------- |
-| 1     | tkadn | `string` | Accept "**tkadn**"** **only. |
-| 2     | EVENT | `string` | See Standard Events below.   |
+| order | name  | type     | note                          |
+| ----- | ----- | -------- | ----------------------------- |
+| 1     | tkadn | `string` | Accept "**tkadn**" **** only. |
+| 2     | EVENT | `string` | See Standard Events below.    |
 
 #### Standard Events
 

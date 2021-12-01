@@ -14,13 +14,13 @@ This migration guide help developer who like to update AotterTrek iOS SDK to **v
 * [Remove XcodeColor Logs](aottertrek-3.x-migration-guide.md#\_4-xcodecolor-logs-removed)
 * [Ad Cache Setting](aottertrek-3.x-migration-guide.md#\_5-ad-cache-setting-changed)
 
-### Change: SDK Name  <a href="_1-sdk-name-changed" id="_1-sdk-name-changed"></a>
+### Change: SDK Name  <a href="#_1-sdk-name-changed" id="_1-sdk-name-changed"></a>
 
 * SDK 1.x : `AotterService`
 * SDK 3.x : `AotterTrek-iOS-SDK`
 * Import class change to `#import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>`
 
-### Change: Class Prefix  <a href="_2-class-prefix-changed" id="_2-class-prefix-changed"></a>
+### Change: Class Prefix  <a href="#_2-class-prefix-changed" id="_2-class-prefix-changed"></a>
 
 *   SDK 1.x: `AT`
 
@@ -40,7 +40,7 @@ Video Ad and Interactive Ad will be removed after SDK 3.x, a new ad format `Supr
 | Interactive Ad | `ATAdInteract` | _(removed)_  |
 | Supr Ad        | -              | `TKAdSuprAd` |
 
-### Remove XcodeColor Logs <a href="_4-xcodecolor-logs-removed" id="_4-xcodecolor-logs-removed"></a>
+### Remove XcodeColor Logs <a href="#_4-xcodecolor-logs-removed" id="_4-xcodecolor-logs-removed"></a>
 
 Since Xcode 8 stop supporting third-party plug-ins, the [XcodeColors](https://github.com/robbiehanson/XcodeColors) are not available anymore.
 
@@ -52,7 +52,7 @@ Since Xcode 8 stop supporting third-party plug-ins, the [XcodeColors](https://gi
 | ATLoggerLevelDetail               | TKLoggerLevelDetail |
 | ATLoggerLevelDetailWithXcodeColor | _(removed)_         |
 
-### Ad Cache Setting Changed. <a href="_5-ad-cache-setting-changed" id="_5-ad-cache-setting-changed"></a>
+### Ad Cache Setting Changed. <a href="#_5-ad-cache-setting-changed" id="_5-ad-cache-setting-changed"></a>
 
 * 1.x : `ATsetIndividualAdPoolSize:`
 * 3.0\~3.1: `disableAdCachePool` and `enableAdCachePoolWithIndiviaulPoolSize:`

@@ -6,7 +6,7 @@ Step 1: [Initialize AotterTrek SDK ](supr.ad.md#step-1-initialize-aottertrek-sdk
 Step 2: [Customize _TableViewCell_ / _CollectionViewCell_ / _ViewController_](supr.ad.md#step-2-customize-tableviewcell-collectionviewcell-viewcontroller)__
 
 {% hint style="warning" %}
-Notice: If your project is based on Swift, please import_ Aotter-iOS-SDK.h_ in the bridge file.
+Notice: If your project is based on Swift, please import _Aotter-iOS-SDK.h_ in the bridge file.
 {% endhint %}
 
 ```swift
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_END
 {% tab title="TrekNativeAdTableViewCell.m" %}
 ### Declare data method
 
-#### - **GoogleMobileAds SDK version 8 and above** <a href="declare-a-gadunifiednativead-data-method" id="declare-a-gadunifiednativead-data-method"></a>
+#### - **GoogleMobileAds SDK version 8 and above** <a href="#declare-a-gadunifiednativead-data-method" id="declare-a-gadunifiednativead-data-method"></a>
 
 ```swift
 - (void)setGADNativeAdData:(GADNativeAd *)nativeAd withViewSize:(CGSize)size {
@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_END
 {% endtab %}
 {% endtabs %}
 
-\-** YourViewController**
+\- **YourViewController**
 
 {% tabs %}
 {% tab title="YourViewController.m" %}

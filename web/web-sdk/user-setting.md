@@ -19,15 +19,15 @@ By sending user's info to AotterTrek, our system will analyze data and optimize 
 </script>
 ```
 
-We provide the following attributes. Except for the marked ones, all of the data will be **hashed **before send to AotterTrek server.
+We provide the following attributes. Except for the marked ones, all of the data will be **hashed** before send to AotterTrek server.
 
 | Key            | Guidelines                                                                                                                                                                                   |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `email`        | Trim leading and trailing white space, and convert all characters to lowercase.                                                                                                              |
-| `hashedEmail ` | Trim leading and trailing white space and convert all characters to lowercase. You should hash it with sha256, **Trek won't be hashed again.**                                               |
+| `hashedEmail`  | Trim leading and trailing white space and convert all characters to lowercase. You should hash it with sha256, **Trek won't be hashed again.**                                               |
 | `phone`        | Remove symbols, letters, and any leading zeroes. You should prefix the country code if the`country`field is not specified.                                                                   |
-| `hashedPhone ` | Remove symbols, letters, and any leading zeroes. You should prefix the country code if the `country` field is not specified. You should hash it with sha256, **Trek won't be hashed again.** |
-| `gender`       | Use _**m** _for male, _**f**_ for female.                                                                                                                                                    |
+| `hashedPhone`  | Remove symbols, letters, and any leading zeroes. You should prefix the country code if the `country` field is not specified. You should hash it with sha256, **Trek won't be hashed again.** |
+| `gender`       | Use _**m** _ for male, _**f**_ for female.                                                                                                                                                   |
 | `birthYear`    | Use the _YYYY_ format: 1900 to the current year.                                                                                                                                             |
 | `birthMonth`   | Use the _MM_ format: `01` to `12`.                                                                                                                                                           |
 | `birthDate`    | Use the _DD_ format: `01` to `31`.                                                                                                                                                           |
@@ -35,7 +35,7 @@ We provide the following attributes. Except for the marked ones, all of the data
 | `city`         |                                                                                                                                                                                              |
 | `state`        |                                                                                                                                                                                              |
 | `zip`          |                                                                                                                                                                                              |
-| `fbId  `       | **Trek won't be hashed this attribute.**                                                                                                                                                     |
+| `fbId`         | **Trek won't be hashed this attribute.**                                                                                                                                                     |
 
 ### Test Result
 

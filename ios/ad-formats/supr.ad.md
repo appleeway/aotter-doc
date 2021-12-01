@@ -75,7 +75,7 @@ self.suprAd.delegate = self;
 
 ### Step 3: Register AdView and TKMediaView
 
-If you'd like to use** screen width** as ad-view width, we recommend using `preferedMediaViewSize` for calculating the corresponding ad-view height.
+If you'd like to use **screen width** as ad-view width, we recommend using `preferedMediaViewSize` for calculating the corresponding ad-view height.
 
 ```objectivec
 -(void)TKAdSuprAd:(TKAdSuprAd *)suprAd didReceivedAdWithAdData:(NSDictionary *)adData preferedMediaViewSize:(CGSize)size isVideoAd{
@@ -153,7 +153,7 @@ This function will destroy ads completely. In the condition that`TKAdSuprAd`mana
 
 * Top View & IMA SDK
 
-Supr.Ad including video ad advertising, which uses VAST technology provided by the Google IMA SDK. In the implementation of VAST, AotterTrek iOS SDK needs to register _ViewController_ when requesting VAST ads from Google IMA. In the meantime, Google IMA SDK will compare _**TopViewController**_ with _**the ViewController shows ads**_. _This_ _ViewController_ should be** **_**the same** ViewController that displays the video ads!_ If it's not the same one, might lead to a **CRASH** in your app but cause by Google IMA SDK.
+Supr.Ad including video ad advertising, which uses VAST technology provided by the Google IMA SDK. In the implementation of VAST, AotterTrek iOS SDK needs to register _ViewController_ when requesting VAST ads from Google IMA. In the meantime, Google IMA SDK will compare _**TopViewController**_ with _**the ViewController shows ads**_. _This_ _ViewController_ should be ** **_**the same** ViewController that displays the video ads!_ If it's not the same one, might lead to a **CRASH** in your app but cause by Google IMA SDK.
 
 ![](<../../.gitbook/assets/截圖 2021-09-23 下午12.18.13.png>)
 

@@ -1,6 +1,6 @@
 # AdMob Mediation
 
-### Prerequisites <a href="prerequisites" id="prerequisites"></a>
+### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 For more information about prerequisites, check the page link below.
 

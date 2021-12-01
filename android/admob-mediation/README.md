@@ -2,7 +2,7 @@
 
 AdMob Mediation is a feature that lets you serve ads to your apps from multiple sources, including the AdMob Network and third-party ad networks. This guide will show you how to integrate AotterTrek Network into your AdMob app.
 
-### Prerequisites <a href="prerequisites" id="prerequisites"></a>
+### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 For more information about prerequisites, check the page link below.
 

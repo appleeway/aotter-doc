@@ -18,21 +18,21 @@ This migration guide help developer who like to update AotterTrek Android SDK to
 * [Request Ads](migration-guide.md#ad-object-listener)
 * [Life Cycle](migration-guide.md#lifecycle)
 
-### SDK Installation <a href="install-sdk" id="install-sdk"></a>
+### SDK Installation <a href="#install-sdk" id="install-sdk"></a>
 
 Dependencies library is upgraded to version 4.x. Version 3.x is no longer be updated.
 
 ```kotlin
 // Version 4.x: Please use the dependency library as follow
 implementation 'com.google.code.gson:gson:2.8.6'
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.3.1'
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.3.2'
 
 // Version 3.x: It's about to deprecate the following dependency library
 implementation 'com.google.android.gms:play-services-ads:18.1.1'
 implementation 'com.aotter.net:trek-sdk:3.2.1'
 ```
 
-### Callback Functions <a href="initialization-sdk" id="initialization-sdk"></a>
+### Callback Functions <a href="#initialization-sdk" id="initialization-sdk"></a>
 
 #### SDK Initialization&#x20;
 
@@ -72,14 +72,14 @@ AotterTrek.INSTANCE.initAotterService(context,"YOUR_CLIENT_ID", (Function1)(new 
 
 In version 4, the following callbacks are still available but please notice that `onAdLoaded` callback use **AdData** model instead of the TKAdNative model.
 
-\-** **onAdError**                         **-** onAdLoaded**\
-****-** **onAdClicked**                     **-** **onAdImpression
+\- **** onAdError                         ****                         - **onAdLoaded**\
+****- **** onAdClicked                     ****                     - **** onAdImpression
 
 ### Objects / Media View / Methods
 
 #### - Ad Object
 
-In version 4, the _TKAdN_ object is deprecated and uses the **TrekAd **object instead.
+In version 4, the _TKAdN_ object is deprecated and uses the **TrekAd** object instead.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -104,15 +104,15 @@ In version 4, we use **TrekMediaView** instead of TKMediaView.
 ****\
 **- Methods**
 
-When setting ad listener, version 4 uses the **`setTrekAdStatusListener()`**method instead of `setAdListener()`.** **Furthermore,** **inject interface to listener use **TrekAdStatusCallBack** interface instead of _TKAdListener._
+When setting ad listener, version 4 uses the **`setTrekAdStatusListener()`**method instead of `setAdListener()`. **** Furthermore, **** inject interface to listener use **TrekAdStatusCallBack** interface instead of _TKAdListener._
 
-When register ads,_ _**`registerAdView()`** method is deprecated. In version 4, different ad types use their own register method as below.
+When register ads, __ **`registerAdView()`** method is deprecated. In version 4, different ad types use their own register method as below.
 
 * Native Ad: Use **`registerNativeAd()`** method
 * Supr.Ad: Use **`registerSuprAd()`** method
 * Banner Ad: Use **`registerBannerAd()`** method
 
-### Request Ads <a href="ad-object-listener" id="ad-object-listener"></a>
+### Request Ads <a href="#ad-object-listener" id="ad-object-listener"></a>
 
 In version 4, requesting ads use **builder style** as the following code snippet.
 
@@ -138,7 +138,7 @@ trekAd
 {% endtab %}
 {% endtabs %}
 
-### Life Cycle <a href="lifecycle" id="lifecycle"></a>
+### Life Cycle <a href="#lifecycle" id="lifecycle"></a>
 
 The life cycle in version 4 is automatically managed, which means that publishers don't need to do any life cycle management on their own.[\
 ](https://app.gitbook.com/@a173200488/s/aotter-trek-sdk-document/)\

@@ -1,6 +1,6 @@
 # Ad Formats
 
-We provide** three different kinds of ad**. Checkout the following tabs for more infomation.
+We provide **three different kinds of ad**. Checkout the following tabs for more infomation.
 
 {% hint style="info" %}
 🧙🏼‍♂️ Tips: You need to build a ad unit in AotterTrek UI console. Enter app list and manage ad-slot, choose an ad type and size.
@@ -8,9 +8,9 @@ We provide** three different kinds of ad**. Checkout the following tabs for more
 
 {% tabs %}
 {% tab title="Banner Ad" %}
-## Banner Ad <a href="banner-ad" id="banner-ad"></a>
+## Banner Ad <a href="#banner-ad" id="banner-ad"></a>
 
-### 1. Create Ad slot <a href="jian-li-ban-wei" id="jian-li-ban-wei"></a>
+### 1. Create Ad slot <a href="#jian-li-ban-wei" id="jian-li-ban-wei"></a>
 
 Enter the slot management of [Application List](https://trek.aotter.net/publisher/list/app) , create slot name and choose a type.
 
@@ -18,7 +18,7 @@ Enter the slot management of [Application List](https://trek.aotter.net/publishe
 
 ![](../.gitbook/assets/iOS\_BannerAd.png)
 
-### Example APP form [Aotter GitHub](https://github.com/aotter/AotterTrek-Android-SDK/blob/master/android-sample/app/src/main/java/com/aotter/net/treksampleapp/activity/BannerAdListViewActivity.java)  <a href="github-fan-li-app" id="github-fan-li-app"></a>
+### Example APP form [Aotter GitHub](https://github.com/aotter/AotterTrek-Android-SDK/blob/master/android-sample/app/src/main/java/com/aotter/net/treksampleapp/activity/BannerAdListViewActivity.java)  <a href="#github-fan-li-app" id="github-fan-li-app"></a>
 
 ```java
 @BindView(R.id.listview)
@@ -68,7 +68,7 @@ public void onAdLoaded(TKAdNative nativeAd) {
 }
 ```
 
-## Lifecycle <a href="lifecycle" id="lifecycle"></a>
+## Lifecycle <a href="#lifecycle" id="lifecycle"></a>
 
 ```java
 @Override
@@ -100,7 +100,7 @@ public void onDestroy() {
 }
 ```
 
-#### isExpired <a href="isexpired" id="isexpired"></a>
+#### isExpired <a href="#isexpired" id="isexpired"></a>
 
 Check the ad is expired or not.
 
@@ -110,9 +110,9 @@ nativeAd.isExpired();
 {% endtab %}
 
 {% tab title="Native Ad" %}
-## Native Ad <a href="native-ad" id="native-ad"></a>
+## Native Ad <a href="#native-ad" id="native-ad"></a>
 
-### Create Ad slot <a href="jian-li-ban-wei" id="jian-li-ban-wei"></a>
+### Create Ad slot <a href="#jian-li-ban-wei" id="jian-li-ban-wei"></a>
 
 Enter the slot management of [Application List](https://trek.aotter.net/publisher/list/app) , create slot name and choose a type.
 
@@ -188,7 +188,7 @@ public void onAdLoaded(TKAdNative nativeAd) {
 }
 ```
 
-## [Lifecycle](https://aotter.github.io/trek-sdk-docs/#/Android/Native\_Ad?id=lifecycle) <a href="lifecycle" id="lifecycle"></a>
+## [Lifecycle](https://aotter.github.io/trek-sdk-docs/#/Android/Native\_Ad?id=lifecycle) <a href="#lifecycle" id="lifecycle"></a>
 
 ```java
 @Override
@@ -220,7 +220,7 @@ public void onDestroy() {
 }
 ```
 
-#### isExpired <a href="isexpired" id="isexpired"></a>
+#### isExpired <a href="#isexpired" id="isexpired"></a>
 
 Check the ad is expired or not.
 
@@ -230,9 +230,9 @@ nativeAd.isExpired();
 {% endtab %}
 
 {% tab title="Supr.Ad" %}
-## Supr.Ad <a href="supr-ad" id="supr-ad"></a>
+## Supr.Ad <a href="#supr-ad" id="supr-ad"></a>
 
-### Create Ad slot <a href="jian-li-ban-wei" id="jian-li-ban-wei"></a>
+### Create Ad slot <a href="#jian-li-ban-wei" id="jian-li-ban-wei"></a>
 
 Enter the slot management of [Application List](https://trek.aotter.net/publisher/list/app) , create slot name and choose a type.
 
@@ -304,7 +304,7 @@ public void onAdLoaded(NativeAd nativeAd) {
 }
 ```
 
-## Lifecycle <a href="lifecycle" id="lifecycle"></a>
+## Lifecycle <a href="#lifecycle" id="lifecycle"></a>
 
 ```java
 @Override
@@ -336,7 +336,7 @@ public void onDestroy() {
 }
 ```
 
-#### isExpired <a href="isexpired" id="isexpired"></a>
+#### isExpired <a href="#isexpired" id="isexpired"></a>
 
 Check the ad is expired or not.
 
@@ -344,7 +344,7 @@ Check the ad is expired or not.
 nativeAd.isExpired();
 ```
 
-#### isVideoAd <a href="isvideoad" id="isvideoad"></a>
+#### isVideoAd <a href="#isvideoad" id="isvideoad"></a>
 
 Check the ad is video or not.
 

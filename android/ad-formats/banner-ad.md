@@ -144,7 +144,7 @@ trekAd
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Register Ad View and Set Layout** **
+### Step 5: Register Ad View and Set Layout ****&#x20;
 
 You need to register ads in **`onAdloaded()`**method to receive the impression and click events. More specifically, register ad view and set layout in **`TrekAdStatusListener()`** method of**`onAdLoaded`**.
 

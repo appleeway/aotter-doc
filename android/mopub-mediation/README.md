@@ -1,6 +1,6 @@
 # MoPub Mediation
 
-### Prerequisites <a href="prerequisites" id="prerequisites"></a>
+### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 {% content-ref url="prerequisites.md" %}
 [prerequisites.md](prerequisites.md)

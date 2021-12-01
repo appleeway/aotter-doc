@@ -1,8 +1,8 @@
 # 🎉 Ad Slot Management
 
-## \[Release Note] Ad Slot Management for Publishers <a href="release-note-ad-slot-management-for-publishers" id="release-note-ad-slot-management-for-publishers"></a>
+## \[Release Note] Ad Slot Management for Publishers <a href="#release-note-ad-slot-management-for-publishers" id="release-note-ad-slot-management-for-publishers"></a>
 
-#### Hello 各位開發者 <a href="hello-ge-wei-kai-fa-zhe" id="hello-ge-wei-kai-fa-zhe"></a>
+#### Hello 各位開發者 <a href="#hello-ge-wei-kai-fa-zhe" id="hello-ge-wei-kai-fa-zhe"></a>
 
 在此通知大家，**AotterTrek** 的**全新版位管理系統**已經上線囉～🎉
 
@@ -31,9 +31,9 @@
 | -------------------------------------- | ---------------------------------------------- |
 
 {% hint style="warning" %}
-✨** **需要您特別注意的是 :\
+✨ **** 需要您特別注意的是 :\
 1\. **廣告版位名稱可使用 a - z, 0 - 9,  \_**，**請勿使用中文名稱。**\
-****2.** **廣告請求時需帶入**版位** **UUID**，目前已不需要帶入版位名稱。\
+****2. **** 廣告請求時需帶入**版位** **UUID**，目前已不需要帶入版位名稱。\
 3\. 切換正式 / 測試環境只需要更換 client Id 即可。
 {% endhint %}
 

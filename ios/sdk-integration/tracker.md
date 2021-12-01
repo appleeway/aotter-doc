@@ -69,14 +69,14 @@ double user_location_lng = 244.232323;
 NSDictionary *locationObject = [TKTracker helper_locationObjectWithLocationId:@"<your_location_id>" title:nil url:@"" categories:@[@"user_location"] address:nil lat:user_location_lat lng:user_location_lng additionalMeta:nil];
 ```
 
-### Step 2. Engage Tracker Event with Objects <a href="step-2-engage-trakcer-event-with-these-parts" id="step-2-engage-trakcer-event-with-these-parts"></a>
+### Step 2. Engage Tracker Event with Objects <a href="#step-2-engage-trakcer-event-with-these-parts" id="step-2-engage-trakcer-event-with-these-parts"></a>
 
 ```objectivec
 //engage trakcer item with POST type
 [[TKTracker sharedAPI] trackerEngageItemWithItemId:@"myPostId" type:kTKTTypeREAD_POST userObject:userObject entityObject:entityObject locationObject:locationObject];
 ```
 
-### Step 3. (Optional)  Update Tracker Items' Specific Part <a href="step3-optional-update-the-tracker-items39-specific-part-if-needed" id="step3-optional-update-the-tracker-items39-specific-part-if-needed"></a>
+### Step 3. (Optional)  Update Tracker Items' Specific Part <a href="#step3-optional-update-the-tracker-items39-specific-part-if-needed" id="step3-optional-update-the-tracker-items39-specific-part-if-needed"></a>
 
 Update `entity object` / `user object` / `location object` for specific items if it's necessary for your app's life cycle.
 
@@ -86,7 +86,7 @@ Update `entity object` / `user object` / `location object` for specific items if
 [[TKTracker sharedAPI] trackerUpdateItem:@"myPostId" withLocationObject:@{@"foo":@"bar"}];
 ```
 
-### Step 4. (Optional) Exit Tracker item <a href="step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time" id="step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time"></a>
+### Step 4. (Optional) Exit Tracker item <a href="#step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time" id="step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time"></a>
 
 Exit tracker item if the tracker event has finished its action. For Example, when users leave the posting page, means that the user finished reading the post.
 
@@ -94,13 +94,13 @@ Exit tracker item if the tracker event has finished its action. For Example, whe
 [[TKTracker sharedAPI] trackerExitItem:@"myPostId"];
 ```
 
-### Step 5. Send Tracker Items <a href="step-5-send-tracker-items" id="step-5-send-tracker-items"></a>
+### Step 5. Send Tracker Items <a href="#step-5-send-tracker-items" id="step-5-send-tracker-items"></a>
 
 ```objectivec
 [[TKTracker sharedAPI] trackerSendItems];        
 ```
 
-## Full Example <a href="example" id="example"></a>
+## Full Example <a href="#example" id="example"></a>
 
 ```objectivec
 -(void)engageItemAndSend{

@@ -8,7 +8,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 ```kotlin
 dependencies {
-    implementation 'com.aotter.net:trek-sdk-android-mopub-mediation-kotlin:4.1.8'
+    implementation 'com.aotter.net:trek-sdk-android-mopub-mediation-kotlin:4.1.9'
 }
 ```
 

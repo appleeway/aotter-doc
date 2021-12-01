@@ -11,7 +11,7 @@ Step 2: [Initialize configuration](supr.ad-layout-recyclerview.md#step-2-initial
 Step 3: [Create `MoPubRecyclerAdapter`](supr.ad-layout-recyclerview.md#step-3-create-mopubrecycleradapter)\
 Step 4: [Create ViewBinder](supr.ad-layout-recyclerview.md#step-4-create-viewbinder)\
 Step 5: [Render ViewBinder and Register Renderer](supr.ad-layout-recyclerview.md#step-5-render-viewbinder-and-register-renderer)\
-Step 6:** **[Load Ads](supr.ad-layout-recyclerview.md#step-6-load-ads)
+Step 6: **** [Load Ads](supr.ad-layout-recyclerview.md#step-6-load-ads)
 
 ### Step 1: Create Supr.Ad Layout
 
@@ -164,7 +164,7 @@ Note: If you are integrating multiple third-party ad networks like Facebook and 
 Refer to [MoPub Integrate Third-Party Ad Networks](https://developers.mopub.com/publishers/mediation/integrate-android/) for more detail.
 {% endhint %}
 
-### Step 6:** **Load Ads
+### Step 6: **** Load Ads
 
 {% tabs %}
 {% tab title="Kotlin" %}

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2021/12/01 release - SDK `4.3.2`
+
+* Support android 12
+* Support kotlin version 1.5.31
+* Update exoplayer
+* Adjust impression tool
+* Adjust third-party click event flow
+* Fix banner ad, Supr.Ad impression event
+
 ## 2021/09/27 release - SDK `4.3.1`
 
 * Adjust om impressionType

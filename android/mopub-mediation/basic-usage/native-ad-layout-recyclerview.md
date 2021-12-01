@@ -11,7 +11,7 @@ Step 2: [Initialize Configuration](native-ad-layout-recyclerview.md#step-2-initi
 Step 3: [Create `MoPubRecyclerAdapter`](native-ad-layout-recyclerview.md#step-3-create-mopubrecycleradapter)\
 Step 4: [Create ViewBinder](../../ad-formats/native-ad.md#step-4-request-an-ad)\
 Step 5: [Render ViewBinder and Register Renderer](native-ad-layout-recyclerview.md#step-5-render-viewbinder-and-register-renderer)\
-Step 6:** **[Load Ads](native-ad-layout-recyclerview.md#step-6-load-ads)
+Step 6: **** [Load Ads](native-ad-layout-recyclerview.md#step-6-load-ads)
 
 ### Step 1: Create Native Ad Layout
 

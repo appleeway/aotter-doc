@@ -2,10 +2,10 @@
 
 Follow these steps to download and include SDK in your project:
 
-**Step 1: **[**Including the SDK**](installation.md#including)****\
-**Step 2: **[**Initialization**](installation.md#step-2-initialization)
+**Step 1:** [**Including the SDK**](installation.md#including)****\
+**Step 2:** [**Initialization**](installation.md#step-2-initialization)
 
-### Step 1: Including the SDK <a href="including" id="including"></a>
+### Step 1: Including the SDK <a href="#including" id="including"></a>
 
 **Using Gradle**
 
@@ -16,7 +16,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 ```kotlin
 dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.3.1'
+    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.3.2'
 }
 ```
 
@@ -98,10 +98,10 @@ public class MyApplication extends Application {
 Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app). \
 We also provide test client id for receiving test ads only.
 
-* **Test Client ID : **`DNgNhOwfbUkOqcQFI+uD`
+* **Test Client ID :** `DNgNhOwfbUkOqcQFI+uD`
 
 {% hint style="success" %}
-Note: You can switch** test / production** mode by changing **test client id to your own client id.**
+Note: You can switch **test / production** mode by changing **test client id to your own client id.**
 {% endhint %}
 
 ## Next Steps

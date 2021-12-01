@@ -8,7 +8,7 @@ Notice that this feature will not work properly when the page is **redirect-need
 
 ### How it works 🤔 ?
 
-1\. When users click on an ad, it will open a new page (which lead to your website) and then the URL will be attached a tracking parameter` _tkadbc`.
+1\. When users click on an ad, it will open a new page (which lead to your website) and then the URL will be attached a tracking parameter `_tkadbc`.
 
 > Ex:https://example.com/page/camp2017/\_tkadbc=fd91c867eff1b33bf5936d910589...
 
