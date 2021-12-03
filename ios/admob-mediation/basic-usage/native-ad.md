@@ -81,10 +81,10 @@ NS_ASSUME_NONNULL_END
     NSArray *nibObjects =
     [[NSBundle mainBundle] loadNibNamed:@"UnifiedNativeAdView" owner:nil options:nil];
     [self setAdView:[nibObjects firstObject]];
-
-		//NSString *img_icon = nativeAd.extraAssets[kTKAdImage_iconKey]; 				//82x82
-    //NSString *img_icon_hd = nativeAd.extraAssets[kTKAdImage_icon_hdKey];	//300x300
-    //NSString *img_main = nativeAd.extraAssets[kTKAdImage_mainKey];				//1200x628
+    
+    //NSString *img_icon = nativeAd.extraAssets[kTKAdImage_iconKey];//82x82
+    //NSString *img_icon_hd = nativeAd.extraAssets[kTKAdImage_icon_hdKey];//300x300
+    //NSString *img_main = nativeAd.extraAssets[kTKAdImage_mainKey];//1200x628
     //NSString *sponser = nativeAd.extraAssets[kTKAdSponser];
     
     ((UIImageView *)self.nativeAdView.iconView).image = nativeAd.icon.image;
@@ -108,13 +108,13 @@ NS_ASSUME_NONNULL_END
 
     NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_nativeAdView);
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_nativeAdView]|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewDictionary]];
+      options:0
+      metrics:nil
+      views:viewDictionary]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_nativeAdView]|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewDictionary]];
+      options:0
+      metrics:nil
+      views:viewDictionary]];
 }
 ```
 {% endtab %}
