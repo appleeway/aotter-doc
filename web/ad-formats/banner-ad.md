@@ -2,7 +2,7 @@
 
 **Banner Ad Size**
 
-\- 320x50    - 640x100    - 336x280    - 300x250&#x20;
+\- 320x50    - 640x100
 
 We provide different kinds of sizes in banner ads, but the size has been decided by you in the ad slot phase. See [Create an Ad Slot](../web-sdk/prerequisites.md#step-3-create-an-ad-slot).
 

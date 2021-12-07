@@ -1,5 +1,9 @@
 # Supr.Ad
 
+**Supr.Ad Size**
+
+\- 300x250    - 336x280
+
 Follow these steps to build a Supr.Ad layout and then requests it.
 
 Step 1: [Insert `<div>` tag ](supr.ad.md#step-1-insert-less-than-div-greater-than-tag)\
@@ -32,4 +36,4 @@ Please replace`placement_UUID` with your ad place UUID.
 
 ### Done! 👏🏼
 
-![](<../../.gitbook/assets/截圖 2021-04-01 下午3.40.15.png>)
+![](<../../.gitbook/assets/截圖 2021-12-07 下午4.26.30.png>)

@@ -84,7 +84,7 @@ For the publisher who use AotterTrek SDK for the first time and didn't get full 
 
 AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
 
-![](<../../.gitbook/assets/截圖 2021-04-01 下午3.40.15.png>)
+![](<../../.gitbook/assets/截圖 2021-12-07 下午4.26.30.png>)
 
 ## Full Example
 

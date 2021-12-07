@@ -31,10 +31,10 @@ After entering the list, you might find the ad status is test ad only. For the p
 Entering the ad slots management and then creating ad slots. Name the ad slot with lowercase letters `a-z` , number `0-9` and underscore `_` .\
 AotterTrek currently provides three types of ad and different sizes:
 
-* Supr.Ad (1200x628 / 336x280 / 300x250)
-* Banner Ad (320x50 / 640x100 / 336x280 / 300x250)
+* Supr.Ad (336x280 / 300x250)
+* Banner Ad (320x50 / 640x100)
 
-![](<../../.gitbook/assets/截圖 2021-09-17 上午11.55.35.png>)
+![](../../.gitbook/assets/%E6%88%AA%E5%9C%96%202021-09-17%20%E4%B8%8A%E5%8D%8811.55.35.png)
 
 After the ad slot is created, you will see a list of ad slots as shown.
 
