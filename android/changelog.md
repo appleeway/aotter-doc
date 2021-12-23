@@ -1,5 +1,9 @@
 # Changelog
 
+## 2021/12/23 release - SDK `4.3.4`
+
+* Use Activity page (instead of DialogFragment page) when context comes from the application
+
 ## 2021/12/01 release - SDK `4.3.2`
 
 * Support android 12
