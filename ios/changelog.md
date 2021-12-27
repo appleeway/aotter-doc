@@ -1,6 +1,6 @@
 # Changelog
 
-## 22021/10/05 relase - SDK `3.6.4`
+## 2021/10/05 release - SDK `3.6.4`
 
 * update OM SDK version
 
