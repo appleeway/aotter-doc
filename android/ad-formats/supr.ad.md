@@ -195,7 +195,7 @@ override fun onAdLoaded(adData: AdData) {
     val callToAction:String = adData.callToAction
        
     //Registered an ad view
-    trekAd.registerSuprAd(context,adContainer,trekMediaView,adData)
+    trekAd.registerSuprAd(adContainer,trekMediaView,adData)
        
 }
 ```
@@ -222,3 +222,4 @@ public void onAdLoaded(@NotNull AdData adData) {
 ```
 {% endtab %}
 {% endtabs %}
+

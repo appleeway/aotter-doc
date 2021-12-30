@@ -216,7 +216,7 @@ override fun onAdLoaded(adData: AdData) {
     val sponsor:String = adData.sponsor
     
     //Registered an ad view
-    trekAd.registerNativeAd(context,nativeAdView,adData)
+    trekAd.registerNativeAd(nativeAdView,adData)
        
 }
 ```

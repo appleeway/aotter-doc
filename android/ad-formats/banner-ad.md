@@ -154,7 +154,7 @@ You need to register ads in **`onAdloaded()`**method to receive the impression a
 override fun onAdLoaded(adData: AdData) {
     
     //Registered an ad view
-    trekAd.registerBannerAd(context,trekBannerView,adData)
+    trekAd.registerBannerAd(trekBannerView,adData)
        
 }
 ```
