@@ -15,7 +15,7 @@ Step 5: [Register Ad View and Set Layout](supr.ad.md#step-5-register-ad-view-and
 | `advertiserName` | String | Advertiser Name | Yes                   | Recommended              |
 | `title`          | String | Ad Headline     | Yes                   | Recommended              |
 | `text`           | String | Ad Text         | No, could be empty    | Recommended              |
-| `callToAction`   | String | Ex: "瞭解詳情"      | No, could be empty    | Recommended              |
+| `callToAction`   | String | Ex: "瞭解詳情"      | Yes                   | Recommended              |
 
 #### - isExpired
 

@@ -18,7 +18,7 @@ Step 7: [Destroy Ad (Optional)](supr.ad.md#step-7-optional-destroy-ad)\
 | `advertiserName` | String | Advertiser Name | Yes                   | Recommended              |
 | `title`          | String | Ad Headline     | Yes                   | Recommended              |
 | `text`           | String | Ad Text         | No, could be empty    | Recommended              |
-| `callToAction`   | String | Ex: "瞭解詳情"      | No, could be empty    | Recommended              |
+| `callToAction`   | String | Ex: "瞭解詳情"      | Yes                   | Recommended              |
 
 ### Functions
 
