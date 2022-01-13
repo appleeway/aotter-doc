@@ -27,7 +27,7 @@ AotterTrek('tkadn', 'FormSubmit');
 **Custom events** are also available. You can replace `EVENT_NAME` to your custom event name.
 
 ```javascript
-AotterTrek('tkadn', '{{EVENT_NAME}}');
+AotterTrek('tkadn', 'EVENT_NAME');
 ```
 
 ### Usage&#x20;
