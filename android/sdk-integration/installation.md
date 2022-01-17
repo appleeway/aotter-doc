@@ -7,6 +7,10 @@ Follow these steps to download and include SDK in your project:
 
 ### Step 1: Including the SDK <a href="#including" id="including"></a>
 
+{% hint style="warning" %}
+Please noticed that AotterTrek Android SDK Development Environment: `Kotlin version 1.5.xx`
+{% endhint %}
+
 **Using Gradle**
 
 ![](../../.gitbook/assets/1631868969014.jpg)
