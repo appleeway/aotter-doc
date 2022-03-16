@@ -97,6 +97,10 @@ TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
 
 Please inject the **TrekAdStatusCallBack** interface in **`setTrekSatusCallBack()`** method.
 
+{% hint style="warning" %}
+Please noticed that Supr.ad includes video ad. **In the circumstance of video ad display, it will not trigger the `onAdClicked()` and `onAdImpression()` event.**&#x20;
+{% endhint %}
+
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
