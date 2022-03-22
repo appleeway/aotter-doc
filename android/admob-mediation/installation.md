@@ -8,7 +8,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 ```kotlin
 dependencies {
-    implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.2.2'
+    implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.4.0'
 }
 ```
 

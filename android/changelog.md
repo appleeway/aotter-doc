@@ -1,5 +1,14 @@
 # Changelog
 
+## 2022/03/22 release - SDK `4.4.0`
+
+* Change domain
+* Support OM JSON tag
+* Support OM js string dynamic update
+* Support webview slide
+* Improve BackgroundHolder setting
+* Update ExoPlayer
+
 ## 2021/12/23 release - SDK `4.3.4`
 
 * Use Activity page (instead of DialogFragment page) when context comes from the application
