@@ -120,20 +120,36 @@ In version 4, requesting ads use **builder style** as the following code snippet
 {% tab title="Kotlin" %}
 ```kotlin
 // Version 4.x
-trekAd
-.setPlaceUid("YOUR_UUID")//Ex."0000-12345-6789-000"
-.setCategory("YOUR_CATEGORY_STRING_WHAT_EVERY_YOU_WANT")//Ex."news"
-.applyTrekAd()
+val trekAdRequest = TrekAdRequest().Builder()
+        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
+        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
+        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
+        .build()
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
 // Version 4.x
-trekAd
-.setPlaceUid("YOUR_UUID")//Ex."0000-12345-6789-000"
-.setCategory("YOUR_CATEGORY_STRING_WHAT_EVERY_YOU_WANT")//Ex."news"
-.applyTrekAd();
+TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
+        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
+        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
+        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
+        .build();
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}
