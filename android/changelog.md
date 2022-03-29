@@ -1,13 +1,17 @@
 # Changelog
 
-## 2022/03/22 release - SDK `4.4.0`
+## 2022/03/29 release - SDK `4.4.2`
 
 * Change domain
+* Add `setContentUrl()` & `setContentTitle()`
 * Support OM JSON tag
 * Support OM js string dynamic update
+* OMSDK obstruction minor adjustment
+* Add OMSDK `contentUrl` and `customRefencData`
 * Support webview slide
 * Improve BackgroundHolder setting
 * Update ExoPlayer
+* Mapping Admob mediation `hasVideoContent` parameter
 
 ## 2021/12/23 release - SDK `4.3.4`
 

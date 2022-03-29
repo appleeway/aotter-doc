@@ -9,7 +9,7 @@ The Native Ad API allows you to build a customized experience for the ads you sh
 Step 1: [Create Native Ad Layout](native-ad.md#step-1-create-native-ad-layout)\
 Step 2: [Create `trekAd` Object Instance](native-ad.md#step-2-create-trekad-object-instance)\
 Step 3: [Set Ad Status Listener Callback](native-ad.md#step-3-set-ad-status-listener-callback)\
-Step 4: [Request an Ad](native-ad.md#step-4-request-an-ad)\
+Step 4: [Create `TrekAdRequest` and Request an Ad](native-ad.md#step-4-create-trekadrequest-and-request-an-ad)\
 Step 5: [Register Ad View and Set Layout](native-ad.md#step-5-register-ad-view-and-set-layout)
 
 ### AdData Parameters
@@ -166,26 +166,48 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Request an Ad
 
-The **`setCategory()`**method is optional. You can skip it if you don't want to set it.
+
+### Step 4: Create `TrekAdRequest` and Request an Ad
+
+* **Create `TrekAdRequest`**
+
+The **`setCategory()`, `setContentUrl()`, `setContentTitle()` ** method is optional. You can skip it if you don't want to set it.
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd
-.setPlaceUid("YOUR_UUID")//Ex."0000-12345-6789-000"
-.setCategory("YOUR_CATEGORY_STRING_WHICH_YOU_WANT")//Ex."news"
-.applyTrekAd()
+val trekAdRequest = TrekAdRequest().Builder()
+        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
+        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
+        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
+        .build()
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd
-.setPlaceUid("YOUR_UUID")//Ex."0000-12345-6789-000"
-.setCategory("YOUR_CATEGORY_STRING_WHAT_EVERY_YOU_WANT")//Ex."news"
-.applyTrekAd();
+TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
+        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
+        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
+        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
+        .build();
+```
+{% endtab %}
+{% endtabs %}
+
+* **Request an Ad**
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}

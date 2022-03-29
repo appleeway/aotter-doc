@@ -8,6 +8,12 @@ Step 3: [Set Ad Layout and Bind Ad View](supr.ad-layout.md#step-3-set-ad-layout-
 Step 4: [Create `AdRequest`](supr.ad-layout.md#step-4-create-adrequest)\
 Step 5: [Request an Ad](supr.ad-layout.md#step-5-request-an-ad)
 
+{% hint style="warning" %}
+**Initialize your ad object with a context of Activity or Fragment instance:**\
+****\
+****In the constructor for a new ad object, you must pass in an object of type **Context**. This **Context** is passed on to other ad networks when using mediation. Some ad networks require a more restrictive **Context** that is of type **Activity** or **Fragment** and may not be able to serve ads without an **Activity** or **Fragment** instance. Therefore, we recommend passing in the context of **Activity** or **Fragment** instance when initializing ad objects to ensure a consistent experience with your mediated ad networks.
+{% endhint %}
+
 ### Step 1: Create Supr.Ad Layout
 
 #### **Example Supr.Ad layout**
@@ -135,7 +141,9 @@ val adRequest = AdRequest
 
 val bundle = Bundle()
 
-bundle.putString(TrekAdmobDataKey.CATEGORY, "YOU_CATEGORY")//ex."news"
+bundle.putString(TrekAdmobDataKey.CATEGORY, "PAGE_CATEGORY");//ex."3C"
+bundle.putString(TrekAdmobDataKey.CONTENT_URL, "PAGE_URL");//ex."https://agirls.aotter.net/"
+bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少女"
 
 val adRequest = AdRequest
     .Builder()
@@ -154,7 +162,9 @@ AdRequest adRequest = new AdRequest
 
 Bundle bundle = new Bundle();
 
-bundle.putString(TrekAdmobDataKey.CATEGORY, "YOU_CATEGORY");//ex."news"
+bundle.putString(TrekAdmobDataKey.CATEGORY, "PAGE_CATEGORY");//ex."3C"
+bundle.putString(TrekAdmobDataKey.CONTENT_URL, "PAGE_URL");//ex."https://agirls.aotter.net/"
+bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少女"
 
 AdRequest adRequest = new AdRequest
     .Builder()
