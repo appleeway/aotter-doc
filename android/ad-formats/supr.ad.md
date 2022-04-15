@@ -4,8 +4,8 @@ Follow these steps to build a Supr.Ad layout and then requests it.
 
 Step 1: [Create Supr.Ad Layout](supr.ad.md#step-1-create-supr-ad-layout)\
 Step 2: [Create `trekAd` Object Instance](supr.ad.md#step-2-create-trekad-object-instance)\
-Step 3: [Set Ad Status Listener Callback](supr.ad.md#step-3-set-ad-status-listener-callback)\
-Step 4: [//you have to set the method that is or not get an AdData.Create `TrekAdRequest` and Request an Ad](supr.ad.md#step-4-create-trekadrequest-and-request-an-ad)\
+Step 3: [Set TrekAdListener](supr.ad.md#step-3-set-trekadlistener)\
+Step 4: [Create TrekAdRequest and Request an Ad](supr.ad.md#step-4-create-trekadrequest-and-request-an-ad)\
 Step 5: [Register Ad View and Set Layout](supr.ad.md#step-5-register-ad-view-and-set-layout)
 
 ### **AdData Parameter**
@@ -93,7 +93,7 @@ TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set Ad Status Listener Callback
+### Step 3: Set TrekAdListener
 
 Please inject **TrekAdListener** interface in **setTrekAdListener** method.
 

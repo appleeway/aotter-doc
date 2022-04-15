@@ -4,7 +4,7 @@ Follow these steps to build a banner ad layout and then requests it.
 
 Step 1: [Create Banner Ad Layout](banner-ad.md#step-1-create-banner-ad-layout)\
 Step 2: [Create `trekAd` Object Instance](banner-ad.md#step-2-create-trekad-object-instance)\
-Step 3: [Set Ad Status Listener Callback](banner-ad.md#step-3-set-ad-status-listener-callback)\
+Step 3: [Set TrekAdListener](banner-ad.md#step-3-set-trekadlistener)\
 Step 4: [Create `TrekAdRequest` and Request an Ad](banner-ad.md#step-4-create-trekadrequest-and-request-an-ad)\
 Step 5: [Register Ad View and Set Layout](banner-ad.md#step-5-register-ad-view-and-set-layout)
 

@@ -8,7 +8,7 @@ The Native Ad API allows you to build a customized experience for the ads you sh
 
 Step 1: [Create Native Ad Layout](native-ad.md#step-1-create-native-ad-layout)\
 Step 2: [Create `trekAd` Object Instance](native-ad.md#step-2-create-trekad-object-instance)\
-Step 3: [Set Ad Status Listener Callback](native-ad.md#step-3-set-ad-status-listener-callback)\
+Step 3: [Set TrekAdListener](native-ad.md#step-3-set-trekadlistener)\
 Step 4: [Create `TrekAdRequest` and Request an Ad](native-ad.md#step-4-create-trekadrequest-and-request-an-ad)\
 Step 5: [Register Ad View and Set Layout](native-ad.md#step-5-register-ad-view-and-set-layout)
 
