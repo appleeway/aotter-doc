@@ -21,7 +21,7 @@ Step 6: [Request an Ad](banner-ad-layout.md#step-6-request-an-ad)
 
 ```kotlin
 <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/bannerAdViewContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -103,7 +103,9 @@ Set layout in the callback function of `onAdLoaded`.
 
 override fun onAdLoaded() {
     super.onAdLoaded()
-    linearLayout.addView(bannerAdView)
+
+    viewBinding.bannerAdViewContainer.addView(bannerAdView)
+
 }
 
 .....
@@ -116,8 +118,10 @@ override fun onAdLoaded() {
 
 @Override
 public void onAdLoaded() {
-    super.onAdLoaded();           
-    linearLayout.addView(bannerAdView);          
+    super.onAdLoaded();
+                
+    viewBinding.bannerAdViewContainer.addView(bannerAdView);
+                
 }
 
 .....
@@ -144,7 +148,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少�
 
 val adRequest = AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventBanner::class.java, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventBanner::class.java, bundle)
     .build()
 ```
 {% endtab %}
@@ -165,7 +169,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少�
 
 AdRequest adRequest = new AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventBanner.class, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventBanner.class, bundle)
     .build();
 ```
 {% endtab %}

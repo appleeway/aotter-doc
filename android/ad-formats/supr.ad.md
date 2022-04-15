@@ -95,7 +95,7 @@ TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
 
 ### Step 3: Set Ad Status Listener Callback
 
-Please inject the **TrekAdStatusCallBack** interface in **`setTrekSatusCallBack()`** method.
+Please inject **TrekAdListener** interface in **setTrekAdListener** method.
 
 {% hint style="warning" %}
 Please noticed that Supr.ad includes video ad. **In the circumstance of video ad display, it will not trigger the `onAdClicked()` and `onAdImpression()` event.**&#x20;
@@ -104,10 +104,10 @@ Please noticed that Supr.ad includes video ad. **In the circumstance of video ad
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-​//you have to set the method that is or not get an AdData.
-trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
+​//you have to set the method that is or not get a AdData.
+trekAd.setTrekAdListener(object : TrekAdListener{
 
-    override fun onAdError(message: String) {
+    override fun onAdFailedToLoad(message: String) {
        //ad error callback
     }
 
@@ -116,11 +116,11 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
        //adData is an ad data.
     }
 
-    override fun onAdClicked(adData: AdData) {
+    override fun onAdClicked() {
        //In this callback, it means that the  ad was clicked.
     }
 
-    override fun onAdImpression(view: View) {
+    override fun onAdImpression() {
        //In this callback, this means that the ad has been displayed.
     }
 
@@ -130,10 +130,10 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
 
 {% tab title="Java" %}
 ```java
-//you have to set the method that is or not get an AdData.
-    trekAd.setTrekAdStatusListener(new TrekAdStatusCallBack() {
+//you have to set the method that is or not get a AdData.
+    trekAd.setTrekAdListener(new TrekAdListener() {
             @Override
-            public void onAdError(@NotNull String message) {
+            public void onAdFailedToLoad(@NotNull String message) {
                 //ad error callback
             }
 
@@ -144,12 +144,12 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
             }
 
             @Override
-            public void onAdClicked(@NotNull AdData adData) {
+            public void onAdClicked() {
                 //In this callback, it means that the  ad was clicked.
             }
 
             @Override
-            public void onAdImpression(@NotNull View view) {
+            public void onAdImpression() {
                 //In this callback, this means that the ad has been displayed.
             }
      });
@@ -166,7 +166,7 @@ The **`setCategory()`, `setContentUrl()`, `setContentTitle()` ** method is optio
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-val trekAdRequest = TrekAdRequest().Builder()
+val trekAdRequest = TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -176,7 +176,7 @@ val trekAdRequest = TrekAdRequest().Builder()
 
 {% tab title="Java" %}
 ```java
-TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
+TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -190,13 +190,13 @@ TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}
@@ -240,7 +240,7 @@ public void onAdLoaded(@NotNull AdData adData) {
 
 
       //Registered an ad view
-      trekAd.registerSuprAd(context,adContainer,trekMediaView,adData);
+      trekAd.registerSuprAd(adContainer,trekMediaView,adData);
 
 }
 ```

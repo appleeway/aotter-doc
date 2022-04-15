@@ -1,5 +1,10 @@
 # Changelog
 
+## 2022/04/15 release - SDK `4.4.5`
+
+* Optimized implementation
+* Update AdMob mediation custom adapter ( [Migrate to SDK v21](https://developers.google.com/admob/android/migration) )
+
 ## 2022/03/29 release - SDK `4.4.2`
 
 * Change domain

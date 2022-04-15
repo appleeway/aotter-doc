@@ -61,7 +61,7 @@ Build your own native ad layout or you can check out the example layout below.
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -69,23 +69,46 @@ Build your own native ad layout or you can check out the example layout below.
                         android:id="@+id/advertiser"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Sponsored"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/adImg10"
+                        app:layout_constraintStart_toEndOf="@+id/adImg"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/adTitle"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="TextView"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/adImg10"
-                        app:layout_constraintTop_toBottomOf="@+id/advertiser10" />
+                        app:layout_constraintStart_toEndOf="@+id/adImg"
+                        app:layout_constraintTop_toBottomOf="@+id/advertiser" />
 
+                    <ImageView
+                        android:id="@+id/adImg"
+                        android:layout_width="100dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-     </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 ```
 
 ### Step 2: Create `trekAd` Object Instance
@@ -106,17 +129,17 @@ TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set Ad Status Listener Callback
+### Step 3: Set TrekAdListener
 
-Please inject the **TrekAdStatusCallBack** interface in **`setTrekStatusCallBack()`** method.
+Please inject **TrekAdListener** interface in **setTrekAdListener** method.
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
 //you have to set the method that is or not get a AdData.
-trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
+trekAd.setTrekAdListener(object : TrekAdListener{
 
-    override fun onAdError(message: String) {
+    override fun onAdFailedToLoad(message: String) {
        //ad error callback
     }
 
@@ -125,11 +148,11 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
        //adData is an ad data.
     }
 
-    override fun onAdClicked(adData: AdData) {
+    override fun onAdClicked() {
        //In this callback, it means that the  ad was clicked.
     }
 
-    override fun onAdImpression(view: View) {
+    override fun onAdImpression() {
        //In this callback, this means that the ad has been displayed.
     }
 
@@ -140,9 +163,9 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
 {% tab title="Java" %}
 ```java
 //you have to set the method that is or not get a AdData.
-    trekAd.setTrekAdStatusListener(new TrekAdStatusCallBack() {
+    trekAd.setTrekAdListener(new TrekAdListener() {
             @Override
-            public void onAdError(@NotNull String message) {
+            public void onAdFailedToLoad(@NotNull String message) {
                 //ad error callback
             }
 
@@ -153,12 +176,12 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
             }
 
             @Override
-            public void onAdClicked(@NotNull AdData adData) {
+            public void onAdClicked() {
                 //In this callback, it means that the  ad was clicked.
             }
 
             @Override
-            public void onAdImpression(@NotNull View view) {
+            public void onAdImpression() {
                 //In this callback, this means that the ad has been displayed.
             }
      });
@@ -177,7 +200,7 @@ The **`setCategory()`, `setContentUrl()`, `setContentTitle()` ** method is optio
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-val trekAdRequest = TrekAdRequest().Builder()
+val trekAdRequest = TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -187,7 +210,7 @@ val trekAdRequest = TrekAdRequest().Builder()
 
 {% tab title="Java" %}
 ```java
-TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
+TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -201,20 +224,22 @@ TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Step 5: Register Ad View and Set Layout
 
-You need to register ads in **`onAdloaded()`**method to receive the impression and click events. More specifically, register ad view and set layout in **`TrekAdStatusListener()`** method of**`onAdLoaded`**.
+You need to register for in **onAdloaded** method ads to receive impressions and click events.
+
+In  **onAdLoaded** of **TrekAdStatusListener** method register ad view and set layout.
 
 {% tabs %}
 {% tab title="Kotlin" %}

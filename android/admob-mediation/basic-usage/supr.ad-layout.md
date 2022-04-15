@@ -24,12 +24,12 @@ Step 5: [Request an Ad](supr.ad-layout.md#step-5-request-an-ad)
 
 ```kotlin
 <com.google.android.gms.ads.nativead.NativeAdView
-    android:id="@+id/admobNativeView"
+    android:id="@+id/nativeAdView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
         <com.google.android.gms.ads.nativead.MediaView
-            android:id="@+id/admobMediaView"
+            android:id="@+id/mediaView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 
             />
@@ -76,19 +76,9 @@ Set layout and bind ad view in the callback function of `forNativeAd`.
 
 forNativeAd { nativeAd ->
 
-  //Please binding ad view
-  viewBinding.admobNativeView.mediaView = viewBinding.admobMediaView
+  viewBinding.nativeAdView.mediaView = viewBinding.mediaView
 
-  admobNativeView.setNativeAd(nativeAd)
-
-  nativeAd.extras.getSerializable(TrekAdmobDataKey.AD_DATA)?.let{
-
-  val adData = it as AdData
-  
-  TrekAdmobAdViewBinder.bindingAdView(adData,admobNativeView)
-
-  } 
-  //      
+  viewBinding.nativeAdView.setNativeAd(nativeAd)
    
 }
 
@@ -105,20 +95,9 @@ forNativeAd { nativeAd ->
   @Override
     public void onNativeAdLoaded(@NonNull @NotNull NativeAd nativeAd) {
                         
-     //Please binding ad view
-      viewBinding.admobNativeView.setMediaView(viewBinding.admobMediaView);
+      viewBinding.nativeAdView.setMediaView(viewBinding.mediaView);
   
-      admobNativeAdView.setNativeAd(nativeAd);
-  
-      if(nativeAd.getExtras().getSerializable(TrekAdmobDataKey.AD_DATA) != null){
-
-        AdData adData = (AdData)nativeAd.getExtras().getSerializable(TrekAdmobDataKey.AD_DATA);
-  
-        TrekAdmobAdViewBinder.INSTANCE.bindingAdView(adData,admobNativeAdView);
-  
-      }
-  
-      //      
+      viewBinding.nativeAdView.setNativeAd(nativeAd);
 
     }
 })
@@ -147,7 +126,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少�
 
 val adRequest = AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventNative::class.java, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventNative::class.java, bundle)
     .build()
 ```
 {% endtab %}
@@ -168,7 +147,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少�
 
 AdRequest adRequest = new AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventNative.class, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventNative.class, bundle)
     .build();
 ```
 {% endtab %}

@@ -24,12 +24,11 @@ Step 5: [Request an Ad](native-ad-layout.md#step-5-request-an-ad)
 
 ```kotlin
 <com.google.android.gms.ads.nativead.NativeAdView
-                android:id="@+id/admobNativeAdView"
+                android:id="@+id/nativeAdView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
      <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/adView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -40,7 +39,7 @@ Step 5: [Request an Ad](native-ad-layout.md#step-5-request-an-ad)
                          />
 
                     <TextView
-                        android:id="@+id/admobAdTitle"
+                        android:id="@+id/adTitle"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         />
@@ -89,21 +88,15 @@ Set layout and bind ad view in the callback function of `forNativeAd`.
 
 forNativeAd { nativeAd ->
 
-  val advertiser:String = nativeAd.advertiser
-               
-  val text:String = nativeAd.body
+viewBinding.sponsored.text = nativeAd.advertiser
 
-  //Please binding ad view
-  admobNativeAdView.setNativeAd(nativeAd)
-  
-  nativeAd.extras.getSerializable(TrekAdmobDataKey.AD_DATA)?.let {
-  
-    val adData = it as AdData
-    
-    TrekAdmobAdViewBinder.bindingAdView(adData,admobNativeAdView)
-    
-  }
-  //      
+viewBinding.adTitle.text = nativeAd.body
+
+viewBinding.nativeAdView.headlineView = viewBinding.admobAdTitle
+
+viewBinding.nativeAdView.advertiserView = viewBinding.sponsored
+
+viewBinding.nativeAdView.setNativeAd(nativeAd)
    
 }
 
@@ -120,22 +113,15 @@ forNativeAd { nativeAd ->
   @Override
     public void onNativeAdLoaded(@NonNull @NotNull NativeAd nativeAd) {
                         
-      String advertiser = nativeAd.getAdvertiser();
-               
-      String text = nativeAd.getBody();
+    viewBinding.sponsored.text = nativeAd.getAdvertiser();
 
-      //Please binding ad view
-      admobNativeAdView.setNativeAd(nativeAd);
-  
-      if(nativeAd.getExtras().getSerializable(TrekAdmobDataKey.AD_DATA) != null){
+    viewBinding.adTitle.text = nativeAd.getBody();
 
-        AdData adData = (AdData)nativeAd.getExtras().getSerializable(TrekAdmobDataKey.AD_DATA) ;
-  
-        TrekAdmobAdViewBinder.INSTANCE.bindingAdView(adData,admobNativeAdView);
-  
-      }
-  
-      //      
+    viewBinding.nativeAdView.setHeadlineView(viewBinding.admobAdTitl);
+
+    viewBinding.nativeAdView.setAdvertiserView(viewBinding.sponsore);
+
+    viewBinding.nativeAdView.setNativeAd(nativeAd)   
 
     }
 })
@@ -164,7 +150,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE")//ex."電獺少女
 
 val adRequest = AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventNative::class.java, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventNative::class.java, bundle)
     .build()
 ```
 {% endtab %}
@@ -185,7 +171,7 @@ bundle.putString(TrekAdmobDataKey.CONTENT_TITLE, "PAGE_TITLE");//ex."電獺少�
 
 AdRequest adRequest = new AdRequest
     .Builder()
-    .addCustomEventExtrasBundle(TrekAdmobCustomEventNative.class, bundle)
+    .addNetworkExtrasBundle(TrekAdmobCustomEventNative.class, bundle)
     .build();
 ```
 {% endtab %}

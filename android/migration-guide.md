@@ -24,8 +24,8 @@ Dependencies library is upgraded to version 4.x. Version 3.x is no longer be upd
 
 ```kotlin
 // Version 4.x: Please use the dependency library as follow
-implementation 'com.google.code.gson:gson:2.8.6'
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.2'
+implementation 'com.google.code.gson:gson:2.9.0'
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
 
 // Version 3.x: It's about to deprecate the following dependency library
 implementation 'com.google.android.gms:play-services-ads:18.1.1'
@@ -42,16 +42,16 @@ We add a completion callback in version 4 which is useful for publishers who wan
 {% tab title="Kotlin" %}
 ```kotlin
 // Version 4.x
-AotterTrek.initAotterService(context,"YOUR_CLIENT_ID"){
-   //aotter service init finshed callback.
-} 
+AotterTrek.initialize(context,"YOUR_CLIENT_ID"){
+   //aotter service init finished callback.
+}
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
 // Version 4.x
-AotterTrek.INSTANCE.initAotterService(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
+AotterTrek.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
                         
        public Object invoke(Object var1) {
             this.invoke((Unit)var1);
@@ -61,7 +61,7 @@ AotterTrek.INSTANCE.initAotterService(context,"YOUR_CLIENT_ID", (Function1)(new 
        public final void invoke(@NotNull Unit it) {
             Intrinsics.checkNotNullParameter(it, "it");
                            
-             //aotter service init finshed callback.
+             //aotter service init finished callback.
                           
        }
        
@@ -72,8 +72,8 @@ AotterTrek.INSTANCE.initAotterService(context,"YOUR_CLIENT_ID", (Function1)(new 
 
 In version 4, the following callbacks are still available but please notice that `onAdLoaded` callback use **AdData** model instead of the TKAdNative model.
 
-\- **** onAdError                         ****                         - **onAdLoaded**\
-****- **** onAdClicked                     ****                     - **** onAdImpression
+\- **** onAdFailedToLoad                        ****                        - **onAdLoaded**\
+****- **** onAdClicked                                    ****                                    - **** onAdImpression
 
 ### Objects / Media View / Methods
 
@@ -104,7 +104,7 @@ In version 4, we use **TrekMediaView** instead of TKMediaView.
 ****\
 **- Methods**
 
-When setting ad listener, version 4 uses the **`setTrekAdStatusListener()`**method instead of `setAdListener()`. **** Furthermore, **** inject interface to listener use **TrekAdStatusCallBack** interface instead of _TKAdListener._
+When setting ad listener, version 4 uses **setTrekAdListener** method instead of _setAdListener_. **** Furthermore, **** inject interface to listener use **TrekAdListener** interface instead of _TKAdListener._
 
 When register ads, __ **`registerAdView()`** method is deprecated. In version 4, different ad types use their own register method as below.
 
@@ -120,7 +120,7 @@ In version 4, requesting ads use **builder style** as the following code snippet
 {% tab title="Kotlin" %}
 ```kotlin
 // Version 4.x
-val trekAdRequest = TrekAdRequest().Builder()
+val trekAdRequest = TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -131,7 +131,7 @@ val trekAdRequest = TrekAdRequest().Builder()
 {% tab title="Java" %}
 ```java
 // Version 4.x
-TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
+TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
@@ -140,16 +140,18 @@ TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
 {% endtab %}
 {% endtabs %}
 
+**(下面改變)**
+
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}

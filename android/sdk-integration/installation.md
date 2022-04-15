@@ -19,8 +19,8 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 ```kotlin
 dependencies {
-    implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.2'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
 }
 ```
 
@@ -59,7 +59,7 @@ class MyApplication:Application {
         super.onCreate(savedInstanceState)
         
         //AotterService is a singleton pattren, please just initialize once.
-        AotterTrek.initAotterService(context,"YOUR_CLIENT_ID"){
+        AotterTrek.initialize(context,"YOUR_CLIENT_ID"){
             //aotter service init finshed callback.
         }
                    
@@ -78,7 +78,7 @@ public class MyApplication extends Application {
         super.onCreate();
        
         //AotterService is a singleton pattren, please just initialize once.
-        AotterTrek.INSTANCE.initAotterService(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
+        AotterTrek.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
                         
                         public Object invoke(Object var1) {
                            this.invoke((Unit)var1);

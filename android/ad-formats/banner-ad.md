@@ -60,17 +60,17 @@ TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set Ad Status Listener Callback
+### Step 3: Set TrekAdListener
 
-Please inject the **TrekAdStatusCallBack** interface in **`setTrekSatusCallBack()`** method.
+Please inject **TrekAdListener** interface in **setTrekAdListener** method.
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
 //you have to set the method that is or not get a AdData.
-trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
+trekAd.setTrekAdListener(object : TrekAdListener{
 
-    override fun onAdError(message: String) {
+    override fun onAdFailedToLoad(message: String) {
        //ad error callback
     }
 
@@ -79,11 +79,11 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
        //adData is an ad data.
     }
 
-    override fun onAdClicked(adData: AdData) {
+    override fun onAdClicked() {
        //In this callback, it means that the  ad was clicked.
     }
 
-    override fun onAdImpression(view: View) {
+    override fun onAdImpression() {
        //In this callback, this means that the ad has been displayed.
     }
 
@@ -94,9 +94,9 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
 {% tab title="Java" %}
 ```java
 //you have to set the method that is or not get a AdData.
-    trekAd.setTrekAdStatusListener(new TrekAdStatusCallBack() {
+    trekAd.setTrekAdListener(new TrekAdListener() {
             @Override
-            public void onAdError(@NotNull String message) {
+            public void onAdFailedToLoad(@NotNull String message) {
                 //ad error callback
             }
 
@@ -107,12 +107,12 @@ trekAd.setTrekAdStatusListener(object : TrekAdStatusCallBack {
             }
 
             @Override
-            public void onAdClicked(@NotNull AdData adData) {
+            public void onAdClicked() {
                 //In this callback, it means that the  ad was clicked.
             }
 
             @Override
-            public void onAdImpression(@NotNull View view) {
+            public void onAdImpression() {
                 //In this callback, this means that the ad has been displayed.
             }
      });
@@ -153,20 +153,22 @@ TrekAdRequest trekAdRequest = new TrekAdRequest().Builder()
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest)
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd.setPlaceUid("YOUR_UUID").applyTrekAd(trekAdRequest);
+trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Step 5: Register Ad View and Set Layout ****&#x20;
 
-You need to register ads in **`onAdloaded()`**method to receive the impression and click events. More specifically, register ad view and set layout in **`TrekAdStatusListener()`** method of**`onAdLoaded`**.
+You need to register for in **onAdloaded** method ads to receive impression and click events.
+
+In  **onAdLoaded** of **TrekAdStatusListener** method register ad view and set layout.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -186,7 +188,7 @@ override fun onAdLoaded(adData: AdData) {
 public void onAdLoaded(@NotNull AdData adData) {
 
       //Registered an ad view
-       trekAd.registerBannerAd(context,trekBannerView,adData)
+       trekAd.registerBannerAd(trekBannerView,adData)
 
 }
 ```
