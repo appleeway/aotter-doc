@@ -140,8 +140,6 @@ TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
 {% endtab %}
 {% endtabs %}
 
-**(下面改變)**
-
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
