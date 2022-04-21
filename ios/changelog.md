@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022/04/21 release - SDK `3.7.1`
+
+* Replace Google IMA SDK dependencies with customed VAST player for video ad rendering
+
 ## 2021/10/05 release - SDK `3.6.4`
 
 * update OM SDK version
