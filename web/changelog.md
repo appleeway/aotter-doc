@@ -1,6 +1,6 @@
 # Changelog
 
-## 2021/11/03 release - SDK `3.3.2`
+## 2021/11/03 release - SDK `3.3.3`
 
 * Adjust Ad supply logic.
 * Add custom ad selector feature.
