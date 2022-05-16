@@ -77,21 +77,13 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
        
-        //AotterService is a singleton pattren, please just initialize once.
-        AotterTrek.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
-                        
-                        public Object invoke(Object var1) {
-                           this.invoke((Unit)var1);
-                           return Unit.INSTANCE;
-                        }
+        AotterTrek.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
 
-                        public final void invoke(@NotNull Unit it) {
-                           Intrinsics.checkNotNullParameter(it, "it");
-                           
-                          //aotter service init finshed callback.
-                          
-                        }
-        }));
+            // init finished callback.
+
+            return Unit.INSTANCE;
+
+        });
         
     }
 }
