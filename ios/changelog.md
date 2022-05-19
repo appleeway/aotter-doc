@@ -1,8 +1,14 @@
 # Changelog
 
+## 2022/05/18 release - SDK `3.7.2`
+
+* OM SDK: support dynamic omTags(javascriptResourceUrl)
+* new optional param: contentTitle & contentUrl for initial an ad
+* update OM SDK version
+
 ## 2022/04/21 release - SDK `3.7.1`
 
-* Replace Google IMA SDK dependencies with customed VAST player for video ad rendering
+* Replace Google IMA SDK dependencies with custom VAST player for video ad rendering
 
 ## 2021/10/05 release - SDK `3.6.4`
 
