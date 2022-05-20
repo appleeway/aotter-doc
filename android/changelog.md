@@ -4,7 +4,7 @@
 
 * Optimized implementation
 * Update AdMob mediation custom adapter ( [Migrate to SDK v21](https://developers.google.com/admob/android/migration) )
-* `TrekAdmobAdViewBinder` class has been removed, and the admob mediation binding view flow has been integrated into the mediation adapter.
+* The `TrekAdmobAdViewBinder` class has been removed, and trek admob mediation binding view flow has been integrated into the mediation adapter.
 
 ## 2022/03/29 release - SDK `4.4.2`
 
