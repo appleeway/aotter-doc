@@ -1,5 +1,10 @@
 # Changelog
 
+## 2022/06/10 release - SDK `3.3.5`
+
+* Minor adjustment in Web SDK log.
+* Remove the close button.
+
 ## 2021/11/03 release - SDK `3.3.3`
 
 * Adjust Ad supply logic.

@@ -66,5 +66,4 @@ Noted that when you add dataset attribute `data-mobile`, the ad will only be sho
 
 ### Done! 👏🏼
 
-![](<../../.gitbook/assets/截圖 2021-09-14 下午5.59.28.png>)
-
+![](<../../.gitbook/assets/截圖 2022-06-10 上午11.28.47.png>)
