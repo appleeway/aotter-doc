@@ -8,8 +8,8 @@ Add `adUnit` in your mediation group and fill in `Class Name`, `Parameter`.
 
 It must be the same name as your "**Custom Event**" class file name, for example:
 
-\- Native Ad:  `AotterTrekGADCustomEvenNativeAd` \
-\- Supr.Ad: `AotterTrekGADCustomEvenNativeAd`\
+\- Native Ad:  `AotterTrekGADCustomEventNativeAd` \
+\- Supr.Ad: `AotterTrekGADCustomEventNativeAd`\
 \- Banner Ad: `AotterTrekGADCustomEventBannerAd`
 
 * Parameter
