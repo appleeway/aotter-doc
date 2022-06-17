@@ -21,19 +21,18 @@ Step 3: [Remove User When Logout](user-setting.md#step-3-remove-user-when-logout
 ### Step 2: Update User&#x20;
 
 ```objectivec
-[[AotterTrek sharedAPI] updateCurrentUserWithValue:@"deviceId" 
-                                     forKey:ATUserKeyDeviceID];
+[[AotterTrek sharedAPI] updateCurrentUserWithValue:@true
+                                     forKey:TKUserKeyGender];
 ```
 
 **- enum: ATUserKey**
 
 | Enum Name           | Value Type | Descriptions            |
 | ------------------- | ---------- | ----------------------- |
-| `TKUserKeyAdId`     | NSString   |                         |
 | `TKUserKeyEmail`    | NSString   | Ex: "a111111@gmail.com" |
 | `TKUserKeyPhone`    | NSString   | Ex: "09XXXXXXXXX"       |
 | `TKUserKeyFbId`     | NSString   |                         |
-| `TKUserKeyGender`   | BOOL       | True for male           |
+| `TKUserKeyGender`   | BOOL       | true for male           |
 | `TKUserKeyBirthday` | String     | YYYY/MM/DD              |
 
 ### Step 3: Remove User When Logout
