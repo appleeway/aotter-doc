@@ -2,6 +2,11 @@
 
 ## 2022/06/22 release - SDK `4.5.0` (Recommend)
 
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 31**
+{% endhint %}
+
 * new TrekNativeAdImage
 * Open browser with chrome
 * imp tool optimization
@@ -9,6 +14,13 @@
 * Log optimization
 
 ## 2022/04/15 release - SDK `4.4.5`&#x20;
+
+{% hint style="info" %}
+Below this version:
+
+**minSdkVersion 21** \
+**targetSdkVersion 30**
+{% endhint %}
 
 * Optimized implementation
 * Update AdMob mediation custom adapter ( [Migrate to SDK v21](https://developers.google.com/admob/android/migration) )
