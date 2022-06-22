@@ -96,6 +96,14 @@ viewBinding.nativeAdView.headlineView = viewBinding.admobAdTitle
 
 viewBinding.nativeAdView.advertiserView = viewBinding.sponsored
 
+val sponsor:String = nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR)?:"" 
+
+val mainImage:String = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE)?:"" //1200x628
+
+val icon:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE)?:""//82x82
+
+val iconHd:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD)?:""//300x300
+
 viewBinding.nativeAdView.setNativeAd(nativeAd)
    
 }
@@ -120,6 +128,14 @@ viewBinding.nativeAdView.setNativeAd(nativeAd)
     viewBinding.nativeAdView.setHeadlineView(viewBinding.admobAdTitl);
 
     viewBinding.nativeAdView.setAdvertiserView(viewBinding.sponsore);
+
+    String sponsor = nativeAd.getExtras.getString(TrekAdmobDataKey.SPONSOR); 
+
+    String mainImage:= nativeAd.getExtras.getString(TrekAdmobDataKey.MAIN_IMAGE); //1200x628
+
+    String icon:= nativeAd.getExtras.getString(TrekAdmobDataKey.ICON_IMAGE);//82x82
+
+    String iconHd:= nativeAd.getExtras.getString(TrekAdmobDataKey.ICON_IMAGE_HD);//300x300
 
     viewBinding.nativeAdView.setNativeAd(nativeAd)   
 

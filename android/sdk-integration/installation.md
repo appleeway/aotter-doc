@@ -20,7 +20,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 ```kotlin
 dependencies {
     implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
+    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.5.0'
 }
 ```
 

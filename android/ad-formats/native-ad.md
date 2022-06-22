@@ -237,9 +237,9 @@ trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
 
 ### Step 5: Register Ad View and Set Layout
 
-You need to register for in **onAdloaded** method ads to receive impressions and click events.
+You need to register for in **onAdLoaded** method ads to receive impressions and click events.
 
-In  **onAdLoaded** of **TrekAdStatusListener** method register ad view and set layout.
+In  **onAdLoaded** of **TrekAdListener** method register ad view and set layout.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -251,12 +251,18 @@ override fun onAdLoaded(adData: AdData) {
     val title:String = adData.title
     
     val text:String = adData.text
+
+    var imgIconHdUri:Uri = adData.imgIconHd.uri //size:300x300
+
+    var imgMainUri:Uri = adData.imgMain.uri //size:1200x628
     
-    var imgMain:String = adData.imgMain //size:1200x628
+    var imgIconUri:Uri = adData.imgIcon.uri //size:82x82
+
+    var imgIconHdDrawable:Drawable = adData.imgIconHd.drawable//size:300x300
+
+    var imgMainDrawable:Drawable = adData.imgMain.drawable//size:1200x628
     
-    var imgIcon:String = adData.imgIcon //size:82x82
-    
-    var imgIconHd:String = adData.imgIconHd //size:300x300
+    var imgIconDrawable:Drawable = adData.imgIcon.drawable//size:82x82
     
     val callToAction:String = adData.callToAction
     
@@ -280,11 +286,17 @@ public void onAdLoaded(@NotNull AdData adData) {
 
       String text = adData.getText();
 
-      String imgMain = adData.getImgMain(); //size:1200x628
+      Uri imgMainUri = adData.getImgMain().getUri(); //size:1200x628
 
-      String imgIcon = adData.getImgIcon(); //size:82x82
+      Uri imgIconUri = adData.getImgIcon().getUri(); //size:82x82
 
-      String imgIconHd = adData.getImgIconHd(); //size:300x300
+      Uri imgIconHdUri = adData.getImgIconHd().getUri(); //size:300x300
+      
+      Drawable imgMainDrawable = adData.getImgMain().getDrawable(); //size:1200x628
+
+      Drawable imgIconDrawable = adData.getImgIcon().getDrawable(); //size:82x82
+
+      Drawable imgIconHdDrawable = adData.getImgIconHd().getDrawable(); //size:300x300
 
       String callToAction = adData.getCallToAction();
 
@@ -292,7 +304,7 @@ public void onAdLoaded(@NotNull AdData adData) {
 
 
       //Registered an ad view
-      trekAd.registerNativeAd(context,nativeAdView,adData);
+      trekAd.registerNativeAd(nativeAdView,adData);
 
 }
 ```
