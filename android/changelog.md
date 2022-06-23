@@ -12,6 +12,7 @@
 * imp tool optimization
 * TrekMediaView optimization
 * Log optimization
+* Support vertical slide
 
 ## 2022/04/15 release - SDK `4.4.5`&#x20;
 
