@@ -12,7 +12,7 @@ Please follow the instructions to install mediation and SDK.
 ```swift
 pod 'AotterTrek-iOS-SDK','3.7.2'
 pod 'Google-Mobile-Ads-SDK','8.8.0'
-pod 'TrekSDKAdMobMediationObjc','1.0.6'
+pod 'TrekSDKAdMobMediationObjc','1.0.7'
 ```
 
 2\. Run `pod install`
