@@ -207,7 +207,8 @@ TrekAdRequest trekAdRequest = new TrekAdRequest
 {% endtab %}
 {% endtabs %}
 
-**Load ad**
+\
+The `loadAd()`This method sends a request for a single ad :
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -219,6 +220,22 @@ trekAdLoader.loadAd(trekAdRequest)
 {% tab title="Java" %}
 ```java
 trekAdLoader.loadAd(trekAdRequest);
+```
+{% endtab %}
+{% endtabs %}
+
+The `loadAds()` method sends a request for multiple ads (up to 5) :
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+trekAdLoader.loadAd(trekAdRequest,3)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+trekAdLoader.loadAd(trekAdRequest,3);
 ```
 {% endtab %}
 {% endtabs %}

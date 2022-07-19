@@ -102,7 +102,6 @@ Note: You can switch **test / production** mode by changing **test client id to 
 
 * Follow our guides for integrating different Ad Formats in your app:
   * [Native Ad](../ad-formats/native-ad.md)
-  * [Supr.Ad](broken-reference)
   * [Banner Ad](../ad-formats/banner-ad.md)
 * Or you would like to check out the demo app:
   * [Demo](trek-example-app-demo.md)
