@@ -4,15 +4,14 @@
 
 The Native Ad API allows you to build a customized experience for the ads you show in your app. When using Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of **ad parameters** such as a title, an image, a call to action, and you are able to use them to construct a custom view where the ad is shown.\
 \
-****Follow these steps to build a native ad layout that fits your application and then requests it.
+****Follow these steps to build a native ad layout that fits your application and then requests it.\
+****
 
-Step 1: [Create Native Ad Layout](native-ad.md#step-1-create-native-ad-layout)\
-Step 2: [Create `trekAd` Object Instance](native-ad.md#step-2-create-trekad-object-instance)\
-Step 3: [Set TrekAdListener](native-ad.md#step-3-set-trekadlistener)\
-Step 4: [Create `TrekAdRequest` and Request an Ad](native-ad.md#step-4-create-trekadrequest-and-request-an-ad)\
-Step 5: [Register Ad View and Set Layout](native-ad.md#step-5-register-ad-view-and-set-layout)
+Step 1: [Create Ad Layout](native-ad.md#step-1-create-treknativeadview)\
+Step 2: [How to build and request ad](native-ad.md#step-2-how-to-build-and-request-ad) \
+Step 3: [Render ad  layout](native-ad.md#step-3-render-treknativeadview-layout)
 
-### AdData Parameters
+### TrekNativeAd Parameters
 
 | Variable         | Type   | Description     |  **Always have value** |  Required to be displayed |
 | ---------------- | ------ | --------------- | ---------------------- | ------------------------- |
@@ -25,7 +24,7 @@ Step 5: [Register Ad View and Set Layout](native-ad.md#step-5-register-ad-view-a
 | `callToAction`   | String | Ex: "瞭解詳情"      | Yes                    | Recommended               |
 | `sponsor`        | String | Sponsored       | Yes                    | Required                  |
 
-![](<../../.gitbook/assets/截圖 2021-09-10 下午5.36.49.png>)
+![](../../.gitbook/assets/%E6%88%AA%E5%9C%96%202021-09-10%20%E4%B8%8B%E5%8D%885.36.49.png)
 
 #### - isExpired
 
@@ -34,243 +33,228 @@ You can use this method to check if the ad is expired or not.
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-adData.isExpired()
+trekNativeAd.isExpired()
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-adData.isExpired();
+trekNativeAd.isExpired();
 ```
 {% endtab %}
 {% endtabs %}
 
-### Step 1: Create Native Ad Layout
+### Step 1: Create Ad Layout
 
-Build your own native ad layout or you can check out the example layout below.
+Create NativeAdView or you can check out the example layout below.
 
-#### **Example Native Ad Layout**
-
-```kotlin
-<androidx.cardview.widget.CardView
-                android:id="@+id/nativeAdView"
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/adContainer"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="match_parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.aotter.net.trek.ads.TrekMediaView
+                    android:id="@+id/trekMediaView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/advertiser"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:text="Sponsored"
-                        android:textColor="@android:color/holo_red_dark"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/adImg"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/advertiser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Sponsored"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trekMediaView" />
 
-                    <TextView
-                        android:id="@+id/adTitle"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="TextView"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/adImg"
-                        app:layout_constraintTop_toBottomOf="@+id/advertiser" />
+                <TextView
+                    android:id="@+id/adTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="TextView"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/advertiser"
+                    app:layout_constraintTop_toBottomOf="@+id/advertiser" />
 
-                    <ImageView
-                        android:id="@+id/adImg"
-                        android:layout_width="100dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-### Step 2: Create `trekAd` Object Instance
+### Step 2: How to build and request ad&#x20;
 
-Notice that you should initialize `AotterTrek.TrekService` before using `trekAd`, otherwise, an exception will be thrown.
+**Create TrekAdListener**
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-var trekAd:TrekAd = AotterTrek.trekService(context)
+private val trekAdListener = object : TrekAdListener {
+        override fun onAdFailedToLoad(message: String) {
+            super.onAdFailedToLoad(message)
+            //ad error
+        }
+
+        override fun onAdLoaded(trekNativeAd: TrekNativeAd) {
+            super.onAdLoaded(trekNativeAd)
+            //sueecss get an ad data
+            //trekNativeAd is an ad data.
+        }
+
+        override fun onAdClicked() {
+            super.onAdClicked()
+
+            //ad was clicked.
+            
+        }
+
+        override fun onAdImpression() {
+            super.onAdImpression()
+            
+            //ad has been displayed.
+
+        }
+    }
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
+private TrekAdListener trekAdListener = new TrekAdListener(){
+
+        @Override
+        public void onAdImpression() {
+                //ad has been displayed.
+        }
+
+        @Override
+        public void onAdClicked() {
+                //ad was clicked.
+        }
+
+        @Override
+        public void onAdLoaded(@NonNull TrekNativeAd trekNativeAd) {
+             //sueecss get an ad data
+            //trekNativeAd is an ad data.
+        }
+
+        @Override
+        public void onAdFailedToLoad(@NonNull String message) {
+              //ad error  
+        }
+    };
 ```
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set TrekAdListener
-
-Please inject **TrekAdListener** interface in **setTrekAdListener** method.
+**Create TrekAdLoader**
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-//you have to set the method that is or not get a AdData.
-trekAd.setTrekAdListener(object : TrekAdListener{
-
-    override fun onAdFailedToLoad(message: String) {
-       //ad error callback
-    }
-
-    override fun onAdLoaded(adData: AdData) {
-       //In this callback, it means that you will receive an advertisement.
-       //adData is an ad data.
-    }
-
-    override fun onAdClicked() {
-       //In this callback, it means that the  ad was clicked.
-    }
-
-    override fun onAdImpression() {
-       //In this callback, this means that the ad has been displayed.
-    }
-
- })
+val trekAdLoader = TrekAdLoader
+            .Builder(context, "YOUR_UUID")//Ex."0000-12345-6789-000"
+            .withAdListener(trekAdListener)
+            .build()
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-//you have to set the method that is or not get a AdData.
-    trekAd.setTrekAdListener(new TrekAdListener() {
-            @Override
-            public void onAdFailedToLoad(@NotNull String message) {
-                //ad error callback
-            }
-
-            @Override
-            public void onAdLoaded(@NotNull AdData adData) {
-                //In this callback, it means that you will receive an advertisement.
-                //adData is an ad data.
-            }
-
-            @Override
-            public void onAdClicked() {
-                //In this callback, it means that the  ad was clicked.
-            }
-
-            @Override
-            public void onAdImpression() {
-                //In this callback, this means that the ad has been displayed.
-            }
-     });
+TrekAdLoader trekAdLoader = new TrekAdLoader
+            .Builder(context, "YOUR_UUID")//Ex."0000-12345-6789-000"
+            .withAdListener(trekAdListener)
+            .build()
 ```
 {% endtab %}
 {% endtabs %}
 
-
-
-### Step 4: Create `TrekAdRequest` and Request an Ad
-
-* **Create `TrekAdRequest`**
-
-The **`setCategory()`, `setContentUrl()`, `setContentTitle()` ** method is optional. You can skip it if you don't want to set it.
+**Create TrekAdRequest**
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-val trekAdRequest = TrekAdRequest.Builder()
-        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
-        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
-        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
-        .build()
+val trekAdRequest = TrekAdRequest
+            .Builder()
+            //The setCategory()、setContentUrl()、setContentTitle() method is optional. You can skip it if you don't want to set it.
+            .setCategory("YOUR_CATEGORY_STRING_WHICH_YOU_WANT")//Ex."news"
+            .setContentUrl("YOUR_CONTENT_URL_STRING_WHICH_YOU_WANT")//Ex."https://agirls.aotter.net/"
+            .setContentTitle("YOUR_CONTENT_TITLE_WHICH_YOU_WANT")//Ex."電獺少女"
+            .build()
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
-        .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
-        .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
-        .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
-        .build();
+TrekAdRequest trekAdRequest = new TrekAdRequest
+            .Builder()
+            //The setCategory()、setContentUrl()、setContentTitle() method is optional. You can skip it if you don't want to set it.
+            .setCategory("YOUR_CATEGORY_STRING_WHICH_YOU_WANT")//Ex."news"
+            .setContentUrl("YOUR_CONTENT_URL_STRING_WHICH_YOU_WANT")//Ex."https://agirls.aotter.net/"
+            .setContentTitle("YOUR_CONTENT_TITLE_WHICH_YOU_WANT")//Ex."電獺少女"
+            .build();
 ```
 {% endtab %}
 {% endtabs %}
 
-* **Request an Ad**
+**Load ad**
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
+trekAdLoader.loadAd(trekAdRequest)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
+trekAdLoader.loadAd(trekAdRequest);
 ```
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Register Ad View and Set Layout
-
-You need to register for in **onAdLoaded** method ads to receive impressions and click events.
-
-In  **onAdLoaded** of **TrekAdListener** method register ad view and set layout.
+### Step 3: Render ad  layout
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-override fun onAdLoaded(adData: AdData) {
-    
-    val advertiserName:String = adata.advertiserName
+override fun onAdLoaded(trekNativeAd: TrekNativeAd) {
+   super.onAdLoaded(trekNativeAd)
+            
+    val advertiserName:String = trekNativeAd.advertiserName
 
-    val title:String = adData.title
+    val title:String = trekNativeAd.title
     
-    val text:String = adData.text
+    val text:String = trekNativeAd.text
+    
+    var imgIconHdUri:Uri = trekNativeAd.imgIconHd.uri //size:300x300
 
-    var imgIconHdUri:Uri = adData.imgIconHd.uri //size:300x300
+    var imgMainUri:Uri = trekNativeAd.imgMain.uri //size:1200x628
+    
+    var imgIconUri:Uri = trekNativeAd.imgIcon.uri //size:82x82
 
-    var imgMainUri:Uri = adData.imgMain.uri //size:1200x628
-    
-    var imgIconUri:Uri = adData.imgIcon.uri //size:82x82
+    var imgIconHdDrawable:Drawable = trekNativeAd.imgIconHd.drawable//size:300x300
 
-    var imgIconHdDrawable:Drawable = adData.imgIconHd.drawable//size:300x300
-
-    var imgMainDrawable:Drawable = adData.imgMain.drawable//size:1200x628
+    var imgMainDrawable:Drawable = trekNativeAd.imgMain.drawable//size:1200x628
     
-    var imgIconDrawable:Drawable = adData.imgIcon.drawable//size:82x82
+    var imgIconDrawable:Drawable = trekNativeAd.imgIcon.drawable//size:82x82
     
-    val callToAction:String = adData.callToAction
+    val callToAction:String = trekNativeAd.callToAction
     
-    val sponsor:String = adData.sponsor
+    val sponsor:String = trekNativeAd.sponsor
     
-    //Registered an ad view
-    trekAd.registerNativeAd(nativeAdView,adData)
-       
+    //Registered ad 
+ TrekAdViewBinder.registerAdView(viewBinding.adContainer,view.trekMediaView,trekNativeAd)
 }
 ```
 {% endtab %}
@@ -278,34 +262,33 @@ override fun onAdLoaded(adData: AdData) {
 {% tab title="Java" %}
 ```java
 @Override
-public void onAdLoaded(@NotNull AdData adData) {
+public void onAdLoaded(@NonNull TrekNativeAd trekNativeAd) {
 
-      String advertiserName = adData.getAdvertiserName();
+    String advertiserName = trekNativeAd.advertiserName;
 
-      String title = adData.getTitle();
+    String title = trekNativeAd.title;
+    
+    String text = trekNativeAd.text;
+    
+    Uri imgMainUri = trekNativeAd.getImgMain().getUri(); //size:1200x628
 
-      String text = adData.getText();
+    Uri imgIconUri = trekNativeAd.getImgIcon().getUri(); //size:82x82
 
-      Uri imgMainUri = adData.getImgMain().getUri(); //size:1200x628
-
-      Uri imgIconUri = adData.getImgIcon().getUri(); //size:82x82
-
-      Uri imgIconHdUri = adData.getImgIconHd().getUri(); //size:300x300
+    Uri imgIconHdUri = trekNativeAd.getImgIconHd().getUri(); //size:300x300
       
-      Drawable imgMainDrawable = adData.getImgMain().getDrawable(); //size:1200x628
+    Drawable imgMainDrawable = trekNativeAd.getImgMain().getDrawable(); //size:1200x628
 
-      Drawable imgIconDrawable = adData.getImgIcon().getDrawable(); //size:82x82
+    Drawable imgIconDrawable = trekNativeAd.getImgIcon().getDrawable(); //size:82x82
 
-      Drawable imgIconHdDrawable = adData.getImgIconHd().getDrawable(); //size:300x300
+    Drawable imgIconHdDrawable = trekNativeAd.getImgIconHd().getDrawable(); //size:300x300
 
-      String callToAction = adData.getCallToAction();
-
-      String sponsor = adData.getSponsor();
-
-
-      //Registered an ad view
-      trekAd.registerNativeAd(nativeAdView,adData);
-
+    String callToAction = trekNativeAd.callToAction;
+    
+    String sponsor = trekNativeAd.sponsor;
+    
+      //Registered ad 
+ TrekAdViewBinder.registerAdView(viewBinding.trekNativeAdView,null,trekNativeAd);
+    
 }
 ```
 {% endtab %}

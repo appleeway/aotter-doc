@@ -19,8 +19,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 ```kotlin
 dependencies {
-    implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.5.0'
+    implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
 }
 ```
 
@@ -58,8 +57,7 @@ class MyApplication:Application {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        //AotterService is a singleton pattren, please just initialize once.
-        AotterTrek.initialize(context,"YOUR_CLIENT_ID"){
+        TrekAds.initialize(context,"YOUR_CLIENT_ID"){
             //aotter service init finshed callback.
         }
                    
@@ -77,7 +75,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
        
-        AotterTrek.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
+        TrekAds.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
 
             // init finished callback.
 
@@ -104,7 +102,7 @@ Note: You can switch **test / production** mode by changing **test client id to 
 
 * Follow our guides for integrating different Ad Formats in your app:
   * [Native Ad](../ad-formats/native-ad.md)
-  * [Supr.Ad](../ad-formats/supr.ad.md)
+  * [Supr.Ad](broken-reference)
   * [Banner Ad](../ad-formats/banner-ad.md)
 * Or you would like to check out the demo app:
   * [Demo](trek-example-app-demo.md)

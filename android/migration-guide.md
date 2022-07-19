@@ -23,9 +23,8 @@ This migration guide help developer who like to update AotterTrek Android SDK to
 Dependencies library is upgraded to version 4.x. Version 3.x is no longer be updated.
 
 ```kotlin
-// Version 4.x: Please use the dependency library as follow
-implementation 'com.google.code.gson:gson:2.9.0'
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
+// Version 4.x: Please use the dependency library as following
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
 
 // Version 3.x: It's about to deprecate the following dependency library
 implementation 'com.google.android.gms:play-services-ads:18.1.1'
@@ -42,7 +41,7 @@ We add a completion callback in version 4 which is useful for publishers who wan
 {% tab title="Kotlin" %}
 ```kotlin
 // Version 4.x
-AotterTrek.initialize(context,"YOUR_CLIENT_ID"){
+TrekAds.initialize(context,"YOUR_CLIENT_ID"){
    //aotter service init finished callback.
 }
 ```
@@ -51,7 +50,7 @@ AotterTrek.initialize(context,"YOUR_CLIENT_ID"){
 {% tab title="Java" %}
 ```java
 // Version 4.x
-AotterTrek.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
+TrekAds.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
                         
        public Object invoke(Object var1) {
             this.invoke((Unit)var1);
@@ -79,23 +78,7 @@ In version 4, the following callbacks are still available but please notice that
 
 #### - Ad Object
 
-In version 4, the _TKAdN_ object is deprecated and uses the **TrekAd** object instead.
-
-{% tabs %}
-{% tab title="Kotlin" %}
-```kotlin
-// Version 4.x
-var trekAd:TrekAd = AotterTrek.trekService(context)
-```
-{% endtab %}
-
-{% tab title="Java" %}
-```java
-// Version 4.x
-TrekAd trekAd = AotterTrek.INSTANCE.trekService(context);
-```
-{% endtab %}
-{% endtabs %}
+In version 4, _TKAdN_ object is deprecated, and uses **TrekAdLoader** object instead.
 
 #### - Media View
 
@@ -106,20 +89,21 @@ In version 4, we use **TrekMediaView** instead of TKMediaView.
 
 When setting ad listener, version 4 uses **setTrekAdListener** method instead of _setAdListener_. **** Furthermore, **** inject interface to listener use **TrekAdListener** interface instead of _TKAdListener._
 
-When register ads, __ **`registerAdView()`** method is deprecated. In version 4, different ad types use their own register method as below.
+When registering ad, _registerAdView_ method is deprecated. In version 4, the register method is as below.
 
-* Native Ad: Use **`registerNativeAd()`** method
-* Supr.Ad: Use **`registerSuprAd()`** method
-* Banner Ad: Use **`registerBannerAd()`** method
+```
+ TrekAdViewBinder.registerAdView(adContainer,trekMediaView,trekNativeAd)
+```
 
-### Request Ads <a href="#ad-object-listener" id="ad-object-listener"></a>
+### Create `TrekAdRequest`&#x20;
 
-In version 4, requesting ads use **builder style** as the following code snippet.
+* **Create `TrekAdRequest`**
+
+The **`setCategory()`, `setContentUrl()`, `setContentTitle()` ** method is optional. You can skip it if you don't want to set it.
 
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-// Version 4.x
 val trekAdRequest = TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
@@ -130,26 +114,11 @@ val trekAdRequest = TrekAdRequest.Builder()
 
 {% tab title="Java" %}
 ```java
-// Version 4.x
 TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
         .setCategory("YOUR_CATEGORY_STRING_OF_THE_DISPLAY_PAGE")//Ex."3C"
         .setContentUrl("YOUR_URL_STRING_OF_THE_DISPLAY_PAGE")//Ex."https://agirls.aotter.net/"
         .setContentTitle("YOUR_TITLE_STRING_OF_THE_DISPLAY_PAGE")//Ex."電獺少女"
-        .build();
-```
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab title="Kotlin" %}
-```kotlin
-trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest)
-```
-{% endtab %}
-
-{% tab title="Java" %}
-```java
-trekAd.setPlaceUid("YOUR_UUID").loadAd(trekAdRequest);
+        .build();j
 ```
 {% endtab %}
 {% endtabs %}

@@ -30,7 +30,7 @@ Please check out the page links below for ad layout examples.
 [banner-ad-layout.md](basic-usage/banner-ad-layout.md)
 {% endcontent-ref %}
 
-{% content-ref url="basic-usage/supr.ad-layout.md" %}
-[supr.ad-layout.md](basic-usage/supr.ad-layout.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 

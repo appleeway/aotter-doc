@@ -6,8 +6,8 @@
 [native-ad.md](native-ad.md)
 {% endcontent-ref %}
 
-{% content-ref url="supr.ad.md" %}
-[supr.ad.md](supr.ad.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="banner-ad.md" %}
