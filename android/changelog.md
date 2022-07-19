@@ -8,7 +8,8 @@
 {% endhint %}
 
 * New Sensor
-* `AdLoader` instead of `TrekAd`
+* `TrekAdLoader` instead of `TrekAd`
+* The `TrekAdLoader.loadAds()` method sends a request for multiple ads (up to 5)
 * `TrekNativeAd` instead of `AdData`
 * `TrekAds.initialize() method` instead of `AotterService.initialize() method`
 * `TrekBannerAdView` instead of `TrekBannerView`
