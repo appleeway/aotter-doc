@@ -2,6 +2,11 @@
 
 ## 2022/07/19 release - SDK `4.6.1` (Recommend)
 
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 31**
+{% endhint %}
+
 * New Sensor
 * `AdLoader` instead of `TrekAd`
 * `TrekNativeAd` instead of `AdData`
