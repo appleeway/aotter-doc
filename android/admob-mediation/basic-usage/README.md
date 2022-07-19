@@ -6,10 +6,6 @@
 [native-ad-layout.md](native-ad-layout.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="banner-ad-layout.md" %}
 [banner-ad-layout.md](banner-ad-layout.md)
 {% endcontent-ref %}

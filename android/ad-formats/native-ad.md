@@ -254,7 +254,7 @@ override fun onAdLoaded(trekNativeAd: TrekNativeAd) {
     val sponsor:String = trekNativeAd.sponsor
     
     //Registered ad 
- TrekAdViewBinder.registerAdView(viewBinding.adContainer,view.trekMediaView,trekNativeAd)
+ TrekAdViewBinder.registerAdView(viewBinding.adContainer,viewBinding.trekMediaView,trekNativeAd)
 }
 ```
 {% endtab %}
@@ -287,7 +287,7 @@ public void onAdLoaded(@NonNull TrekNativeAd trekNativeAd) {
     String sponsor = trekNativeAd.sponsor;
     
       //Registered ad 
- TrekAdViewBinder.registerAdView(viewBinding.trekNativeAdView,null,trekNativeAd);
+ TrekAdViewBinder.registerAdView(viewBinding.adContainer,viewBinding.trekMediaView,trekNativeAd)
     
 }
 ```

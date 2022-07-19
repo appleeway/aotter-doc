@@ -1,6 +1,19 @@
 # Changelog
 
-## 2022/06/22 release - SDK `4.5.0` (Recommend)
+## 2022/07/19 release - SDK `4.6.1` (Recommend)
+
+* New Sensor
+* `AdLoader` instead of `TrekAd`
+* `TrekNativeAd` instead of `AdData`
+* `TrekAds.initialize() method` instead of `AotterService.initialize() method`
+* `TrekBannerAdView` instead of `TrekBannerView`
+* New `TrekAdViewBinder` object (Using the object register ad layout)
+* `TrekJsonObject` instead of `JsonObject`
+* Kotlinx-serialization instead of Gson
+* Updating ExoPlayer version to `2.17.1`
+* Updating Kotlin version to `1.6.21`
+
+## 2022/06/22 release - SDK `4.5.0`&#x20;
 
 {% hint style="info" %}
 **minSdkVersion 21** \

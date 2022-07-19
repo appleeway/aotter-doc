@@ -50,21 +50,13 @@ TrekAds.initialize(context,"YOUR_CLIENT_ID"){
 {% tab title="Java" %}
 ```java
 // Version 4.x
-TrekAds.INSTANCE.initialize(context,"YOUR_CLIENT_ID", (Function1)(new Function1() {
-                        
-       public Object invoke(Object var1) {
-            this.invoke((Unit)var1);
-            return Unit.INSTANCE;
-       }
+TrekAds.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
 
-       public final void invoke(@NotNull Unit it) {
-            Intrinsics.checkNotNullParameter(it, "it");
-                           
-             //aotter service init finished callback.
-                          
-       }
-       
-}));
+            // init finished callback.
+
+            return Unit.INSTANCE;
+
+        });
 ```
 {% endtab %}
 {% endtabs %}
