@@ -242,6 +242,11 @@ trekAdLoader.loadAd(trekAdRequest,3);
 
 ### Step 3: Render ad  layout
 
+{% hint style="info" %}
+If you sends a request for a single ad , please use **`onAdLoaded`**` ``callback.`\
+``If you sends a request for multiple ads , please use **`onAdsLoaded`**` ``callback.`
+{% endhint %}
+
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
