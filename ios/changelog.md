@@ -1,5 +1,10 @@
 # Changelog
 
+## 2022/07/25 release - SDK `3.7.3`
+
+* support Gyrometer & Accelerometer detect.
+* CoreMotion framework is added.
+
 ## 2022/05/18 release - SDK `3.7.2`
 
 * OM SDK: support dynamic omTags(javascriptResourceUrl)
