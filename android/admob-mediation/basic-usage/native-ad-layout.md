@@ -174,25 +174,25 @@ Render **NativeAdView** in the callback function of `forNativeAd`.
 
 forNativeAd { nativeAd ->
 
-val sponsor:String = nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR)?:"" 
+   val sponsor:String = nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR)?:"" 
 
-val mainImage:String = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE)?:"" //1200x628
+   val mainImage:String = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE)?:"" //1200x628
 
-val icon:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE)?:""//82x82
+   val icon:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE)?:""//82x82
 
-val iconHd:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD)?:""//300x300
+   val iconHd:String = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD)?:""//300x300
 
-viewBinding.advertiser.text = nativeAd.advertiser
+   viewBinding.advertiser.text = nativeAd.advertiser
 
-viewBinding.adTitle.text = nativeAd.body
+   viewBinding.adTitle.text = nativeAd.body
 
-viewBinding.nativeAdView.headlineView = viewBinding.adTitle
+   viewBinding.nativeAdView.headlineView = viewBinding.adTitle
 
-viewBinding.nativeAdView.advertiserView = viewBinding.advertiser
+   viewBinding.nativeAdView.advertiserView = viewBinding.advertiser
 
-viewBinding.nativeAdView.mediaView =  viewBinding.mediaView
+   viewBinding.nativeAdView.mediaView =  viewBinding.mediaView
 
-viewBinding.nativeAdView.setNativeAd(nativeAd)
+   viewBinding.nativeAdView.setNativeAd(nativeAd)
    
 }
 
@@ -202,33 +202,28 @@ viewBinding.nativeAdView.setNativeAd(nativeAd)
 
 {% tab title="Java" %}
 ```java
-@Override
-public void onAdLoaded(@NonNull TrekNativeAd trekNativeAd) {
 
-    String advertiserName = trekNativeAd.advertiserName;
+forNativeAd { nativeAd ->
 
-    String title = trekNativeAd.title;
-    
-    String text = trekNativeAd.text;
-    
-    Uri imgMainUri = trekNativeAd.getImgMain().getUri(); //size:1200x628
+   String sponsor= nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR)?:"" ;
 
-    Uri imgIconUri = trekNativeAd.getImgIcon().getUri(); //size:82x82
+   String mainImage = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE)?:"" ;//1200x628
 
-    Uri imgIconHdUri = trekNativeAd.getImgIconHd().getUri(); //size:300x300
-      
-    Drawable imgMainDrawable = trekNativeAd.getImgMain().getDrawable(); //size:1200x628
+   String icon = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE)?:"";//82x82
 
-    Drawable imgIconDrawable = trekNativeAd.getImgIcon().getDrawable(); //size:82x82
+   String iconHd = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD)?:"";//300x300
 
-    Drawable imgIconHdDrawable = trekNativeAd.getImgIconHd().getDrawable(); //size:300x300
+   viewBinding.advertiser.text = nativeAd.advertiser;
 
-    String callToAction = trekNativeAd.callToAction;
-    
-    String sponsor = trekNativeAd.sponsor;
-    
-    //Registered ad 
-    viewBinding.trekNativeAdView.setNativeAd(trekNativeAd);
+   viewBinding.adTitle.text = nativeAd.body;
+
+   viewBinding.nativeAdView.headlineView = viewBinding.adTitle;
+
+   viewBinding.nativeAdView.advertiserView = viewBinding.advertiser;
+
+   viewBinding.nativeAdView.mediaView =  viewBinding.mediaView;
+
+   viewBinding.nativeAdView.setNativeAd(nativeAd);
     
 }
 ```
