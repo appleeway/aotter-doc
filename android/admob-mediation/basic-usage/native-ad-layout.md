@@ -205,13 +205,13 @@ forNativeAd { nativeAd ->
 
 forNativeAd { nativeAd ->
 
-   String sponsor= nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR)?:"" ;
+   String sponsor= nativeAd.extras.getString(TrekAdmobDataKey.SPONSOR) ;
 
-   String mainImage = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE)?:"" ;//1200x628
+   String mainImage = nativeAd.extras.getString(TrekAdmobDataKey.MAIN_IMAGE) ;//1200x628
 
-   String icon = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE)?:"";//82x82
+   String icon = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE);//82x82
 
-   String iconHd = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD)?:"";//300x300
+   String iconHd = nativeAd.extras.getString(TrekAdmobDataKey.ICON_IMAGE_HD);//300x300
 
    viewBinding.advertiser.text = nativeAd.advertiser;
 
