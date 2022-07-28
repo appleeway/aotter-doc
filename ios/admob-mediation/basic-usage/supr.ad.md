@@ -258,7 +258,7 @@ static NSInteger googleMediationSuprAdPosition = 8;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (_gADUnifiedSuprAd != nil) {
         [[NSNotificationCenter defaultCenter]postNotificationName:@"SuprAdScrolled"
-                                                           object:self
+                                                           object:nil
                                                          userInfo:nil];
     }
 }
