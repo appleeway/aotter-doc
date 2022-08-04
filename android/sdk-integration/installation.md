@@ -19,7 +19,13 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 ```kotlin
 dependencies {
+
+    //before version 4.6.1
     implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
+
+    //above version 4.7.2
+    implementation 'com.aotter.android:trek-ads:4.7.2'
+    
 }
 ```
 
