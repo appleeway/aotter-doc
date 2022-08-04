@@ -24,10 +24,7 @@ Dependencies library is upgraded to version 4.x. Version 3.x is no longer be upd
 
 ```kotlin
 // Version 4.x: Please use the dependency library as following
- //before version 4.6.1
- implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
- //above version 4.7.2
- implementation 'com.aotter.android:trek-ads:4.7.2'
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
 
 // Version 3.x: It's about to deprecate the following dependency library
 implementation 'com.google.android.gms:play-services-ads:18.1.1'
