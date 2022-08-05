@@ -24,7 +24,7 @@
 * Support Gam mediation
 * Support Max mediation
 
-## 2022/07/19 release - SDK `4.6.1` (Recommend)
+## 2022/07/19 release - SDK `4.6.1`&#x20;
 
 {% hint style="info" %}
 **minSdkVersion 21** \
