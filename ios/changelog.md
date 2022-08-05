@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022/08/05 release - SDK `3.7.4`
+
+* adjust impression check method when scrolling.
+
 ## 2022/07/25 release - SDK `3.7.3`
 
 * support Gyrometer & Accelerometer detect.
