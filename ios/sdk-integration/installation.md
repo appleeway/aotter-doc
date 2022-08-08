@@ -12,7 +12,7 @@ Step 2: [Initiation & Settings](installation.md#step-2-initialzation-and-setting
 1\.  Add the following line to your project's Podfile:
 
 ```objectivec
-pod 'AotterTrek-iOS-SDK', '3.7.5'
+pod 'AotterTrek-iOS-SDK', '3.7.4'
 ```
 
 2\.  Run `pod install`&#x20;
