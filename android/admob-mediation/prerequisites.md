@@ -15,19 +15,22 @@ If you don't familiar with AdMob, please refer to the links below:
 Add `adUnit` in your mediation group and fill in `Class Name`, `Parameter`.
 
 *   Class Name \
+    \
     &#x20;  **before version 4.6.1**
 
     * Native Ads:&#x20;
       * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventNative**
     * Banner Ads:&#x20;
-      * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventBanner**
+      * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventBanner**\
+        ****
 
     &#x20;  **above version 4.7.2**
 
     * Native Ads:&#x20;
       * **com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative**
     * Banner Ads:&#x20;
-      * **com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner**
+      * **com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner**\
+        ****
 * Parameter
   * {"clientId":"**YOUR\_TREK\_CLIENT\_ID**","placeUid":"**YOUR\_TREK\_PLACE\_UUID**"}
 
