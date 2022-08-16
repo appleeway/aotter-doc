@@ -15,8 +15,7 @@ Step 2: [How to build and request ad](banner-ad.md#step-2-how-to-build-and-reque
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-    </com.aotter.net.trek.ads.TrekBannerAdView>
+</com.aotter.net.trek.ads.TrekBannerAdView>
 ```
 
 ### Step 2: How to build and request ad&#x20;
@@ -137,6 +136,16 @@ If request ad is  success , TrekBannerAdView is going to render view automatical
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
+
+//autoRefresh's default value is false
+viewBinding.trekBannerAdView.autoRefresh = true
+
+//refresh each every time 
+//RefreshTime.REFRESH_TIME_15000_MS , 15 sec
+//RefreshTime.REFRESH_TIME_30000_MS , 30 sec
+//RefreshTime.REFRESH_TIME_60000_MS , 60 sec
+viewBinding.trekBannerAdView.refreshTime = RefreshTime.REFRESH_TIME_15000_MS
+
 viewBinding.trekBannerAdView.loadAd(trekAdRequest)
 ```
 {% endtab %}

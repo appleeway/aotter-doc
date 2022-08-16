@@ -16,11 +16,15 @@
   * `images` object provider `drawable` 、`uri`
   * remove unnecessary parameter
 * **After version 4.7.2 , we had been changed trek and mediation dependencies path**
-  * trek : `implementation 'com.aotter.android:trek-ads:4.7.2'`
-  * trek admob mediation : `implementation 'com.aotter.android:trek-admob-mediation:4.7.2'`
+  * trek :&#x20;
+    * **`implementation 'com.aotter.android:trek-ads:4.7.2'`**
+  * trek admob mediation :&#x20;
+    * **`implementation 'com.aotter.android:trek-admob-mediation:4.7.2'`**
 * **After version 4.7.2 , we had been changed mediation custom class path**
-  * Native Ad : `com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`
-  * Banner Ad : `com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`
+  * Native Ad :&#x20;
+    * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
+  * Banner Ad :&#x20;
+    * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 * Support Gam mediation
 * Support Max mediation
 
