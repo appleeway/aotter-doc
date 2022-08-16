@@ -22,9 +22,12 @@ This migration guide help developer who like to update AotterTrek Android SDK to
 
 Dependencies library is upgraded to version 4.x. Version 3.x is no longer be updated.
 
-```kotlin
+```groovy
 // Version 4.x: Please use the dependency library as following
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
+ //before version 4.6.1
+ implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
+ //above version 4.7.2
+ implementation 'com.aotter.android:trek-ads:4.7.2'
 
 // Version 3.x: It's about to deprecate the following dependency library
 implementation 'com.google.android.gms:play-services-ads:18.1.1'
@@ -63,8 +66,8 @@ TrekAds.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
 
 In version 4, the following callbacks are still available but please notice that `onAdLoaded` callback use **AdData** model instead of the TKAdNative model.
 
-\- **** onAdFailedToLoad                        ****                        - **onAdLoaded**\
-****- **** onAdClicked                                    ****                                    - **** onAdImpression
+**- onAdFailedToLoad                        - onAdLoaded**\
+**- onAdClicked                                    - onAdImpression**
 
 ### Objects / Media View / Methods
 
@@ -83,7 +86,7 @@ When setting ad listener, version 4 uses **setTrekAdListener** method instead of
 
 When registering ad, _registerAdView_ method is deprecated. In version 4, the register method is as below.
 
-```
+```kotlin
  TrekAdViewBinder.registerAdView(adContainer,trekMediaView,trekNativeAd)
 ```
 

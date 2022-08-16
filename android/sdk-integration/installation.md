@@ -17,21 +17,15 @@ Please noticed that AotterTrek Android SDK Development Environment: `Kotlin vers
 
 Add the following dependencies to your **app-level** build.gradle (not project!), to use the latest AotterTrek SDK:
 
-```groovy
+```kotlin
 dependencies {
-
-    //before version 4.6.1
     implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
-
-    //above version 4.7.2
-    implementation 'com.aotter.android:trek-ads:4.7.2'
-    
 }
 ```
 
 Please add the following code snippet in your **project-level** build.gradle.
 
-```groovy
+```kotlin
 allprojects {
     repositories {
         google()
@@ -48,7 +42,7 @@ allprojects {
 
 Please add the following code snippet in your AndroidManifest.XML
 
-```xml
+```
 <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 ```
 
