@@ -25,8 +25,6 @@
     * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
   * Banner Ad :&#x20;
     * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
-* Support Gam mediation
-* Support Max mediation
 
 ## 2022/07/19 release - SDK `4.6.1`&#x20;
 
