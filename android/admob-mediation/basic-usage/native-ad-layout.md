@@ -55,7 +55,6 @@ Create NativeAdView or you can check out the example layout below.
                 android:id="@+id/mediaView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintDimensionRatio="16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
