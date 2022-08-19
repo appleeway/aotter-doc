@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022/08/06 release - SDK `3.7.6`
+
+* fix video inline play in suprAd
+
+## 2022/08/06 release - SDK `3.7.5`
+
+* reduce logs at Normal logger level
+
 ## 2022/08/05 release - SDK `3.7.4`
 
 * adjust impression check method when scrolling.
