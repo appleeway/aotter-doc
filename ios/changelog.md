@@ -1,6 +1,6 @@
 # Changelog
 
-## 2022/08/06 release - SDK `3.7.6`
+## 2022/08/19 release - SDK `3.7.6`
 
 * fix video inline play in suprAd
 
