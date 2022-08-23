@@ -13,8 +13,7 @@ To receive release updates, subscribe to our [GitHub repository.](https://github
 Add the following dependencies to your **app-level** build.gradle (not project!), to use the latest AotterTrek adapter:
 
 {% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
-****
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
 {% endhint %}
 
 **Before version 4.6.1 ,please refer to the following.**
