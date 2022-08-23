@@ -19,7 +19,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 **Before version 4.6.1 ,please refer to the following.**
 
-```
+```groovy
 dependencies {
 
 implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.6.1'
