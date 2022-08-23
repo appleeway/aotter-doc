@@ -1,6 +1,12 @@
 # Installation
 
-### Including the SDK
+### Getting Started
+
+We have provider demo and mediation adapter source.
+
+To receive release updates, subscribe to our [GitHub repository.](https://github.com/aotter/aotter-trek-mediation-android)
+
+### Add the SDK to the Project
 
 **Using Gradle**
 
