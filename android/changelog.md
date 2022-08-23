@@ -19,8 +19,29 @@
 {% hint style="warning" %}
 **Breaking change:**
 
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
 
+
+*   **After version 4.7.2 , we had been changed trek and mediation dependencies path**
+
+    trek :&#x20;
+
+    * **`implementation 'com.aotter.android:trek-ads:4.7.2'`**
+
+    trek admob mediation :
+
+    * **`implementation 'com.aotter.android:trek-admob-mediation:4.7.2'`**
+
+
+
+* **After version 4.7.2 , we had been changed mediation custom class path**
+
+&#x20;      Native Ad :&#x20;
+
+* **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
+
+&#x20;      Banner Ad :&#x20;
+
+* **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 * **Detail refer** [**Migration Guide**](migration-guide.md)****
 * **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
 * **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
