@@ -2,14 +2,9 @@
 
 ## Add Native Ads to an Android APP
 
-The Native Ad API allows you to build a customized experience for the ads you show in your app. When using Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of **ad parameters** such as a title, an image, a call to action, and you are able to use them to construct a custom view where the ad is shown.
-
-{% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
-**Detail refer to** [Installation .](../sdk-integration/installation.md)
-{% endhint %}
-
-Follow these steps to build a native ad layout that fits your application and then requests it.\
+The Native Ad API allows you to build a customized experience for the ads you show in your app. When using Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of **ad parameters** such as a title, an image, a call to action, and you are able to use them to construct a custom view where the ad is shown.\
+\
+****Follow these steps to build a native ad layout that fits your application and then requests it.\
 ****
 
 Step 1: [Create Ad Layout](native-ad.md#step-1-create-treknativeadview)\

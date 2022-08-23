@@ -46,7 +46,7 @@ implementation 'com.aotter.android:trek-ads:4.7.2'
 }
 ```
 
-**Legacy SDK,it was  deprecated and stop update.**
+**Legacy Trek SDK,it was  deprecated and stop update.**
 
 ```groovy
 // Version 3.x: It's about to deprecate the following dependency library
