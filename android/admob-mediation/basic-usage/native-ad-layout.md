@@ -4,7 +4,13 @@ Follow these steps to build a native ad layout that fits your application and th
 
 Step 1: [Create NativeAdView](native-ad-layout.md#step-1-create-treknativeadview)\
 Step 2: [How to build and request ad](native-ad-layout.md#step-2-how-to-build-and-request-ad) \
-Step 3: [Render NativeAdView layout](native-ad-layout.md#step-3-render-treknativeadview-layout)
+Step 3: [Render NativeAdView layout](native-ad-layout.md#step-3-render-treknativeadview-layout)\
+
+
+{% hint style="info" %}
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
+**Detail refer to**[ **** Installation](../../../ios/admob-mediation/installation.md) .
+{% endhint %}
 
 ### Step 1: Create NativeAdView
 
@@ -79,9 +85,10 @@ Create NativeAdView or you can check out the example layout below.
 
 ### Step 2: How to build and request ad&#x20;
 
-#### Initialize your ad object with an **context of** Activity or Fragment instance <a href="#initialize_your_ad_object_with_an_activity_instance" id="initialize_your_ad_object_with_an_activity_instance"></a>
-
-In the constructor for a new ad object , you must pass in an object of type **`Context`**. This **`Context`**` ``` is passed on to other ad networks when using mediation. Some ad networks require a more restrictive **`Context`** that is of type **`Activity`** or **`Fragment`** and may not be able to serve ads without an **`Activity`** or **`Fragment`** instance. Therefore, we recommend passing in an context of **`Activity`** or **`Fragment`** instance when initializing ad objects to ensure a consistent experience with your mediated ad networks.
+{% hint style="info" %}
+**Initialize your ad object with a context of Activity or Fragment instance:**\
+****In the constructor for a new ad object, you must pass in an object of type **Context**. This **Context** is passed on to other ad networks when using mediation. Some ad networks require a more restrictive **Context** that is of type **Activity** or **Fragment** and may not be able to serve ads without an **Activity** or **Fragment** instance. Therefore, we recommend passing in the context of **Activity** or **Fragment** instance when initializing ad objects to ensure a consistent experience with your mediated ad networks.
+{% endhint %}
 
 **Create AdLoader**
 

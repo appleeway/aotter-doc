@@ -10,9 +10,8 @@ Step 5: [Create `AdRequest`](banner-ad-layout.md#step-5-create-adrequest)\
 Step 6: [Request an Ad](banner-ad-layout.md#step-6-request-an-ad)
 
 {% hint style="info" %}
-**Initialize your ad object with a context of Activity or Fragment instance:**\
-****\
-****In the constructor for a new ad object, you must pass in an object of type **Context**. This **Context** is passed on to other ad networks when using mediation. Some ad networks require a more restrictive **Context** that is of type **Activity** or **Fragment** and may not be able to serve ads without an **Activity** or **Fragment** instance. Therefore, we recommend passing in the context of **Activity** or **Fragment** instance when initializing ad objects to ensure a consistent experience with your mediated ad networks.
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
+**Detail refer to**[ **** Installation](../../../ios/admob-mediation/installation.md) .
 {% endhint %}
 
 ### Step 1: Create Banner Ad Layout
@@ -29,6 +28,11 @@ Step 6: [Request an Ad](banner-ad-layout.md#step-6-request-an-ad)
 ```
 
 ### **Step 2: Create `AdView`**
+
+{% hint style="info" %}
+**Initialize your ad object with a context of Activity or Fragment instance:**\
+****In the constructor for a new ad object, you must pass in an object of type **Context**. This **Context** is passed on to other ad networks when using mediation. Some ad networks require a more restrictive **Context** that is of type **Activity** or **Fragment** and may not be able to serve ads without an **Activity** or **Fragment** instance. Therefore, we recommend passing in the context of **Activity** or **Fragment** instance when initializing ad objects to ensure a consistent experience with your mediated ad networks.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Kotlin" %}
