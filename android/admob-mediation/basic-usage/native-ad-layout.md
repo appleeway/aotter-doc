@@ -9,7 +9,7 @@ Step 3: [Render NativeAdView layout](native-ad-layout.md#step-3-render-treknativ
 
 {% hint style="info" %}
 **In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
-**Detail refer to**[ **** Installation](../../../ios/admob-mediation/installation.md) .
+**Detail refer to** [Installation .](../installation.md)
 {% endhint %}
 
 ### Step 1: Create NativeAdView
