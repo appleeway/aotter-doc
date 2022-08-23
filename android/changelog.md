@@ -23,7 +23,7 @@
 
 * **Detail refer** [**Migration Guide**](migration-guide.md)****
 * **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
-* **Detail refer** [**admob mediation installation**](admob-mediation/installation.md)****
+* **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
 {% endhint %}
 
 ## 2022/07/19 release - SDK `4.6.1`&#x20;
