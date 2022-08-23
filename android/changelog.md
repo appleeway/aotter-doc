@@ -15,16 +15,16 @@
 * TrekNativeAd object new feature
   * `images` object provider `drawable` 、`uri`
   * remove unnecessary parameter
-* **After version 4.7.2 , we had been changed trek and mediation dependencies path**
-  * trek :&#x20;
-    * **`implementation 'com.aotter.android:trek-ads:4.7.2'`**
-  * trek admob mediation :&#x20;
-    * **`implementation 'com.aotter.android:trek-admob-mediation:4.7.2'`**
-* **After version 4.7.2 , we had been changed mediation custom class path**
-  * Native Ad :&#x20;
-    * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
-  * Banner Ad :&#x20;
-    * **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
+
+{% hint style="warning" %}
+**Breaking change:**
+
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
+
+* **Detail refer** [**Migration Guide**](migration-guide.md)****
+* **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
+* **Detail refer** [**admob mediation installation**](admob-mediation/installation.md)****
+{% endhint %}
 
 ## 2022/07/19 release - SDK `4.6.1`&#x20;
 
