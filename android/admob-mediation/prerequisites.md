@@ -12,7 +12,7 @@ If you don't familiar with AdMob, please refer to the links below:
 
 ### Configure AdMob Ad Units
 
-Add `adUnit` in your mediation group and fill in `Class Name`, `Parameter`.
+Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parameter`**.
 
 {% hint style="info" %}
 **In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**

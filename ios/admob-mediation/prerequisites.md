@@ -26,7 +26,11 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
 You can refer following the format:&#x20;
 
-<table><thead><tr><th>adType</th><th>adPlace</th><th data-type="select"></th></tr></thead><tbody><tr><td><strong><code>nativeAd</code></strong></td><td><strong>AotterTrek Ad Place UUID</strong></td><td></td></tr><tr><td><strong><code>suprAd</code></strong></td><td><strong>AotterTrek Ad Place UUID</strong></td><td></td></tr><tr><td><strong><code>suprAd</code></strong></td><td><strong>AotterTrek Ad Place UUID</strong></td><td></td></tr></tbody></table>
+|           | adType         | adPlace                      |
+| --------- | -------------- | ---------------------------- |
+| Native Ad | **`nativeAd`** | **AotterTrek Ad Place UUID** |
+| Supr.Ad   | **`suprAd`**   | **AotterTrek Ad Place UUID** |
+| Banner Ad | **`suprAd`**   | **AotterTrek Ad Place UUID** |
 
 Take native ad as an example, its configuring will be set like below:
 
