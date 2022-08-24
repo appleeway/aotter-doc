@@ -16,12 +16,15 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
 #### **Class Name**&#x20;
 
-* Native Ad
-  * **`AotterTrekGADCustomEventNativeAd` **&#x20;
-* Supr.Ad
-  * **`AotterTrekGADCustomEventNativeAd`**
-* Banner Ad&#x20;
-  * **`AotterTrekGADCustomEventBannerAd`**
+*   Native Ad:
+
+    **`AotterTrekGADCustomEventNativeAd` **&#x20;
+*   Supr.Ad:
+
+    **`AotterTrekGADCustomEventNativeAd`**
+*   Banner Ad:
+
+    **`AotterTrekGADCustomEventBannerAd`**
 
 #### Parameter
 
