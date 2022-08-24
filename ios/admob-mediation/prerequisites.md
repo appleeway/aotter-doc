@@ -22,12 +22,13 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
 #### Parameter
 
-* `{:"adType":"`**YOUR\_AD\_TYPE**`", "adPlace":"`**YOUR\_PLACE\_UUID**`"}`
+* `{"adType":"`**YOUR\_AD\_TYPE**`", "adPlace":"`**YOUR\_PLACE\_UUID**`"}`
 
-Please following the format:&#x20;
+You can refer following the format:&#x20;
 
-| **`nativeAd`** | **AotterTrek Ad Place UUID** |
+| adType         | adPlace                      |
 | -------------- | ---------------------------- |
+| **`nativeAd`** | **AotterTrek Ad Place UUID** |
 | **`suprAd`**   | **AotterTrek Ad Place UUID** |
 | **`suprAd`**   | **AotterTrek Ad Place UUID** |
 
