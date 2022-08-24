@@ -1,26 +1,35 @@
 # Prerequisites
 
+Before you can integrate mediation that **AotterTrek Network as a third-party ad network** for an ad format, you need to integrate that ad format into your AdMob app:
+
+* ****[**AdMob Native Ads**](https://developers.google.com/admob/ios/native/start)****
+* ****[**AdMob Banner Ads**](https://developers.google.com/admob/ios/banner)****
+
+If you don't familiar with AdMob, please refer to the links below:
+
+* **New to Google AdMob? Read** [**Admob - Get Started**](https://developers.google.com/admob/ios/quick-start)****
+* **New to mediation? Read** [**AdMob mediation - Overview**](https://developers.google.com/admob/ios/mediate)****
+
 ### Configure AdMob Ad Units
 
-Add `adUnit` in your mediation group and fill in `Class Name`, `Parameter`.
+Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parameter`**.
 
-* Class Name
+#### **Class Name**&#x20;
 
-It must be the same name as your "**Custom Event**" class file name, for example:
+* Native Ad :**`AotterTrekGADCustomEventNativeAd` **&#x20;
+* Supr.Ad: **`AotterTrekGADCustomEventNativeAd`**
+* Banner Ad :**`AotterTrekGADCustomEventBannerAd`**
 
-\- Native Ad:  `AotterTrekGADCustomEventNativeAd` \
-\- Supr.Ad: `AotterTrekGADCustomEventNativeAd`\
-\- Banner Ad: `AotterTrekGADCustomEventBannerAd`
+#### Parameter
 
-* Parameter
+* `{:"adType":"`**YOUR\_AD\_TYPE**`", "adPlace":"`**YOUR\_PLACE\_UUID**`"}`
 
-Please follow the format: `{"adType":"xxx", "adPlace":"xxx"}`&#x20;
+Please following the format:&#x20;
 
-|           | adType     | adPlace                      |
-| --------- | ---------- | ---------------------------- |
-| Native Ad | `nativeAd` | **AotterTrek Ad Place UUID** |
-| Supr.Ad   | `suprAd`   | **AotterTrek Ad Place UUID** |
-| Banner Ad | `suprAd`   | **AotterTrek Ad Place UUID** |
+| **`nativeAd`** | **AotterTrek Ad Place UUID** |
+| -------------- | ---------------------------- |
+| **`suprAd`**   | **AotterTrek Ad Place UUID** |
+| **`suprAd`**   | **AotterTrek Ad Place UUID** |
 
 Take native ad as an example, its configuring will be set like below:
 
