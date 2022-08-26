@@ -27,9 +27,8 @@ Dependencies library is upgraded to version 4.x. Version 3.x is no longer be upd
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.6.1.**
-
-**Recommend publisher install above version 4.7.2.**
+We are recommend publisher install above version 4.7.2.\
+We are about to deprecated versions prior to 4.6.1
 {% endhint %}
 
 **Before version 4.6.1 ,please refer to the following.**
