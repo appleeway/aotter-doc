@@ -16,6 +16,13 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 **In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
 {% endhint %}
 
+{% hint style="warning" %}
+**We are about to deprecated versions prior to 4.6.1.**
+
+**Recommend publisher install above version 4.7.2.**
+{% endhint %}
+
+****\
 **Before version 4.6.1 ,please refer to the following.**
 
 ```groovy
