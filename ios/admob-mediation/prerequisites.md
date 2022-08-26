@@ -14,7 +14,21 @@ If you don't familiar with AdMob, please refer to the links below:
 
 Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parameter`**.
 
-#### **Class Name**&#x20;
+
+
+{% hint style="info" %}
+**The AotterTrekGADMediaAdapter is new protocal for GAD requirement. trek adapter is implemented since 1.0.9, but the CustomEvent class is still works.**
+{% endhint %}
+
+{% hint style="warning" %}
+**We are about to deprecated Trek versions prior to 3.7.6 anddeprecated mediation versions prior to 1.0.8**
+
+**Recommend developer install above Trek version 3.7.7 and above** **medaiton version 1.0.9**
+{% endhint %}
+
+### **Class Name**&#x20;
+
+#### **B**elow TrekSDK 3.7.6 & admob medaiton 1.0.8
 
 *   Native Ad:
 
@@ -26,7 +40,13 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
     **AotterTrekGADCustomEventBannerAd**
 
-#### Parameter
+#### Above TrekSDK 3.7.7 & admob medaiton 1.0.9
+
+*   Native Ad / Supr Ad / Banner Ad :&#x20;
+
+    **AotterTrekGADMediaAdapter**
+
+### Parameter
 
 * {"adType":"**YOUR\_AD\_TYPE**","adPlace":"**YOUR\_PLACE\_UUID**"}
 

@@ -1,9 +1,5 @@
 # Changelog
 
-## 2022/08/26 release - SDK `3.7.7`
-
-* add AotterTrek.sdkVersion method to get sdk version
-
 ## 2022/08/19 release - SDK `3.7.6`
 
 * fix video inline play in suprAd
