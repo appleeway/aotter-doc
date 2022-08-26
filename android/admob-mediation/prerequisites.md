@@ -21,7 +21,7 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 {% hint style="warning" %}
 **We are about to deprecated versions prior to 4.6.1.**
 
-**Recommend publisher install above version 4.7.2.**
+**Recommend developer install above version 4.7.2.**
 {% endhint %}
 
 *   Class Name \
