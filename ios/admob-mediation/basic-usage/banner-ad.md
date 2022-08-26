@@ -73,7 +73,7 @@ static NSString *const BannerAdUnit = @"Your AdMob banner ad unit";
     GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
   
   	// FIll in categories like "news"、"movie" at CATEGORIES
-    [extra setExtras:@{@"category":@"CATEGORIES"} forLabel:@"AotterTrekGADCustomEventBannerAd"];
+    [extra setExtras:@{@"category":@"CATEGORIES"} forLabel:@"AotterTrekGADCustomEventBannerAd"]; //label must be same as your mediation class name, AotterTrekGADMediaAdapter or AotterTrekGADCustomEventBannerAd.
     [request registerAdNetworkExtras:extra];
     
     [_gadBannerView loadRequest:request];

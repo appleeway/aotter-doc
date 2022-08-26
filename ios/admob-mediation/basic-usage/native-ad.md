@@ -194,7 +194,7 @@ static NSInteger googleMediationNativeAdPosition = 6;
     GADRequest *request = [GADRequest request];
     GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
     // FIll in categories like "news"、"movie" at CATEGORIES
-    [extra setExtras:@{@"category":@"CATEGORIES"} forLabel:@"AotterTrekGADCustomEventNativeAd"];
+    [extra setExtras:@{@"category":@"CATEGORIES"} forLabel:@"AotterTrekGADCustomEventNativeAd"]; //label must be same as your mediation class name, AotterTrekGADMediaAdapter or AotterTrekGADCustomEventNativeAd.
     [request registerAdNetworkExtras:extra];
 }
 
