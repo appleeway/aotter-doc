@@ -21,9 +21,9 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated Trek versions prior to 3.7.6 anddeprecated mediation versions prior to 1.0.8**
+**We are about to deprecated admob mediation versions prior to 1.0.8**
 
-**Recommend developer install above Trek version 3.7.7 and above** **medaiton version 1.0.9**
+**Recommend developer install above admob** **medaiton version 1.0.9**
 {% endhint %}
 
 ### **Class Name**&#x20;

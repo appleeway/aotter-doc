@@ -19,7 +19,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 {% hint style="warning" %}
 **We are about to deprecated versions prior to 4.6.1.**
 
-**Recommend developer install above version 4.7.2.**
+**Recommend publisher install above version 4.7.2.**
 {% endhint %}
 
 ****\
