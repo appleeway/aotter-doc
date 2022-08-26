@@ -42,7 +42,7 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
 #### Above TrekSDK 3.7.7 & admob medaiton 1.0.9
 
-*   Native Ad / Supr Ad / Banner Ad :&#x20;
+*   Native Ad / Supr Ad / Banner Ad:&#x20;
 
     **AotterTrekGADMediaAdapter**
 
