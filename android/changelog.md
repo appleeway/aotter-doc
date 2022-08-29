@@ -19,7 +19,7 @@
 {% hint style="warning" %}
 ### **Breaking change:**
 
-#### **we had been changed trek and mediation dependencies path**
+#### **After version 4.7.2 , we had been changed trek and mediation dependencies path**
 
 trek :&#x20;
 
@@ -31,7 +31,7 @@ trek admob mediation :
 
 **``**
 
-#### **we had been changed mediation custom class path**
+#### **After version 4.7.2 , we had been changed mediation custom class path**
 
 Native Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
 

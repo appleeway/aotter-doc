@@ -5,12 +5,7 @@
 The Native Ad API allows you to build a customized experience for the ads you show in your app. When using Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of **ad parameters** such as a title, an image, a call to action, and you are able to use them to construct a custom view where the ad is shown.
 
 {% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek SDK adjusted the `dependency paths` and `mediation class name paths.`**\
-****\
-**``We recommend that developers install new `mediation class name` paths and new dependency paths.**\
-****\
-**Please note,we will  deprecated old Trek SDK dependency paths and old `mediation class name` paths.**\
-****\
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
 **Detail refer to** [Installation .](../sdk-integration/installation.md)
 {% endhint %}
 
