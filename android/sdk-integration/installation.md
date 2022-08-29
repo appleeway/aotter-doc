@@ -30,7 +30,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 ```groovy
 dependencies {
 
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.7.2'
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
 
 }
 ```
