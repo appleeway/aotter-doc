@@ -23,25 +23,25 @@ This migration guide help developer who like to update AotterTrek Android SDK to
 Dependencies library is upgraded to version 4.x. Version 3.x is no longer be updated.
 
 {% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek SDK adjusted the `dependency paths` and `mediation class name paths.`**\
-****\
-**``We recommend that developers install new `mediation class name` paths and new dependency paths.**\
-****\
-**Please note,we will  deprecated old Trek SDK dependency paths and old `mediation class name` paths.**\
-****
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
 {% endhint %}
 
-**Old Trek SDK dependency paths  ,please refer to the following.**
+{% hint style="warning" %}
+We are recommend publisher install above version 4.7.2.\
+We are about to deprecated versions prior to 4.6.1
+{% endhint %}
+
+**Before version 4.6.1 ,please refer to the following.**
 
 ```groovy
 dependencies {
 
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.7.2'
+implementation 'com.aotter.net:trek-sdk-android-kotlin:4.6.1'
 
 }
 ```
 
-**New Trek SDK dependency paths   ,please refer to the following.**
+**Above version 4.7.2 ,please refer to the following.**
 
 ```groovy
 dependencies {
