@@ -14,33 +14,21 @@ Step 3: [Create Ad Unit and Generate Publisher Tag](google-ad-manager-mediation.
 4. Replace the `"placement_UUID"` with your own ad place UUID and use your **client ID** instead of the test client ID in the following code block.
 
 ```markup
- <div id="suprAdContainer" data-place="placement_UUID"></div>
-
-<!-- start: trek sdk -->
+<div id="supr-ad-container"></div>
 <script>
-    (function(w, d, s, src, n) {
-        var js, ajs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(n)) return;
-        js = d.createElement(s); js.id = n;
-        w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
-        js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
-    })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.4.5/sdk.js', 'AotterTrek');
-
-// Notice: This client ID is for test only. Replace it with your own for official operation.
-    AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
-</script>
-<!-- end: trek sdk -->
-
-<script>
-    AotterTrek('suprAd', { 
-        selector: '#suprAdContainer',
-        onAdLoad: () => {
-        // Ad shows. Do something.
-        },
-        onAdFail: () => {
-        // Ad fail. Do something.
-        }
-    })
+  AotterTrekConfig = {
+    // Notice: This client ID is for test only. Replace it with your own for official operation.
+    clientId: "yEFcFoJaruNorh5RqtuR",
+    place: "placement_UUID",
+    selector: "#supr-ad-container",
+    onAdLoad: () => {
+       // Ad shows. Do something.},
+    onAdFail: () => {
+       // Ad fail. Do something.
+    }
+  }
+  
+ !function(){const e=window.top||window,t=e.document,n=document,r="TREK_SESSION",o="https://static.aottercdn.com/trek/sdk/3.4.5/sdk.js",c=n.createElement("link");n.getElementById("trek-catrun-preconnect")||(c.href="https://tkcatrun.aotter.net",c.rel="preconnect",n.head.insertAdjacentElement("beforeend",c));const s=n.createElement("link");n.getElementById("trek-sdk-preload")||(s.href=o,s.rel="preload",s.as="script",n.head.insertAdjacentElement("beforeend",s));const a=(e="")=>e?((Number(e)^16*Math.random())>>Number(e)/4).toString(16):"10000000-1000-4000-8000-100000000000".replace(/[018]/g,a),i=()=>(t.cookie.split(";").find((e=>e.includes(r)))||"").split("=")[1],d=new Promise((n=>{let r=i();r||((()=>{const n=e.location.hostname.substring(e.location.hostname.lastIndexOf(".",e.location.hostname.lastIndexOf(".")-1)+1),r=new Date((new Date).getTime()+94608e6).toUTCString();t.cookie=`TREK_SESSION=${a()};path=/;domain=${n};expires=${r}`})(),r=i());const o=encodeURIComponent(JSON.stringify({trekNetwork:"trek",device:{webSessionId:r},fetchNumber:1,returnBlank:!1,user:{},payload:{place:AotterTrekConfig.place,meta:{dr:t.referrer,dt:t.title,dl:t.location.href}}}));fetch(`https://r2d2.aotter.net/web/fetch?q=${o}`,{method:"GET",headers:{"x-aotter-clientid":AotterTrekConfig.clientId,"x-aotter-version":"web_3.4.5"},credentials:"include",mode:"cors"}).then((e=>e.json())).then((({success:e=[]})=>{n(e)})).catch((()=>{n([])}))})),l=new Promise((e=>{!function(t,n,r,o,c){let s,a=n.getElementsByTagName(r)[0];n.getElementById(c)||(s=n.createElement(r),s.id=c,t[c]=t[c]||function(){(t[c].q=t[c].q||[]).push(arguments)},t[c].l=1*new Date,s.async=1,s.src="https://static.aottercdn.com/trek/sdk/3.4.5/sdk.js",s.onload=()=>{e()},a.parentNode.insertBefore(s,a))}(window,document,"script",0,"AotterTrek")}));Promise.all([d,l]).then((([e])=>{AotterTrek("init",AotterTrekConfig.clientId),AotterTrek("suprAd",AotterTrekConfig,e)}))}();
 </script>
 ```
 
