@@ -24,7 +24,7 @@ Step 3: [Create Ad Unit and Generate Publisher Tag](google-ad-manager-mediation.
         js = d.createElement(s); js.id = n;
         w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
         js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
-    })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.3.5/sdk.js', 'AotterTrek');
+    })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.4.5/sdk.js', 'AotterTrek');
 
 // Notice: This client ID is for test only. Replace it with your own for official operation.
     AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
