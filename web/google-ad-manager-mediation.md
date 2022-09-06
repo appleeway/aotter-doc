@@ -22,7 +22,8 @@ Step 3: [Create Ad Unit and Generate Publisher Tag](google-ad-manager-mediation.
     place: "placement_UUID",
     selector: "#supr-ad-container",
     onAdLoad: () => {
-       // Ad shows. Do something.},
+       // Ad shows. Do something.
+    },
     onAdFail: () => {
        // Ad fail. Do something.
     }
