@@ -3,20 +3,17 @@
 ## 2022/09/01 release - SDK `3.4.5`
 
 * Add Google Ad Manager parallel loading
-* Add new Catrun PARALLAX event
-* Add new Catrun INTERSECTION event
-* Add new Catrun LOADED event payload for control event enable status
 * Add new HTML ads
 * Add new logger
-* Add detect params `trek-debug` to enable debug mode
-* Add detect params `trek-debug-catrun` to override Catrun’s url
+* Add detect params **trek-debug** to enable debug mode
+* Add detect params **trek-debug-catrun** to override Catrun’s URL
 * Fix tracker not send with webSessionId
-* Fix config override issue
+* Fix the config override issue
 * Fix prevent bridge print error logs
 * Update browserslist
 * Update dependency
 * Refactor remove unused code to reduce bundle size
-* Refactor whole create `suprAd` flow
+* Refactor whole create suprAd flow
 * Refactor get website meta from window.top
 * Deprecated NativeAd and VideoAd support
 * Deprecated Popup post-robot
