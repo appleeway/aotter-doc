@@ -13,47 +13,23 @@ Step 2: [Execute Ad Request](banner-ad.md#step-2-execute-ad-request)
 
 ### Step 1: Insert `<div>` Tag
 
-You can insert the following line to where you want to show the ad.\
-Please replace`placement_UUID` with your ad place UUID.
+You can insert the following line to where you want to show the ad.
 
 ```markup
-<div id="bannerAdContainer" data-place="placement_UUID"></div>
+<div id="bannerAdContainer"></div>
 ```
-
-We also provide **top/bottom** of the page ads by simply adding the following dataset attributes.
-
-* **Top of the Page Ad** : `data-fixed="top"`
-
-```markup
-    <div
-      id="bannerAdContainer"
-      data-fixed="top"
-      data-mobile
-      data-place="placement_UUID"
-    ></div>
-```
-
-* **Bottom of the Page Ad** : `data-fixed="bottom"`
-
-```markup
-<div
-      id="bannerAdContainer"
-      data-fixed="bottom"
-      data-mobile
-      data-place="placement_UUID"
-    ></div>
-```
-
-{% hint style="warning" %}
-Noted that when you add dataset attribute `data-mobile`, the ad will only be shown on the **mobile web**.
-{% endhint %}
 
 ### Step 2: Execute Ad Request
+
+Please replace`placement_UUID` with your ad place UUID.
 
 ```markup
 <script>
   AotterTrek('suprAd', {
-    selector: 'bannerAdContainer',
+    selector: '#bannerAdContainer',
+    place: 'placement_UUID',
+    mobile: true,
+    fixed: 'bottom',
     onAdLoad: () => {
         // Ad shows. Do something.
     },
@@ -63,6 +39,12 @@ Noted that when you add dataset attribute `data-mobile`, the ad will only be sho
   })
 </script>
 ```
+
+{% hint style="warning" %}
+Noted that when you set `mobile: true`, the ad will only be shown on the **mobile web**.
+{% endhint %}
+
+We also provide **top** of the page ads by simply change the `fixed: 'bottom'`  to `fixed: 'top'`.
 
 ### Done! 👏🏼
 
