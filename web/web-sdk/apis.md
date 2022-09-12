@@ -53,8 +53,7 @@ AotterTrek('init', 'CLIENT_ID');
 ```javascript
 AotterTrek('suprAd', {
     selector: '#supr-ad',
-    place: 'YOUR_PLACE_UUID',
-    layout: 'prebuilt',
+    place: 'placement_uuid',
     onAdLoad: function(node) {
         // Do something.
     },

@@ -18,9 +18,9 @@ Step 3: [Create Ad Unit and Generate Publisher Tag](google-ad-manager-mediation.
 <script>
   AotterTrekConfig = {
     // Notice: This client ID is for test only. Replace it with your own for official operation.
-    clientId: "yEFcFoJaruNorh5RqtuR",
-    place: "placement_UUID",
-    selector: "#supr-ad-container",
+    clientId: 'yEFcFoJaruNorh5RqtuR',
+    selector: '#supr-ad-container',
+    place: 'placement_UUID',
     onAdLoad: () => {
        // Ad shows. Do something.
     },
