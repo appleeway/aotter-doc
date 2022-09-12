@@ -27,6 +27,8 @@ AotterTrek('init', 'CLIENT_ID');
 
 > Send HTTP request to get ad and injecting response data to specific element.
 
+> Ref: [Ad Formats](../ad-formats/)
+
 #### Arguments
 
 | order | name    | type     | note                 |
@@ -42,7 +44,7 @@ AotterTrek('init', 'CLIENT_ID');
 | place       | `string`              | Custom placement name, you can check out analytics data in Trek Dashboard.      |
 | trekNetwork | `string`              | Set ad network "trek" or "house", **default by "trek"**.                        |
 | mobile      | `boolean`             | If set to true, the ad will only be displayed on the mobile device.             |
-| fixed       | `'top'` or `'bottom'` | If set to top or bottom, the ad will be fixed at the top or bottom of the page. |
+| fixed       | `top` or `bottom`     | If set to top or bottom, the ad will be fixed at the top or bottom of the page. |
 | onAdLoad    | `function`            | Trigger when ad successfully loaded.                                            |
 | onAdFail    | `function`            | Trigger when ad fails to load.                                                  |
 
