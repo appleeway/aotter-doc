@@ -127,9 +127,12 @@ We also provide test client id and test place id for receiving test ads only.
 * Test Client ID **:**&#x20;
   * **DNgNhOwfbUkOqcQFI+uD**
 * Test Place ID **:**&#x20;
-  * Native Ad : **45419fb5-a846-4c4a-837f-3b391ec7b45a**
-  * Supr.Ad : **81608f91-8b2b-4f8f-86a1-539a1959f836**
-  * Banner Ad **: 68856f90-83b7-4f09-98d4-7f480842cb02**
+  * Native Ad :&#x20;
+    * **45419fb5-a846-4c4a-837f-3b391ec7b45a**
+  * Supr.Ad :&#x20;
+    * **81608f91-8b2b-4f8f-86a1-539a1959f836**
+  * Banner Ad **:**&#x20;
+    * **68856f90-83b7-4f09-98d4-7f480842cb02**
 {% endhint %}
 
 ## Next Steps
