@@ -33,15 +33,7 @@ pod 'AotterTrek-iOS-SDK', '3.7.7'
 
 ### Step 2: Initialzation & Settings
 
-Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app). \
-We also provide test client id for receiving test ads only.
-
-{% hint style="success" %}
-Note: You can switch **test / production** mode by changing **test client id to your own client id.**
-{% endhint %}
-
-* Test Client ID: `21tgwWwuzFYiD4ko5Klr`
-* Test\_Client Secret: `fD8P20gzWYrlbuwWklRkicYcNwlWZSZwV+iHj3TzGSzzyfgTWmVR5trs5F1Dp+x9tX2jxq44`
+Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
 
 ```objectivec
 // AppDelegate.m

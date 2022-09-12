@@ -124,7 +124,8 @@ public class MyApplication extends Application {
 We also provide test client id and test place id for receiving test ads only.
 
 {% hint style="info" %}
-* Test Client ID **: DNgNhOwfbUkOqcQFI+uD**
+* Test Client ID **:**&#x20;
+  * **DNgNhOwfbUkOqcQFI+uD**
 * Test Place ID **:**&#x20;
   * Native Ad : **45419fb5-a846-4c4a-837f-3b391ec7b45a**
   * Supr.Ad : **81608f91-8b2b-4f8f-86a1-539a1959f836**
