@@ -32,7 +32,6 @@ Please use **your client id** for initialization which can be found in the [appl
 
   // Notice: replace your own client id or use our test id.
   AotterTrek('init', 'CLIENT_ID');
-
 </script>
 <!-- end: trek sdk -->
 ```
@@ -57,28 +56,17 @@ To displaying Ads, you need to invoke `AotterTrek()`. Put the following code sni
 
 ```markup
 <script>
-AotterTrek('suprAd', {
+ AotterTrek('suprAd', {
     selector: '#adContainer', //#id, .class or any other selector
+    place: 'placement_UUID',
     onAdLoad: () => {
         // Ad shows. Do something.
     },
     onAdFail: () => {
         // Ad fail. Do something.
     }   
-})
+} )
 </script>
-```
-
-You can also pass different Ad formats and options to AotterTrek(). For example, "nativeAd".
-
-> Ref:  [Ad Formats](../ad-formats/) and Options
-
-### Step 3: Insert \<div>\</div> tag with trek-ad attribute
-
-Insert the following `<div>` tag to the place you want to display Ad.
-
-```markup
-<div id="adContainer" data-place="placement_UUID"></div>
 ```
 
 {% hint style="warning" %}
@@ -86,6 +74,14 @@ Please replace`placement_UUID` with the ad place UUID in the ad slot management.
 
 For the publisher who use AotterTrek SDK for the first time and didn't get full access to ad slot management, please contact Aseal representative or [E-mail us](https://aseal.in/contactus).
 {% endhint %}
+
+### Step 3: Insert \<div>\</div> tag
+
+Insert the following `<div>` tag to the place you want to display Ad.
+
+```markup
+<div id="adContainer"></div>
+```
 
 ### Done! 👏🏼
 
@@ -97,8 +93,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
 
 ```markup
 <body>
-    <div id="adContainer" data-place="placement_UUID"></div>
-
+    <div id="adContainer"></div>
     <!-- start: trek sdk -->
     <script>
         (function(w, d, s, src, n) {
@@ -113,18 +108,17 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
         AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
     </script>
     <!-- end: trek sdk -->
-
     <script>
         AotterTrek('suprAd', { 
-            selector: '#adContainer',
-            onAdLoad: () => {
-                // Ad shows. Do something.
-            },
-            onAdFail: () => {
-                // Ad fail. Do something.
-            }
+          selector: '#adContainer',
+          place: 'placement_UUID',
+          onAdLoad: () => {
+            // Ad shows. Do something.
+          },
+          onAdFail: () => {
+            // Ad fail. Do something.
+          }
         })
     </script>
-
 </body>
 ```
