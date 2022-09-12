@@ -11,8 +11,8 @@ Step 2: [Initiation & Settings](installation.md#step-2-initialzation-and-setting
 
 1\.  Add the following line to your project's Podfile:
 
-```objectivec
-pod 'AotterTrek-iOS-SDK', '3.7.4'
+```swift
+pod 'AotterTrek-iOS-SDK', '3.7.7'
 ```
 
 2\.  Run `pod install`&#x20;
@@ -64,6 +64,19 @@ Note: You can switch **test / production** mode by changing **test client id to 
   return YES;
 }
 ```
+
+### Test ad units
+
+We also provide test client id and test place id for receiving test ads only.
+
+{% hint style="info" %}
+* Test Client ID **: DNgNhOwfbUkOqcQFI+uD**
+* Test Client Secret:**fD8P20gzWYrlbuwWklRkicYcNwlWZSZwV+iHj3TzGSzzyfgTWmVR5trs5F1Dp+x9tX2jxq44**
+* Test Place ID **:**&#x20;
+  * Native Ad : **45419fb5-a846-4c4a-837f-3b391ec7b45a**
+  * Supr.Ad : **81608f91-8b2b-4f8f-86a1-539a1959f836**
+  * Banner Ad **: 68856f90-83b7-4f09-98d4-7f480842cb02**
+{% endhint %}
 
 ### Optional
 
