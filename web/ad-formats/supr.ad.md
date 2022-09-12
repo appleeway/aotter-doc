@@ -11,19 +11,21 @@ Step 2: [Execute Ad Request](supr.ad.md#step-2-execute-ad-request)
 
 ### Step 1: Insert `<div>` tag&#x20;
 
-You can insert the following line to where you want to show the ad.\
-Please replace`placement_UUID` with your ad place UUID.
+You can insert the following line to where you want to show the ad.
 
 ```markup
-<div id="suprAdContainer" data-place="placement_UUID"></div>
+<div id="suprAdContainer"></div>
 ```
 
 ### Step 2: Execute Ad Request
+
+Please replace`placement_UUID` with your ad place UUID.
 
 ```markup
 <script>
   AotterTrek('suprAd', {
     selector: '#suprAdContainer',
+    place: 'placement_UUID',
     onAdLoad: () => {
         // Ad shows. Do something.
     },
