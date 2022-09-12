@@ -72,7 +72,9 @@ Please add the following code snippet in your AndroidManifest.XML
 
 ### Step 2: Initialization
 
-After including SDK in your project, you will also need to implement the following line of code to initialize SDK. If you have implemented extensions to the application class, it is recommended to initialize the AotterTrek service in `onCreate()` method. In the following example, the `context` variable represents an `Application` or `Activity`.
+After including SDK in your project, you will also need to implement the following line of code to initialize SDK. If you have implemented extensions to the application class, it is recommended to initialize the AotterTrek service in `onCreate()` method. In the following example, the `context` variable represents an `Application` or `Activity`.\
+\
+Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -81,8 +83,10 @@ class MyApplication:Application {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        TrekAds.initialize(context,"YOUR_CLIENT_ID"){
-            //aotter service init finshed callback.
+        //Test client id: DNgNhOwfbUkOqcQFI+uD
+        //In a real app, use your actual client id, not the one listed above.
+        TrekAds.initialize(context,"DNgNhOwfbUkOqcQFI+uD"){
+            //init finshed callback.
         }
                    
     }
@@ -99,9 +103,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
        
-        TrekAds.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
+        //Test client id: DNgNhOwfbUkOqcQFI+uD
+        //In a real app, use your actual client id, not the one listed above.
+        TrekAds.INSTANCE.initialize(this, "DNgNhOwfbUkOqcQFI+uD", () -> {
 
-            // init finished callback.
+            //init finshed callback.
 
             return Unit.INSTANCE;
 
@@ -113,13 +119,16 @@ public class MyApplication extends Application {
 {% endtab %}
 {% endtabs %}
 
-Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app). \
-We also provide test client id for receiving test ads only.
+### Test ad units
 
-* **Test Client ID :** `DNgNhOwfbUkOqcQFI+uD`
+We also provide test client id and test place id for receiving test ads only.
 
-{% hint style="success" %}
-Note: You can switch **test / production** mode by changing **test client id to your own client id.**
+{% hint style="info" %}
+* Test Client ID **: DNgNhOwfbUkOqcQFI+uD**
+* Test Place ID **:**&#x20;
+  * Native Ad : **45419fb5-a846-4c4a-837f-3b391ec7b45a**
+  * Supr.Ad : **81608f91-8b2b-4f8f-86a1-539a1959f836**
+  * Banner Ad **: 68856f90-83b7-4f09-98d4-7f480842cb02**
 {% endhint %}
 
 ## Next Steps
