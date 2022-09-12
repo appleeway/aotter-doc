@@ -38,14 +38,15 @@ AotterTrek('init', 'CLIENT_ID');
 
 #### Options
 
-| name        | type                  | note                                                                       |
-| ----------- | --------------------- | -------------------------------------------------------------------------- |
-| selector    | `string` or `element` | The CSS selector or target element.                                        |
-| layout      | `string`              | If sets, using default Trek ad layout.                                     |
-| place       | `string`              | Custom placement name, you can check out analytics data in Trek Dashboard. |
-| trekNetwork | `string`              | Set ad network "trek" or "house", **default by "trek"**.                   |
-| onAdLoad    | `function`            | Trigger when ad successfully loaded.                                       |
-| onAdFail    | `function`            | Trigger when ad fails to load.                                             |
+| name        | type                  | note                                                                            |
+| ----------- | --------------------- | ------------------------------------------------------------------------------- |
+| selector    | `string` or `element` | The CSS selector or target element.                                             |
+| place       | `string`              | Custom placement name, you can check out analytics data in Trek Dashboard.      |
+| trekNetwork | `string`              | Set ad network "trek" or "house", **default by "trek"**.                        |
+| mobile      | `boolean`             | If set to true, the ad will only be displayed on the mobile device.             |
+| fixed       | `top` or `bottom`     | If set to top or bottom, the ad will be fixed at the top or bottom of the page. |
+| onAdLoad    | `function`            | Trigger when ad successfully loaded.                                            |
+| onAdFail    | `function`            | Trigger when ad fails to load.                                                  |
 
 #### Example
 
