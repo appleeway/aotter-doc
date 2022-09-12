@@ -15,6 +15,10 @@ Note: AotterTrek SDK only supports displaying Ads on **mobile and tablet website
 
 Please copy the following code snippet then paste it within the `<body>` section of your pages. It's better to put it right before the closing tag.
 
+{% hint style="info" %}
+Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
+{% endhint %}
+
 ```markup
 <!-- start: trek sdk -->
 <script>
@@ -33,15 +37,16 @@ Please copy the following code snippet then paste it within the `<body>` section
 <!-- end: trek sdk -->
 ```
 
+### Test ad units
+
+We also provide test client id and test place id for receiving test ads only.
+
 {% hint style="info" %}
-Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app). \
-We also provide test client id for receiving test ads only.
-{% endhint %}
-
-* **Test Client ID:**`yEFcFoJaruNorh5RqtuR`
-
-{% hint style="success" %}
-Note: You can switch **test / production** mode by changing **test client id to your own client id.**
+* Test Client ID **:**&#x20;
+  * **yEFcFoJaruNorh5RqtuR**
+* Test Place ID **:**&#x20;
+  * banner 640x100: **8624cdd7-c71a-4df2-b9c9-cd93fe79b890**&#x20;
+  * banner 336x280: **be1e1184-aa18-471e-8d49-5c3d455bbf4c**
 {% endhint %}
 
 ### Step 2: Execute AotterTrek()
