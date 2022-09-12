@@ -27,8 +27,6 @@ AotterTrek('init', 'CLIENT_ID');
 
 > Send HTTP request to get ad and injecting response data to specific element.
 
-> Ref: [Ad Formats](../ad-formats/)
-
 #### Arguments
 
 | order | name    | type     | note                 |
@@ -53,7 +51,7 @@ AotterTrek('init', 'CLIENT_ID');
 ```javascript
 AotterTrek('suprAd', {
     selector: '#supr-ad',
-    place: 'placement_uuid',
+    place: 'placement_UUID',
     onAdLoad: function(node) {
         // Do something.
     },
