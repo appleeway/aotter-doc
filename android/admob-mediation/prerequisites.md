@@ -19,14 +19,14 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.4.5.**
+**We are about to deprecated versions prior to 4.6.1.**
 
 **Recommend developer install above version 4.7.2.**
 {% endhint %}
 
 *   Class Name \
     \
-    &#x20;  **before version 4.4.5**
+    &#x20;  **before version 4.6.1**
 
     * Native Ads:&#x20;
       * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventNative**
