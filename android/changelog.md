@@ -1,5 +1,34 @@
 # Changelog
 
+{% hint style="warning" %}
+### **Breaking change:**
+
+#### **Above version 4.5.0 , we had been changed trek and mediation dependencies path**
+
+trek :&#x20;
+
+**`implementation 'com.aotter.android:trek-ads:4.x.x'`**
+
+trek admob mediation :
+
+**`implementation 'com.aotter.android:trek-admob-mediation:4.x.x'`**
+
+**``**
+
+#### **Above version 4.5.0 , we had been changed mediation custom class path**
+
+Native Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
+
+Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**\
+**``**
+
+### **For more details please refer**
+
+* **Detail refer** [**Migration Guide**](migration-guide.md)****
+* **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
+* **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
+{% endhint %}
+
 ## 2022/08/04 release - SDK `4.7.2`(Recommend)
 
 {% hint style="info" %}
@@ -15,35 +44,6 @@
 * TrekNativeAd object new feature
   * `images` object provider `drawable` 、`uri`
   * remove unnecessary parameter
-
-{% hint style="warning" %}
-### **Breaking change:**
-
-#### **After version 4.7.2 , we had been changed trek and mediation dependencies path**
-
-trek :&#x20;
-
-**`implementation 'com.aotter.android:trek-ads:4.7.2'`**
-
-trek admob mediation :
-
-**`implementation 'com.aotter.android:trek-admob-mediation:4.7.2'`**
-
-**``**
-
-#### **After version 4.7.2 , we had been changed mediation custom class path**
-
-Native Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
-
-Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**\
-**``**
-
-### **For more details please refer**
-
-* **Detail refer** [**Migration Guide**](migration-guide.md)****
-* **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
-* **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
-{% endhint %}
 
 ## 2022/07/19 release - SDK `4.6.1`&#x20;
 
