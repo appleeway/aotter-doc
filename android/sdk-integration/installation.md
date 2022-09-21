@@ -18,7 +18,8 @@ Please noticed that AotterTrek Android SDK Development Environment: `Kotlin vers
 Add the following dependencies to your **app-level** build.gradle (not project!), to use the latest AotterTrek SDK:
 
 {% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path`.**\
+****[**See Change Log**](../changelog.md)
 {% endhint %}
 
 {% hint style="warning" %}
