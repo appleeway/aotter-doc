@@ -1,10 +1,5 @@
 # Banner Ad
 
-{% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
-**Detail refer to** [Installation .](../sdk-integration/installation.md)
-{% endhint %}
-
 Follow these steps to build a banner ad layout and then requests it.
 
 Step 1: [Create TrekBannerAdView](banner-ad.md#step-1-create-banner-ad-layout)\
