@@ -15,18 +15,19 @@ If you don't familiar with AdMob, please refer to the links below:
 Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parameter`**.
 
 {% hint style="info" %}
-**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path`.**\
+****[**See Change Log**](../changelog.md)
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.6.1.**
+**We are about to deprecated versions prior to 4.4.5.**
 
 **Recommend developer install above version 4.7.2.**
 {% endhint %}
 
 *   Class Name \
     \
-    &#x20;  **before version 4.6.1**
+    &#x20;  **before version 4.4.5**
 
     * Native Ads:&#x20;
       * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventNative**
