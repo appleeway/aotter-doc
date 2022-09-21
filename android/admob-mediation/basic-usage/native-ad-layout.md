@@ -4,7 +4,13 @@ Follow these steps to build a native ad layout that fits your application and th
 
 Step 1: [Create NativeAdView](native-ad-layout.md#step-1-create-treknativeadview)\
 Step 2: [How to build and request ad](native-ad-layout.md#step-2-how-to-build-and-request-ad) \
-Step 3: [Render NativeAdView layout](native-ad-layout.md#step-3-render-treknativeadview-layout)
+Step 3: [Render NativeAdView layout](native-ad-layout.md#step-3-render-treknativeadview-layout)\
+
+
+{% hint style="info" %}
+**In order to achieve better version integration and normalization, Aotter Trek adjusted the `dependency path` and `mediation class name path` in versions above 4.7.2.**\
+**Detail refer to** [Installation .](../installation.md)
+{% endhint %}
 
 ### Step 1: Create NativeAdView
 
