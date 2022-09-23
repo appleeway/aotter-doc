@@ -25,7 +25,9 @@ Just like the usage of Camera / Album / Location, you need to provide a message 
 
 To present the authorization request, call [`requestTrackingAuthorizationWithCompletionHandler:`](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/3547037-requesttrackingauthorization). We recommend waiting for the completion callback prior to loading ads so that if the user grants the App Tracking Transparency permission, the Interactive Media Ads SDK can use the IDFA in ad requests.
 
-```
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import <AdSupport/AdSupport.h>
 
@@ -36,5 +38,23 @@ To present the authorization request, call [`requestTrackingAuthorizationWithCom
   }];
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+import AdSupport
+import AppTrackingTransparency
+
+func requestIDFA(){
+    ATTrackingManager.requestTrackingAuthorization { status in
+        if status == .authorized {
+            //Authorized.
+            self.myTKAdNative.load()
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 For more information about the possible status values, see [`ATTrackingManager.AuthorizationStatus`](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus).

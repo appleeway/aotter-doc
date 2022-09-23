@@ -36,8 +36,6 @@ pod 'AotterTrek-iOS-SDK', '~> 3.1'
 
 Initial MyApp Service in _AppDelegate.m_
 
-{% tabs %}
-{% tab title="ObjC" %}
 ```objectivec
 // AppDelegate.m
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
@@ -53,82 +51,28 @@ Initial MyApp Service in _AppDelegate.m_
                                        myAppClientId:@""
                                    myAppClientSecret:@""];
 ```
-{% endtab %}
-
-{% tab title="Swift" %}
-```swift
-
-//add Header.h as Objective-C bridging Header
-//reference: https://developer.apple.com/documentation/swift/importing-objective-c-into-swift
-#import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
-​
-​
-//AppDelegate
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    //Required
-    AotterTrek.sharedAPI().initTrekService(withClientId: "<client id", secret: "<client secret>")
-    
-    //Optional
-    AotterTrek.sharedAPI().enableLogger(with: TKLoggerLevelDetail)
-    
-    //Optional
-    AVAudioSession.sharedInstance().setCategory(.ambient)
-    
-    return true
-}
-```
-{% endtab %}
-{% endtabs %}
 
 **#usage**
 
 Native ad `TKMyAppAdNative` usage is the same as `TKAdNative`. See[ Native Ad](ad-formats/) for more information.
 
-{% tabs %}
-{% tab title="ObjC" %}
 ```objectivec
   self.nativeAd = [[TKMyAppAdNative alloc] initWithPlace:@"myPlace" category:@"testCategory"];
   [self.nativeAd registerPresentingViewController:self];
   self.nativeAd.delegate = self;
   [self.nativeAd fetchAd];
 ```
-{% endtab %}
-
-{% tab title="Swift" %}
-```swift
-self.nativeAd = TKMyAppAdNative.init(place: "myPlace", category: "testCategory")
-self.nativeAd?.registerPresenting(self)
-self.nativeAd?.delegate = self
-self.nativeAd?.fetchAd()
-```
-{% endtab %}
-{% endtabs %}
 
 ## Overwrite Click Event for MyApp Ads <a href="#overwrite-click-event-for-myapp-ads" id="overwrite-click-event-for-myapp-ads"></a>
 
 Implement `TKAdNativeDelegate` ->`TKMyAppAdNativeOnClicked:(TKMyAppAdNative *)ad`
 
-{% tabs %}
-{% tab title="ObjC" %}
 ```objectivec
 -(void)TKMyAppAdNativeOnClicked:(TKMyAppAdNative *)ad{
     NSLog(@"[Demo MyApp] >> onClick MyAppAdNative with adData: %@", ad.AdData);
     NSString *targetUrl = ad.AdData[@"url_original"];
 }
 ```
-{% endtab %}
-
-{% tab title="Second Tab" %}
-```swift
-func tkMyAppAdNative(onClicked ad: TKMyAppAdNative!) {
-    print("MyApp onClick MyAppAdNative")
-    if let targetUrl = ad.adData["url_original"]{
-        //do something
-    }
-}
-```
-{% endtab %}
-{% endtabs %}
 
 {% hint style="warning" %}
 **Notice**: This method is only available for MyApp's ads.&#x20;
