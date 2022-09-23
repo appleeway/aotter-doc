@@ -14,12 +14,24 @@ Step 5: [Destroy Ad (Optional)](banner-ad.md#step-5-optional-destroy-ad)
 
 You can use this method to check if the ad is expired or not.
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 [self.myAdNative isExpired]; // YES or NO
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+ self.myAdNative?.isExpired()
+```
+{% endtab %}
+{% endtabs %}
 
 * **impression & click delegate**
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 -(void)TKAdSuprAdWillLogImpression:(TKAdSuprAd *)ad{
     NSLog(@"TKSuprAd log when impression occur");
@@ -29,13 +41,29 @@ You can use this method to check if the ad is expired or not.
     NSLog(@"TKSuprAd log when click occur");
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdSuprAdWillLogClick(_ ad: TKAdSuprAd!) {
+    //will log when click occur
+}
+
+func tkAdSuprAdWillLogImpression(_ ad: TKAdSuprAd!) {
+    //will log when impression occur
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 1: Create `TKAdSuprAd` Object
 
 In the following code snippet, replace the value in `initWithPlace` to your **UUID**.\
 Setting category is optional. You can fill in `nil` if you don't want to set it.
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 // .m
 
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
@@ -74,12 +102,40 @@ Setting category is optional. You can fill in `nil` if you don't want to set it.
 }
 @end
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+class myViewController:UIViewController{
+    var suprAdView:UIView?
+    var suprAd:TKAdSuprAd?
+    
+    override func viewDidLoad() {
+        self.fetchSuprAd()
+    }
+    
+    func fetchSuprAd(){
+        self.suprAd = TKAdSuprAd(place: "YOUR UUID", category: "CATEGORIES")
+        self.suprAd?.delegate = self
+        
+        //register view controller for presenting
+        self.suprAd?.registerPresenting(self)
+        
+        // fetch ad
+        self.suprAd?.fetch()
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Register AdView and TKMediaView
 
 It is recommended to create the view that its size is based on ad size.
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 -(void)TKAdSuprAd:(TKAdSuprAd *)suprAd didReceivedAdWithAdData:(NSDictionary *)adData preferedMediaViewSize:(CGSize)size isVideoAd{
   
     self.suprAd = suprAd;
@@ -100,32 +156,92 @@ It is recommended to create the view that its size is based on ad size.
     [_suprAdView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdSuprAd(_ suprAd: TKAdSuprAd!, didReceivedAdWithAdData adData: [AnyHashable : Any]!, preferedMediaViewSize size: CGSize, isVideoAd: Bool) {
+ 
+ self.suprAd = suprAd
+ 
+ //size for the ad
+ self.suprAdView = UIView.init(frame: CGRectMake(0, 0, size.width, size.height))
+ 
+ //AdView: the container view for ad
+ self.suprAd.register(self.suprAdView)
+ self.suprAd.registerTKMediaView(self.suprAdView)
+ 
+ //AutoLayout
+ self.view.addSubview(self.suprAdView)
+ 
+ self.suprAdView?.translatesAutoresizingMaskIntoConstraints = false
+ self.suprAdView?.widthAnchor.constraint(equalToConstant: size.width).isActive = true
+ self.suprAdView?.heightAnchor.constraint(equalToConstant: size.width).isActive = true
+ self.suprAdView?.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 3: Ad Loading Completion Callback
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 - (void)TKAdSuprAdCompleted:(TKAdSuprAd *)suprAd{
     NSLog(@"TKAdSuprAd >> Completed");
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdSuprAdCompleted(_ suprAd: TKAdSuprAd!) {
+  self.adCell?.setNeedsLayout()
+  self.mainTableView?.reloadData()
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 4: Error Callback
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```swift
 - (void)TKAdSuprAd:(TKAdSuprAd *)suprAd adError:(TKAdError *)error{
     NSLog(@"TKAdSuprAd >> adError: %@", error.message);
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdSuprAd(_ suprAd: TKAdSuprAd!, adError error: TKAdError!) {
+       print("TKAdSuprAd error" + error.description)
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: (Optional) Destroy Ad
 
 This function will destroy ads completely. In the condition that`TKAdSuprAd`manages itself, destroy() is not necessary to be invoked. However, it is still nice to have it when you are pretty sure that this view or view controller won't be used anymore.
 
-```swift
--(void)viewDidDisappear:(BOOL)animated{
-[super viewDidDisappear:animated];
-[self.suprAd destroy];
-}
-```
+{% tabs %}
+{% tab title="ObjC" %}
+<pre class="language-objectivec"><code class="lang-objectivec">-(void)viewDidDisappear:(BOOL)animated{
+<strong>  [super viewDidDisappear:animated];
+</strong>  [self.suprAd destroy];
+}</code></pre>
+{% endtab %}
+
+{% tab title="Swift" %}
+<pre class="language-swift"><code class="lang-swift">override func viewDidDisappear(_ animated: Bool) {
+<strong>    super.viewDidDisappear(animated)
+</strong>    self.suprAd.destroy()
+}</code></pre>
+{% endtab %}
+{% endtabs %}
 
 ###

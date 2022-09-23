@@ -34,7 +34,7 @@ You can use this method to check if the ad is expired or not.
 {% endtab %}
 
 {% tab title="Swift" %}
-```
+```swift
  self.myAdNative?.isExpired()
 ```
 {% endtab %}
@@ -52,7 +52,7 @@ You can use this method to check the ad is a video ad or not.
 {% endtab %}
 
 {% tab title="Swift" %}
-```
+```swift
 self.myAdNative.isVideoAd()
 ```
 {% endtab %}
