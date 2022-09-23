@@ -7,9 +7,11 @@ Step 2: [Customize _ViewController_](banner-ad.md#step-2-customize-viewcontrolle
 
 ### Step 1: Initialize AotterTrek SDK&#x20;
 
+{% tabs %}
+{% tab title="ObjC" %}
 _File: AppDelegate.m_
 
-```swift
+```objectivec
 /// Need to import Lib
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
@@ -31,12 +33,27 @@ _File: AppDelegate.m_
     return YES;
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    GADMobileAds.sharedInstance().start()
+    AotterTrek.sharedAPI().initTrekService(withClientId: "<client id", secret: "<client secret>")
+ 
+ return true
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Customize ViewController
 
 \- **GoogleMobileAds SDK version 8 and above**
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 //Ex:BannerViewController
 #import "BannerViewController.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
@@ -104,3 +121,52 @@ static NSString *const BannerAdUnit = @"Your AdMob banner ad unit";
 
 @end
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+class BannerViewController:UIViewController, GADBannerViewDelegate{
+    var gadBannerView:GADBannerView
+    let bannerAdUnit = "XXXX-XX-XXXXXXXX"
+    
+    override func viewDidLoad() {
+        self.setupGADBannerView()
+        self.bannerLoadRequest()
+    }
+    
+    func setupGADBannerView(){
+        self.gadBannerView = GADBannerView.init(adSize: GADAdSizeBanner)
+        self.gadBannerView.delegate = self
+        self.gadBannerView.rootViewController = self
+        self.gadBannerView.adUnitID = bannerAdUnit
+    }
+    
+    func bannerLoadRequest(){
+        var request = GADRequest.init()
+        var extras = GADCustomEventExtras.init()
+        extras.setExtras(["category":"CATEGORIES"], forLabel: "AotterTrekGADCustomEventBannerAd")
+        //label must be same as your mediation class name, AotterTrekGADMediaAdapter or AotterTrekGADCustomEventBannerAd
+        request.register(extras)
+        self.gadBannerView.load(request)
+    }
+    
+    func setupBannerViewUI(_ bannerView:GADBannerView){
+        self.view.addSubview(bannerView)
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        bannerView.heightAnchor.constraint(equalToConstant: bannerView.bounds.size.height).isActive = true
+        bannerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        bannerView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        bannerView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+    }
+    
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        self.setupBannerViewUI(bannerView)
+    }
+    
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("error message: " + error.localizedDescription)
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
