@@ -53,6 +53,9 @@ Step 5: [Send Tracker Items](tracker.md#step-5-send-tracker-items)\
 
 Create`entityObject` / `userObject` (optional)/ `locationObject` (optional)
 
+{% tabs %}
+{% tab title="Objc" %}
+{% code overflow="wrap" %}
 ```objectivec
 //create entity object with type 'POST'
 NSDictionary *entityPostObject = [TKTracker helper_entityObjectWithTypePOST:@"myPostId" title:@"post title" url:@"http://agirls.aotter.net" tags:nil categories:@[@"news"] reference:nil publishedDate:nil imageUrl:nil author:@"F.D.KKK" meta:@{@"something": @"ffff"}];
@@ -68,48 +71,156 @@ double user_location_lat = 191.232323;
 double user_location_lng = 244.232323;
 NSDictionary *locationObject = [TKTracker helper_locationObjectWithLocationId:@"<your_location_id>" title:nil url:@"" categories:@[@"user_location"] address:nil lat:user_location_lat lng:user_location_lng additionalMeta:nil];
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Swift" %}
+{% code overflow="wrap" %}
+```swift
+//create entity object with type 'POST'
+NSDictionary *entityPostObject = [TKTracker helper_entityObjectWithTypePOST:@"myPostId" title:@"post title" url:@"http://agirls.aotter.net" tags:nil categories:@[@"news"] reference:nil publishedDate:nil imageUrl:nil author:@"F.D.KKK" meta:@{@"something": @"ffff"}];
+   
+//or create entityObject with type 'PLACE'
+NSDictionary *entityObject = [TKTracker helper_entityObjectWithTypePLACE:[NSString stringWithFormat:@"myPlaceEntityId"] title:@"Taipei" url:@"" tags:@[@"city",@"play",@"Taiwan"] categories:@[@"travel"] address:@"New Taipei City" lat:102.333 lng:63.333 meta:@{@"A": @"how do you turn this on?",@"address": @"new address shoud not be seen"}];
+
+//create user object (optional)
+NSDictionary *userObject = [TKTracker helper_userObjectWithEmail:@"<current_user_email>" phone:@"<current_user_phone>" fbId:@"<current_user_fbId>" gender:@"<F or M for current User>" birthday:[NSDate date] additionalMeta:nil];
+
+//create location object (optional)
+double user_location_lat = 191.232323;
+double user_location_lng = 244.232323;
+NSDictionary *locationObject = [TKTracker helper_locationObjectWithLocationId:@"<your_location_id>" title:nil url:@"" categories:@[@"user_location"] address:nil lat:user_location_lat lng:user_location_lng additionalMeta:nil];
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 2. Engage Tracker Event with Objects <a href="#step-2-engage-trakcer-event-with-these-parts" id="step-2-engage-trakcer-event-with-these-parts"></a>
 
+{% tabs %}
+{% tab title="ObjC" %}
+{% code overflow="wrap" %}
 ```objectivec
 //engage trakcer item with POST type
 [[TKTracker sharedAPI] trackerEngageItemWithItemId:@"myPostId" type:kTKTTypeREAD_POST userObject:userObject entityObject:entityObject locationObject:locationObject];
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Swift" %}
+{% code overflow="wrap" %}
+```swift
+//engage tracker item with POST type
+        TKTracker.sharedAPI().trackerEngageItem(withItemId: "myPostId", type: kTKTTypeREAD_POST, userObject: userObject, entityObject: entityObject, locationObject: locationObject)
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Step 3. (Optional)  Update Tracker Items' Specific Part <a href="#step3-optional-update-the-tracker-items39-specific-part-if-needed" id="step3-optional-update-the-tracker-items39-specific-part-if-needed"></a>
 
 Update `entity object` / `user object` / `location object` for specific items if it's necessary for your app's life cycle.
 
+{% tabs %}
+{% tab title="ObjC" %}
+{% code overflow="wrap" %}
 ```objectivec
 [[TKTracker sharedAPI] trackerUpdateItem:@"myPostId" withEntityObject:@{@"foo":@"bar"}];
 [[TKTracker sharedAPI] trackerUpdateItem:@"myPostId" withUserObject:@{@"foo":@"bar"}];
 [[TKTracker sharedAPI] trackerUpdateItem:@"myPostId" withLocationObject:@{@"foo":@"bar"}];
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Swift" %}
+{% code overflow="wrap" %}
+```swift
+let newEntityObject = []
+TKTracker.sharedAPI().trackerUpdateItem("myPostId", withEntityObject: newEntityObject)
+
+let newUserObject = []
+TKTracker.sharedAPI().trackerUpdateItem("myPostId", withUserObject: newUserObject)
+
+let newLocationObject = []
+TKTracker.sharedAPI().trackerUpdateItem("myPostId", withLocationObject: newLocationObject)
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 4. (Optional) Exit Tracker item <a href="#step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time" id="step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time"></a>
 
 Exit tracker item if the tracker event has finished its action. For Example, when users leave the posting page, means that the user finished reading the post.
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 [[TKTracker sharedAPI] trackerExitItem:@"myPostId"];
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+TKTracker.sharedAPI().trackerExitItem("myPostId")
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 5. Send Tracker Items <a href="#step-5-send-tracker-items" id="step-5-send-tracker-items"></a>
 
-```objectivec
-[[TKTracker sharedAPI] trackerSendItems];        
+{% tabs %}
+{% tab title="ObjC" %}
 ```
+[[TKTracker sharedAPI] trackerSendItems];
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```
+TKTracker.sharedAPI().trackerSendItems()
+```
+{% endtab %}
+{% endtabs %}
 
 ## Full Example <a href="#example" id="example"></a>
 
+{% tabs %}
+{% tab title="ObjC" %}
+{% code overflow="wrap" %}
 ```objectivec
 -(void)engageItemAndSend{
     NSDictionary *entityObject = [TKTracker helper_entityObjectWithTypePOST:@"myPostId" title:@"post title" url:@"http://agirls.aotter.net" tags:nil categories:@[@"news"] reference:nil publishedDate:nil imageUrl:nil author:nil];
+    
     NSDictionary *userObject = [TKTracker helper_userObjectWithEmail:@"my@email.net" phone:@"0922333444" fbId:@"" gender:@"M" birthday:@"1999/05/02" additionalMeta:nil];
+    
     [[TKTracker sharedAPI] trackerEngageItemWithItemId:@"myPostId" type:kTKTTypeREAD_POST userObject:userObject entityObject:entityObject locationObject:nil];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[TKTracker sharedAPI] trackerExitItem:@"myPostId"];
         [[TKTracker sharedAPI] trackerSendItems];
     });
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Swift" %}
+{% code overflow="wrap" %}
+```swift
+ func engageItemAndSend(){
+   let entityObject = TKTracker.helper_entityObject(withTypePOST: "myPostId", title: "post title", url: "https://foo.bar", tags: nil, categories: ["news"], reference: nil, publishedDate: nil, imageUrl: nil, author: nil, meta: nil)
+   let userObject = TKTracker.helper_userObject(withEmail: "current_user-email", phone: "current_user_phone", fbId: "current_user_fbId", gender: "F or M for current User", birthday: "", addtionalMeta: nil)
+   
+   TKTracker.sharedAPI().trackerEngageItem(withItemId: "myPostId", type: kTKTTypeREAD_POST, userObject: userObject, entityObject: entityObject, locationObject: nil)
+   
+   DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+       TKTracker.sharedAPI().trackerExitItem("myPostId")
+       TKTracker.sharedAPI().trackerSendItems()
+   }
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 

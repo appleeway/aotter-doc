@@ -35,6 +35,8 @@ pod 'AotterTrek-iOS-SDK', '3.7.7'
 
 Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
 
+{% tabs %}
+{% tab title="Objc " %}
 ```objectivec
 // AppDelegate.m
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
@@ -52,10 +54,34 @@ Please use **your client id** for initialization which can be found in the [appl
    [[AVAudioSession sharedInstance]setCategory:AVAudioSessionCategoryAmbient error:nil];
   
   
-  
   return YES;
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+//add Header.h as Objective-C bridging Header
+//reference: https://developer.apple.com/documentation/swift/importing-objective-c-into-swift
+#import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
+
+
+//AppDelegate
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    //Required
+    AotterTrek.sharedAPI().initTrekService(withClientId: "<client id", secret: "<client secret>")
+    
+    //Optional
+    AotterTrek.sharedAPI().enableLogger(with: TKLoggerLevelDetail)
+    
+    //Optional
+    AVAudioSession.sharedInstance().setCategory(.ambient)
+    
+    return true
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Test ad units
 

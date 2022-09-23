@@ -8,6 +8,8 @@ Step 3: [Remove User When Logout](user-setting.md#step-3-remove-user-when-logout
 
 ### Step 1: Set User When Login
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 [[AotterTrek sharedAPI] setCurrentUserWithEmail:<user_email>
     phone:<user_phone>
@@ -17,13 +19,37 @@ Step 3: [Remove User When Logout](user-setting.md#step-3-remove-user-when-logout
     addtionalMeta:<meta>
 ];
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```
+AotterTrek.sharedAPI().setCurrentUserWithEmail("user_email",
+    phone: "user_phone",
+    fbId: "user_fbId",
+    gender: "user_gender", 
+    birthday: "user_birthday", 
+    addtionalMeta: ["meta":"meta"]
+)
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Update User&#x20;
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 [[AotterTrek sharedAPI] updateCurrentUserWithValue:@true
                                      forKey:TKUserKeyGender];
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+AotterTrek.sharedAPI().updateCurrentUser(withValue: true, for: TKUserKeyGender)
+```
+{% endtab %}
+{% endtabs %}
 
 **- enum: ATUserKey**
 
@@ -37,6 +63,16 @@ Step 3: [Remove User When Logout](user-setting.md#step-3-remove-user-when-logout
 
 ### Step 3: Remove User When Logout
 
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
+ [[AotterTrek sharedAPI] removeCurrentUser];
 ```
-  [[AotterTrek sharedAPI] removeCurrentUser];
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+[[AotterTrek sharedAPI] removeCurrentUser];
 ```
+{% endtab %}
+{% endtabs %}

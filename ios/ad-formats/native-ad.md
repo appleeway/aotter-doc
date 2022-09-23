@@ -32,12 +32,24 @@ Step 4: [Remove and Release](native-ad.md#step-4-remove-and-release)
 
 You can use this method to check if the ad is expired or not.
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 [self.myAdNative isExpired]; // YES or NO
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```
+self.myAdNative?.isExpired()
+```
+{% endtab %}
+{% endtabs %}
 
 * **impression & click delegate**
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 -(void)TKAdNativeWillLogClicked:(TKAdNative *)ad{
     //will log when click occur
@@ -46,31 +58,69 @@ You can use this method to check if the ad is expired or not.
 -(void)TKAdNativeWillLogImpression:(TKAdNative *)ad{
     //will log when impression occur
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdNativeWillLogClicked(_ ad: TKAdNative!) {
+    //will log when click occur
+}
+
+func tkAdNativeWillLogImpression(_ ad: TKAdNative!) {
+    //will log when impression occur
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 1: Create `TKAdNative` Object
 
 In the following code snippet, replace the value in `initWithPlace` to your **UUID**.\
 Setting category is optional. You can fill in `nil` if you don't want to set it.
 
-```swift
-   //initial ad with place and category
-   //Replace the value in initWithPlace to your own UUID. Ex. "0000-12345-6789-000"
-   //and category Ex. "News"
-   self.myAdNative = [TKAdNative alloc] initWithPlace:@"YOUR UUID" category:@"CATEGORIES"];
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
+//initial ad with place and category
+//Replace the value in initWithPlace to your own UUID. Ex. "0000-12345-6789-000"
+//and category Ex. "News"
+self.myAdNative = [TKAdNative alloc] initWithPlace:@"YOUR UUID" category:@"CATEGORIES"];
 
-   //register current presenting view controller
-   [self.myAdNative registerPresentingViewController:self];
-   
-   //set delegate if needed
-   self.myAdNative.delegate = self;
-   
-   //fetch Ad data from API
-   [self.myAdNative fetchAd];
+//register current presenting view controller
+[self.myAdNative registerPresentingViewController:self];
+
+//set delegate if needed
+self.myAdNative.delegate = self;
+
+//fetch Ad data from API
+[self.myAdNative fetchAd];
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+//initial ad with place and category
+//Replace the value in initWithPlace to your own UUID. Ex. "0000-12345-6789-000"
+//and category Ex. "News"
+self.myAdNative = TKAdNative.init(place: "YOUR UUID", category: "CATEGORIES")
+
+//register current presenting view controller
+self.myAdNative?.registerPresenting(self)
+
+//set delegate if needed
+self.myAdNative?.delegate = self
+
+//fetch Ad data from API
+self.myAdNative?.fetchAd()
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Render `TKAdNatvie` UI Object
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 -(void)TKAdNative:(TKAdNative *)ad didReceivedAdWithData:(NSDictionary *)adData{
   
     // Get ad data parameter
@@ -92,20 +142,72 @@ Setting category is optional. You can fill in `nil` if you don't want to set it.
 
    //set Action button
    [self.myAdNative registerCallToActionButton:self.myButton];
-}
+}jj
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+ func tkAdNative(_ ad: TKAdNative!, didReceivedAdWithData adData: [AnyHashable : Any]!) {
+        // Get ad data parameter
+        let advertiserName = adData["advertiserName"]
+        let title = adData["title"]
+        let text = adData["text"]
+        let imgMain = adData["img_main"]
+        let imageIcon = adData["img_icon"]
+        let imageIconHd = adData["img_icon_hd"]
+        let callToAction = adData["callToAction"]
+        let sponsor = adData["sponser"]
+        
+        //register ad view.
+        self.myAdNative?.registerAdView(self.myAdView)
+    
+        //render ad data
+        let adData = ad.adData
+    
+        //{render views...}
+
+        //set Action button
+        self.myAdNative?.registerCall(toActionButton: self.myButton)
+    }
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 3: Ad Fail Delegates
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 -(void)TKAdNative:(TKAdNative *)ad fetchError:(TKAdError *)error{
-    NSLog(@"TKAdNative fetch error: %@", error.message);
+NSLog(@"TKAdNative fetch error: %@", error.message);
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func tkAdNative(_ ad: TKAdNative!, fetchError error: TKAdError!) {
+        print("TKAdNative fetch error" + error.message)
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 4: Remove and Release
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
 //remove and release data
 [self.myAdNative destroy];
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+//remove and release data
+self.myAdNative?.destroy()
+```
+{% endtab %}
+{% endtabs %}
