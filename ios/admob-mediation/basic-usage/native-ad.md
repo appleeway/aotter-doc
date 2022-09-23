@@ -140,7 +140,7 @@ NS_ASSUME_NONNULL_END
 ![TrekNativeAdTableViewCell](../../../.gitbook/assets/109943071-c2233200-7d0f-11eb-894f-2ccd4ff701ee.png)
 {% endtab %}
 
-{% tab title="Untitled" %}
+{% tab title="Swift" %}
 ```swift
 func setGADNativeAdData(_ nativeAd: GADNativeAd){
         let nibObject = NSBundle.main.loadNibNamed("UniedNativeAdView", owner: nil)

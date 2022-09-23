@@ -17,7 +17,11 @@ Notice: If your project is based on Swift, please import _Aotter-iOS-SDK.h_ in t
 
 _File: AppDelegate.m_
 
-```swift
+{% tabs %}
+{% tab title="ObjC" %}
+```objectivec
+File:Appdelegate.m
+
 /// Need to import Lib
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
@@ -39,6 +43,19 @@ _File: AppDelegate.m_
     return YES;
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    GADMobileAds.sharedInstance().start()
+    AotterTrek.sharedAPI().initTrekService(withClientId: "<client id", secret: "<client secret>")
+ 
+ return true
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Customize TableViewCell / CollectionViewCell / ViewController
 
@@ -106,6 +123,37 @@ NS_ASSUME_NONNULL_END
 
 {% tab title="TrekNativeAdTableViewCell.xib" %}
 ![TrekNativeAdTableViewCell](../../../.gitbook/assets/109943071-c2233200-7d0f-11eb-894f-2ccd4ff701ee.png)
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func setGADNativeAdData(_ nativeAd: GADNativeAd){
+        let nibObject = NSBundle.main.loadNibNamed("UniedNativeAdView", owner: nil)
+        self.setAdView(nibObject?.first)
+        
+        self.nativeAdView?.iconView?.image = nativeAd.icon.image
+        self.nativeAdView?.headlineView?.text = nativeAd.headline
+        self.nativeAdView?.bodyView?.text = nativeAd.body
+        self.nativeAdView?.advertiserView?.text = nativeAd.advertiser
+        self.nativeAdView?.nativeAd = nativeAd
+        
+        self.addSubview(self.nativeAdView)
+    }
+    
+    func setAdView(_ view:UIView){
+        // Remove previous ad view.
+        self.nativeAdView?.removeFromSuperview()
+        self.nativeAdView = view;
+
+        // Add new ad view and set constraints to fill its container.
+        self.addSubview(view)
+        self.nativeAdView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        let viewDictionary = _NSDictionaryOfVariableBindings(self.nativeAdView)
+        self.addConstraint(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|", metrics: nil, views: viewDictionary))
+        self.addConstraint(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|", metrics: nil, views: viewDictionary))
+    }
+```
 {% endtab %}
 {% endtabs %}
 
@@ -301,6 +349,66 @@ When requesting ads, the label parameter should be corresponding to the label se
 ![](../../../.gitbook/assets/132634590-ddef116f-0b74-4877-a218-f9c232a28045.png)
 
 ![](../../../.gitbook/assets/132634585-ad98552e-3239-4f4d-abc4-842163179328.png)
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+class YourViewController: UIViewController,GADNativeAdLoaderDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
+    var gADUnifiedNativeAd:GADNativeAd
+    var refreshControl:UIRefreshControl
+    var adLoader:GADAdLoader
+    let nativeAdTableView:UITableView!
+    
+    override func viewDidLoad() {
+        self.setupTableView()
+        self.setupRefreshControl()
+        self.setupGADAdLoader()
+    }
+    
+    func setupTableView(){
+        self.nativeAdTableView.dataSource = self
+        self.nativeAdTableView.delegate = self
+        self.nativeAdTableView.register(UITableViewCell.class, forCellReuseIdentifier: "Cell")
+        self.nativeAdTableView.register(UINib.init(nibName: "TrekNativeAdTableViewCell", bundle: nil), forCellReuseIdentifier: "TreknativeAdTableViewCell")
+    }
+    
+    func setupRefreshControl(){
+        self.refreshControl = UIRefreshControl.init()
+        self.refreshControl.addTarget(self, action: #selector(onRefreshTable), for: .touchUpInside)
+        self.nativeAdTableView.addSubview(self.refreshControl)
+    }
+    
+    func setupGADAdLoader(){
+        self.adLoader = GADAdLoader.init(adUnitID: "your adUnitId id", rootViewController: self, adTypes: [GADAdLoaderAdType.native], options: [])
+        self.adLoader.delegate = self
+        
+        var request = GADRequest.init()
+        var extra = GADCustomEventExtras.init()
+        extra.setExtras(["category":"CATEGORIES"], forLabel: "AotterTrekGADCustomEventNativeAd")
+        //label must be same as your mediation class name, AotterTrekGADMediaAdapter or AotterTrekGADCustomEventNativeAd.
+        request.register(extra)
+        
+        self.adLoader.load(request)
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+        guard let adType = nativeAd.extraAssets?["trekAd"] else{
+            return;
+        }
+        if(adType == "suprAd"){
+            self.gADUnifiedNativeAd = nativeAd
+        }
+
+        self.nativeAdTableView.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if(self.gADUnifiedNativeAd){
+            NotificationCenter.default.post(name: "SuprAdScrolled", object: nil)
+        }
+    }
+}
+```
 {% endtab %}
 {% endtabs %}
 
