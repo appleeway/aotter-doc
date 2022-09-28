@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022/09/01 release - SDK `3.4.6`
+
+* Add `sdkVersionCode`
+* Add trek extra script support
+* Fix Cookie can't be placed correctly
+* Refactor get Cookie method
+* Update GAM snippet
+
 ## 2022/09/01 release - SDK `3.4.5`
 
 * Add Google Ad Manager parallel loading
