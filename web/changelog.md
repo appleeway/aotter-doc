@@ -1,5 +1,10 @@
 # Changelog
 
+## 2022/09/30 release - SDK `3.5.1`
+
+* Fix Popup when close not clean up iframe src&#x20;
+* Refactor Popup
+
 ## 2022/09/01 release - SDK `3.4.6`
 
 * Add `sdkVersionCode`
