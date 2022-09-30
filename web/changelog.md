@@ -5,7 +5,7 @@
 * Fix Popup when close not clean up iframe src&#x20;
 * Refactor Popup
 
-## 2022/09/01 release - SDK `3.4.6`
+## 2022/09/23 release - SDK `3.4.6`
 
 * Add `sdkVersionCode`
 * Add trek extra script support
