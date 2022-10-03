@@ -29,7 +29,22 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 * **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
 {% endhint %}
 
-## 2022/08/04 release - SDK `4.7.2`(Recommend)
+## 2022/10/03 release - SDK `4.8.0`(Recommend)
+
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 31**
+{% endhint %}
+
+**Change log**
+
+* Support  vast xml
+* Support html5
+* Support video rotation
+* Support banner ad play video
+* Log optimization
+
+## 2022/08/04 release - SDK `4.7.2`
 
 {% hint style="info" %}
 **minSdkVersion 21** \

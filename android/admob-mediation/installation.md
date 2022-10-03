@@ -18,9 +18,9 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.4.5.**
+**We are about to deprecated versions prior to 4.4.5**
 
-**Recommend developer install above version 4.7.2.**
+**Recommend developer install above version 4.7.2**
 {% endhint %}
 
 ****\
@@ -39,7 +39,7 @@ implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.4.5'
 ```groovy
 dependencies {
 
-implementation 'com.aotter.android:trek-admob-mediation:4.7.2'
+implementation 'com.aotter.android:trek-admob-mediation:4.8.0'
 
 }
 ```
