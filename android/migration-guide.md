@@ -28,9 +28,9 @@ Dependencies library is upgraded to version 4.x. Version 3.x is no longer be upd
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.4.5**
+**We are about to deprecated versions prior to 4.4.5.**
 
-**Recommend developer install above version 4.7.2**
+**Recommend developer install above version 4.7.2.**
 {% endhint %}
 
 **Before version 4.4.5 ,please refer to the following.**
@@ -48,7 +48,7 @@ implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
 ```groovy
 dependencies {
 
-implementation 'com.aotter.android:trek-ads:4.8.0'
+implementation 'com.aotter.android:trek-ads:4.7.2'
 
 }
 ```
