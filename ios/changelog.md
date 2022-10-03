@@ -1,5 +1,14 @@
 # Changelog
 
+## 2022/09/30 release - SDK `3.8.0`
+
+* TKAdSuprAdWillLogClick will only triggered once per click
+* support new ad format of VAST XML & HTML 5
+
+## 2022/08/26 release - SDK `3.7.7`
+
+* add AotterTrek.sdkVersion method to get sdk version
+
 ## 2022/08/19 release - SDK `3.7.6`
 
 * fix video inline play in suprAd

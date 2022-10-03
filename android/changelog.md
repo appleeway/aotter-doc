@@ -38,7 +38,10 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 
 **Change log**
 
-* Support new ad format of VAST XML & HTML 5
+* Support  vast xml
+* Support html5
+* Support video rotation
+* Support banner ad play video
 * Log optimization
 
 ## 2022/08/04 release - SDK `4.7.2`
