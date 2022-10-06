@@ -32,6 +32,7 @@ Please use **your client id** for initialization which can be found in the [appl
 
   // Notice: replace your own client id or use our test id.
   AotterTrek('init', 'CLIENT_ID');
+  AotterTrek('send');
 </script>
 <!-- end: trek sdk -->
 ```
@@ -104,6 +105,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
 
         // Notice: This client ID is for test only. Replace it to your own for official operation.
         AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
+        AotterTrek('send')
     </script>
     <!-- end: trek sdk -->
     <script>
