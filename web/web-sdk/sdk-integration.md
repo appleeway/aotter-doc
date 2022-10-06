@@ -105,7 +105,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
 
         // Notice: This client ID is for test only. Replace it to your own for official operation.
         AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
-        AotterTrek('send')
+        AotterTrek('send');
     </script>
     <!-- end: trek sdk -->
     <script>
