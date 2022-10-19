@@ -20,6 +20,7 @@
 * Add new logger
 * Add detect params **trek-debug** to enable debug mode
 * Add detect params **trek-debug-catrun** to override Catrun’s URL
+* Add catrun PARALLAX event
 * Fix tracker not send with webSessionId
 * Fix the config override issue
 * Fix prevent bridge print error logs
