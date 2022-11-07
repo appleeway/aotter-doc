@@ -45,8 +45,12 @@ We also provide test client id and test place id for receiving test ads only.
 * Test Client ID **:**&#x20;
   * **yEFcFoJaruNorh5RqtuR**
 * Test Place ID **:**&#x20;
-  * banner 640x100:
-    * **8624cdd7-c71a-4df2-b9c9-cd93fe79b890**
+  * 320x50 （Banner）
+    * **`f62fc7ee-2629-4977-be97-c92f4ac4ec23`**
+  * 336x280 (SuprAd)
+    * **`be1e1184-aa18-471e-8d49-5c3d455bbf4c`**
+  * 300x250  (SuprAd)
+    * **`5a41c4d0-b268-43b2-9536-d774f46c33bf`**
 {% endhint %}
 
 ### Step 2: Execute AotterTrek()
