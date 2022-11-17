@@ -34,7 +34,7 @@ You can use this method to check if the ad is expired or not.
 {% endtab %}
 
 {% tab title="Swift" %}
-```
+```swift
  self.myAdNative?.isExpired()
 ```
 {% endtab %}
@@ -52,7 +52,7 @@ You can use this method to check the ad is a video ad or not.
 {% endtab %}
 
 {% tab title="Swift" %}
-```
+```swift
 self.myAdNative.isVideoAd()
 ```
 {% endtab %}
@@ -251,6 +251,8 @@ func tkAdSuprAd(_ suprAd: TKAdSuprAd!, adError error: TKAdError!) {
 
 When rendering ads in your **ScrollView / TableView / CollectionView** or any other that might have vertical scroll behavior, you should call this function when the scroll behavior takes place.
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if(self.suprAd){
@@ -258,17 +260,40 @@ When rendering ads in your **ScrollView / TableView / CollectionView** or any ot
     }
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if(self.suprAd){
+        self.suprAd.notifyScrolled()
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 7: (Optional) Destroy Ad
 
 This function will destroy ads completely. In the condition that`TKAdSuprAd`manages itself, destroy() is not necessary to be invoked. However, it is still nice to have it when you are pretty sure that this view or view controller won't be used anymore.
 
+{% tabs %}
+{% tab title="ObjC" %}
 ```objectivec
 -(void)viewDidDisappear:(BOOL)animated{
-        [super viewDidDisappear:animated];
-        [self.suprAd destroy];
+    [super viewDidDisappear:animated];
+    [self.suprAd destroy];
 }
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+<pre class="language-swift"><code class="lang-swift">override func viewDidDisappear(_ animated: Bool) {
+<strong>    super.viewDidDisappear(animated)
+</strong>    self.suprAd.destroy()
+}</code></pre>
+{% endtab %}
+{% endtabs %}
 
 ### Special Cases
 

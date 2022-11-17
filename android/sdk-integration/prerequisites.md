@@ -1,56 +1,56 @@
 # Prerequisites
 
-AotterTrek allows you to monetize your Android apps with ads. This prerequisites section will walk you through all necessary steps before integrating the SDK.
+## Before you begin <a href="#before_you_begin" id="before_you_begin"></a>
 
-**Step 0:** [**Check SDK Version Restriction** ](prerequisites.md#step-0-check-sdk-version-restriction)****\
-**Step 1:** [**Register AotterTrek Account**](prerequisites.md#step-1-register-aottertrek-account)****\
-**Step 2:** [**Set Up New Application**](prerequisites.md#step-2-set-up-new-application)****\
-**Step 3:** [**Create an Ad Slot**](prerequisites.md#step-3-create-an-ad-slot)
+To prepare your app, complete the steps in the following sections.
 
-### **Step 0: Check SDK Version Restriction**
+#### App prerequisites <a href="#app_prerequisites" id="app_prerequisites"></a>
 
-Noticed that our SDK version restriction is **minSdkVersion 21 or later**.
+* Use Android Studio **`3.x`** or **`higher`**
+* Make sure that your app's build file uses the following values:
+  * A **`minSdkVersion` ** of **`21`** or **higher**
+  * A **`compileSdkVersion` ** of **`33`** or **`higher`**
+  * A **`kotlin version`** of **1.6.x** or **`higher`**
 
-### **Step 1: Register AotterTrek Account**
+#### Set up your app in your Trek account <a href="#set_up_your_app_in_your_admob_account" id="set_up_your_app_in_your_admob_account"></a>
 
-Register for AotterTrek Account **** [**here**](https://trek.aotter.net)**.**
+Register your app  following steps:
 
-![](<../../.gitbook/assets/Resgister Account.png>)
+1. [**Sign in to**](https://trek.aotter.net/) **** or [**sign up for**](https://trek.aotter.net/) **** an Trek account.
+2. [**Set up new application**](prerequisites.md#set-up-new-application)
+3. ​[**Create an Ad place**](prerequisites.md#create-an-ad-place)****
 
-### **Step 2: Set up New Application**
+## **Set up new application**
 
-Set up a new application in the application list.
+<div>
 
-![](../../.gitbook/assets/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202021-07-01%20102811.png)
+<figure><img src="../../.gitbook/assets/step 1.png" alt=""><figcaption><p><strong>Step 1</strong></p></figcaption></figure>
 
-![](../../.gitbook/assets/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202021-07-01%20102928.png)
+ 
 
-After entering the list, you might find the ad status is test ad only. For the publisher who use AotterTrek SDK for the first time and didn't get full access to ad slots management, please contact Aseal representative or [E-mail us](https://aseal.in/contactus).
+<figure><img src="../../.gitbook/assets/step 2.png" alt=""><figcaption><p><strong>Step 2</strong></p></figcaption></figure>
 
-#### **When activated, there will be ad slot management in the right column as shown.** <a href="#after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma" id="after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma"></a>
+</div>
 
-![](<../../.gitbook/assets/截圖 2021-09-14 下午2.48.18.png>)
+After entering the list, you might find the ad status is test ad only. For the publisher who use AotterTrek SDK for the first time and didn't get full access to ad slots management, please contact Aseal representative or [**E-mail us**](https://aseal.in/contactus)**.**
 
-### **Step 3: Create an Ad Slot**
+{% hint style="info" %}
+#### **When activated, there will be ad slot management in the right column as shown** <a href="#after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma" id="after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma"></a>
+{% endhint %}
 
-Entering the ad slots management and then creating ad slots. Name the ad slot with lowercase letters `a-z` , number `0-9` and underscore `_` .\
+<figure><img src="../../.gitbook/assets/step 3.png" alt=""><figcaption><p><strong>Step 3</strong></p></figcaption></figure>
+
+## **Create an Ad place**
+
+Entering the ad slots management and then creating ad slots. Name the ad slot with lowercase letters **`a-z`** , number **`0-9`** and underscore **`_`** .\
 AotterTrek currently provides three types of ad and different sizes:
 
-* Native Ad
-* Supr.Ad (1200x628)
-* Banner Ad (320x50)
+* **Native Ad**
+* **Supr.Ad (1200x628)**
+* **Banner Ad (320x50)**
 
-![](<../../.gitbook/assets/截圖 2021-11-04 下午3.38.49.png>)
+<figure><img src="../../.gitbook/assets/step 4.png" alt=""><figcaption><p><strong>Step 4</strong></p></figcaption></figure>
 
-After the ad slot is created, you will see a list of ad slots as shown.
+After the ad place is created, you will see a list of ad places as shown.
 
-![](../../.gitbook/assets/1636012205218.jpg)
-
-## Next Steps
-
-* Follow our guides for installation SDK
-
-{% content-ref url="installation.md" %}
-[installation.md](installation.md)
-{% endcontent-ref %}
-
+<figure><img src="../../.gitbook/assets/step 5.jpg" alt=""><figcaption><p><strong>Step 5</strong></p></figcaption></figure>
