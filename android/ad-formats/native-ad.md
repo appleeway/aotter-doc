@@ -7,9 +7,9 @@ The Native Ad API allows you to build a customized experience for the ads you sh
 Follow these steps to build a native ad layout that fits your application and then requests it.\
 ****
 
-Step 1: [Create Ad Layout](native-ad.md#step-1-create-treknativeadview)\
-Step 2: [How to build and request ad](native-ad.md#step-2-how-to-build-and-request-ad) \
-Step 3: [Render ad  layout](native-ad.md#step-3-render-treknativeadview-layout)
+Step 1: [Create Ad Layout](native-ad.md#step-1-create-ad-layout)\
+Step 2: [How to build and request ad ](native-ad.md#step-2-how-to-build-and-request-ad)\
+Step 3: [Render ad  layout](native-ad.md#step-3-render-ad-layout)
 
 ### TrekNativeAd Parameters
 
