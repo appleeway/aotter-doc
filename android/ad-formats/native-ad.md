@@ -46,51 +46,78 @@ trekNativeAd.isExpired();
 
 ### Step 1: Create Ad Layout
 
-Create NativeAdView or you can check out the example layout below.
+* #### Optional 1 :  uses a[**`TrekNativeAdView`** layout](native-ad.md#treknativeadview-class)
+* #### **O**ptional 2 : uses a [custom layout](native-ad.md#undefined)
 
+<details>
+
+<summary><a href="native-ad.md#treknativeadview-class"> </a>(Recommend) TrekNativeAdView layout </summary>
+
+{% code overflow="wrap" %}
 ```xml
-<androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/adContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<com.aotter.net.trek.ads.TrekNativeAdView      xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trekNativeAdView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-                <com.aotter.net.trek.ads.TrekMediaView
-                    android:id="@+id/trekMediaView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/advertiser"/>
+        
+    <TextView
+        android:id="@+id/adTitle"/>
 
-                <TextView
-                    android:id="@+id/advertiser"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="Sponsored"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/trekMediaView" />
+    <TextView
+        android:id="@+id/adText"/>
 
-                <TextView
-                    android:id="@+id/adTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="TextView"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/advertiser"
-                    app:layout_constraintTop_toBottomOf="@+id/advertiser" />
+    <ImageView
+        android:id="@+id/adMainImg" />
+        
+    <ImageView
+        android:id="@+id/adIcon" />
+        
+  // Other assets such as sponsor or media view, call to action, etc follow.
+
+</com.aotter.net.trek.ads.TrekNativeAdView>
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary>Custom layout</summary>
+
+{% code overflow="wrap" %}
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trekNativeAdView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/advertiser"/>
+        
+    <TextView
+        android:id="@+id/adTitle"/>
+
+    <TextView
+        android:id="@+id/adText"/>
+
+    <ImageView
+        android:id="@+id/adMainImg" />
+        
+    <ImageView
+        android:id="@+id/adIcon" />
+        
+  // Other assets such as sponsor or media view, call to action, etc follow.
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+{% endcode %}
+
+</details>
 
 ### Step 2: How to build and request ad&#x20;
 
@@ -247,71 +274,99 @@ If you sends a request for a single ad , please use **`onAdLoaded`**` ``callback
 ``If you sends a request for multiple ads , please use **`onAdsLoaded`**` ``callback.`
 {% endhint %}
 
+This final step registers the TrekNative ad object with the view that's responsible for displaying it:
+
 {% tabs %}
 {% tab title="Kotlin" %}
+* TrekNativeAdView layout
+
 ```kotlin
-override fun onAdLoaded(trekNativeAd: TrekNativeAd) {
-   super.onAdLoaded(trekNativeAd)
-            
-    val advertiserName:String = trekNativeAd.advertiserName
 
-    val title:String = trekNativeAd.title
-    
-    val text:String = trekNativeAd.text
-    
-    var imgIconHdUri:Uri = trekNativeAd.imgIconHd.uri //size:300x300
+//if you don't want set TrekMediaView ,please skip it.
+trekNativeAdView.setTrekMediaView(trekMediaView)
 
-    var imgMainUri:Uri = trekNativeAd.imgMain.uri //size:1200x628
-    
-    var imgIconUri:Uri = trekNativeAd.imgIcon.uri //size:82x82
+//Registering the views in this way allows the SDK to automatically handle tasks such as:
+//Recording clicks
+//Recording impressions
+trekNativeAdView.setNativeAd(trekNativeAd)
 
-    var imgIconHdDrawable:Drawable = trekNativeAd.imgIconHd.drawable//size:300x300
+```
 
-    var imgMainDrawable:Drawable = trekNativeAd.imgMain.drawable//size:1200x628
-    
-    var imgIconDrawable:Drawable = trekNativeAd.imgIcon.drawable//size:82x82
-    
-    val callToAction:String = trekNativeAd.callToAction
-    
-    val sponsor:String = trekNativeAd.sponsor
-    
-    //Registered ad 
- TrekAdViewBinder.registerAdView(viewBinding.adContainer,viewBinding.trekMediaView,trekNativeAd)
-}
+* Custom layout
+
+```kotlin
+
+//containerView is your custom layout.
+//if you don't want inject TrekMediaView ,please inject null.
+val trekAdViewBinder = TrekAdViewBinder(containerView, trekMediaView, trekNativeAd)
+
+//Registering the views in this way allows the SDK to automatically handle tasks such as:
+//Recording clicks
+//Recording impressions
+trekAdViewBinder.bindAdView()
+
 ```
 {% endtab %}
 
 {% tab title="Java" %}
+* TrekNativeAdView layout
+
 ```java
-@Override
-public void onAdLoaded(@NonNull TrekNativeAd trekNativeAd) {
 
-    String advertiserName = trekNativeAd.advertiserName;
+//if you don't want set TrekMediaView ,please skip it.
+trekNativeAdView.setTrekMediaView(trekMediaView);
 
-    String title = trekNativeAd.title;
-    
-    String text = trekNativeAd.text;
-    
-    Uri imgMainUri = trekNativeAd.getImgMain().getUri(); //size:1200x628
+//Registering the views in this way allows the SDK to automatically handle tasks such as:
+//Recording clicks
+//Recording impressions
+trekNativeAdView.setNativeAd(trekNativeAd);
 
-    Uri imgIconUri = trekNativeAd.getImgIcon().getUri(); //size:82x82
+```
 
-    Uri imgIconHdUri = trekNativeAd.getImgIconHd().getUri(); //size:300x300
-      
-    Drawable imgMainDrawable = trekNativeAd.getImgMain().getDrawable(); //size:1200x628
+* Custom layout
 
-    Drawable imgIconDrawable = trekNativeAd.getImgIcon().getDrawable(); //size:82x82
+```java
 
-    Drawable imgIconHdDrawable = trekNativeAd.getImgIconHd().getDrawable(); //size:300x300
+//containerView is your custom layout.
+//if you don't want inject TrekMediaView ,please inject null.
+val trekAdViewBinder = new TrekAdViewBinder(containerView, trekMediaView, trekNativeAd);
 
-    String callToAction = trekNativeAd.callToAction;
-    
-    String sponsor = trekNativeAd.sponsor;
-    
-      //Registered ad 
- TrekAdViewBinder.registerAdView(viewBinding.adContainer,viewBinding.trekMediaView,trekNativeAd)
-    
-}
+//Registering the views in this way allows the SDK to automatically handle tasks such as:
+//Recording clicks
+//Recording impressions
+trekAdViewBinder.bindAdView();
+```
+{% endtab %}
+{% endtabs %}
+
+### Destroy ad
+
+{% tabs %}
+{% tab title="Kotlin" %}
+* TrekNativeAdView layout
+
+```kotlin
+trekNativeAdView.destroy()
+```
+
+* Custom layout
+
+```kotlin
+trekAdViewBinder.destroy()
+```
+{% endtab %}
+
+{% tab title="Java" %}
+* TrekNativeAdView layout
+
+```java
+trekNativeAdView.destroy();
+```
+
+* Custom layout
+
+```java
+trekAdViewBinder.destroy();
 ```
 {% endtab %}
 {% endtabs %}
