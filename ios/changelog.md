@@ -1,5 +1,11 @@
 # Changelog
 
+## 2022/09/30 release - SDK `3.8.1`
+
+* OM SDK renewed
+* VAST support multiple impression & videoTracking
+* VAST support new tracking event: creativeView
+
 ## 2022/09/30 release - SDK `3.8.0`
 
 * TKAdSuprAdWillLogClick will only triggered once per click
