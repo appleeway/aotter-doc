@@ -29,7 +29,22 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 * **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
 {% endhint %}
 
-## 2022/10/03 release - SDK `4.8.0`(Recommend)
+## 2022/11/17 release - SDK `4.8.1`(Recommend)
+
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 33**
+{% endhint %}
+
+**Change log**
+
+* Fix TrekMediaview play flow
+* New TrekNativeAdView
+* Upgrades ExoPlayer version to `2.18.1`
+* New OnInitializationCompleteListener interface
+* Upgrades Kotlin version to `1.7.20`
+
+## 2022/10/03 release - SDK `4.8.0`
 
 {% hint style="info" %}
 **minSdkVersion 21** \
@@ -38,10 +53,7 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 
 **Change log**
 
-* Support  vast xml
-* Support html5
-* Support video rotation
-* Support banner ad play video
+* Support new ad format of VAST XML & HTML 5
 * Log optimization
 
 ## 2022/08/04 release - SDK `4.7.2`
