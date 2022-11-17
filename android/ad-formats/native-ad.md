@@ -46,8 +46,8 @@ trekNativeAd.isExpired();
 
 ### Step 1: Create Ad Layout
 
-* #### Optional 1 :  uses a[**`TrekNativeAdView`** layout](native-ad.md#treknativeadview-class)
-* #### **O**ptional 2 : uses a [custom layout](native-ad.md#undefined)
+* #### Optional 1 :  uses a[**`TrekNativeAdView`** layout](native-ad.md#recommend-treknativeadview-layout)
+* #### **O**ptional 2 : uses a [custom layout](native-ad.md#custom-layout)
 
 <details>
 
