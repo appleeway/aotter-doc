@@ -26,38 +26,32 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 ****\
 **Before version 4.4.5 ,please refer to the following.**
 
-```groovy
-dependencies {
+<pre class="language-groovy"><code class="lang-groovy">dependencies {
 
-implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.4.5'
-
-}
-```
+<strong>implementation 'com.aotter.net:trek-sdk-android-admob-mediation-kotlin:4.4.5'
+</strong>
+}</code></pre>
 
 **Above version 4.7.2 ,please refer to the following.**
 
-```groovy
-dependencies {
+<pre class="language-groovy"><code class="lang-groovy">dependencies {
 
-implementation 'com.aotter.android:trek-admob-mediation:4.8.0'
-
-}
-```
+<strong>implementation 'com.aotter.android:trek-admob-mediation:4.8.1'
+</strong>
+}</code></pre>
 
 Also, add the following code snippet in your **project-level** build.gradle.
 
-```groovy
-allprojects {
+<pre class="language-groovy"><code class="lang-groovy">allprojects {
     repositories {
         google()
         mavenCentral()
         
         // Add this
-        maven { url 'https://deps.aotter.net/artifactory/libs-release-local' }
-        
+<strong>        maven { url 'https://deps.aotter.net/artifactory/libs-release-local' }
+</strong>        
     }
-}
-```
+}</code></pre>
 
 **AndroidManifest.XML**
 
