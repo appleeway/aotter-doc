@@ -30,38 +30,32 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 
 **Before version 4.4.5 ,please refer to the following.**
 
-```groovy
-dependencies {
+<pre class="language-groovy"><code class="lang-groovy">dependencies {
 
-implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
-
-}
-```
+<strong>implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
+</strong>
+}</code></pre>
 
 **Above version 4.7.2 ,please refer to the following.**
 
-```groovy
-dependencies {
+<pre class="language-groovy"><code class="lang-groovy">dependencies {
 
-implementation 'com.aotter.android:trek-ads:4.8.0'
-
-}
-```
+<strong>implementation 'com.aotter.android:trek-ads:4.8.1'
+</strong>
+}</code></pre>
 
 Please add the following code snippet in your **project-level** build.gradle.
 
-```groovy
-allprojects {
+<pre class="language-groovy"><code class="lang-groovy">allprojects {
     repositories {
         google()
         mavenCentral()
         
         // Add this 
-        maven { url 'https://deps.aotter.net/artifactory/libs-release-local' }
-        
+<strong>        maven { url 'https://deps.aotter.net/artifactory/libs-release-local' }
+</strong>        
     }
-}
-```
+}</code></pre>
 
 **AndroidManifest.XML**
 
@@ -80,38 +74,36 @@ Please use **your client id** for initialization which can be found in the [appl
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-class MyApplication:Application {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        //Please fill in trek clent id yourself
+        TrekAds.initialize(this, Trek_client_id ,object :TrekAds.OnInitializationCompleteListener{
+            override fun onInitializationComplete() {
+
+            }
+        })
         
-        //Test client id: DNgNhOwfbUkOqcQFI+uD
-        //In a real app, use your actual client id, not the one listed above.
-        TrekAds.initialize(context,"DNgNhOwfbUkOqcQFI+uD"){
-            //init finshed callback.
-        }
-                   
     }
 }
-
-
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
-public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-       
-        //Test client id: DNgNhOwfbUkOqcQFI+uD
-        //In a real app, use your actual client id, not the one listed above.
-        TrekAds.INSTANCE.initialize(this, "DNgNhOwfbUkOqcQFI+uD", () -> {
+public class MainActivity extends AppCompatActivity {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-            //init finshed callback.
-
-            return Unit.INSTANCE;
-
+        //Please fill in trek clent id yourself
+       TrekAds.INSTANCE.initialize(this, Trek_client_id ,new TrekAds.OnInitializationCompleteListener(){
+            @Override
+            public void onInitializationComplete() {
+                
+            }
         });
         
     }
@@ -122,19 +114,15 @@ public class MyApplication extends Application {
 
 ### Test ad units
 
-We also provide test client id and test place id for receiving test ads only.
-
 {% hint style="info" %}
-* Test Client ID **:**&#x20;
-  * **DNgNhOwfbUkOqcQFI+uD**
-* Test Place ID **:**&#x20;
-  * Native Ad :&#x20;
-    * **45419fb5-a846-4c4a-837f-3b391ec7b45a**
-  * Supr.Ad :&#x20;
-    * **81608f91-8b2b-4f8f-86a1-539a1959f836**
-  * Banner Ad **:**&#x20;
-    * **68856f90-83b7-4f09-98d4-7f480842cb02**
+**Key Point:** Make sure you replace these client id and place uid with your own ad unit ID before publishing your app.
 {% endhint %}
+
+| Ad Format | Client Id            | Place Uid                            |
+| --------- | -------------------- | ------------------------------------ |
+| Native Ad | DNgNhOwfbUkOqcQFI+uD | 45419fb5-a846-4c4a-837f-3b391ec7b45a |
+| Supr.Ad   | DNgNhOwfbUkOqcQFI+uD | 81608f91-8b2b-4f8f-86a1-539a1959f836 |
+| Banner Ad | DNgNhOwfbUkOqcQFI+uD | 68856f90-83b7-4f09-98d4-7f480842cb02 |
 
 ## Next Steps
 
