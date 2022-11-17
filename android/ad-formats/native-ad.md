@@ -274,7 +274,72 @@ If you sends a request for a single ad , please use **`onAdLoaded`**` ``callback
 ``If you sends a request for multiple ads , please use **`onAdsLoaded`**` ``callback.`
 {% endhint %}
 
-This final step registers the TrekNative ad object with the view that's responsible for displaying it:
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+override fun onAdLoaded(trekNativeAd: TrekNativeAd) {
+   super.onAdLoaded(trekNativeAd)
+            
+    val advertiserName:String = trekNativeAd.advertiserName
+
+    val title:String = trekNativeAd.title
+    
+    val text:String = trekNativeAd.text
+    
+    var imgIconHdUri:Uri = trekNativeAd.imgIconHd.uri //size:300x300
+
+    var imgMainUri:Uri = trekNativeAd.imgMain.uri //size:1200x628
+    
+    var imgIconUri:Uri = trekNativeAd.imgIcon.uri //size:82x82
+
+    var imgIconHdDrawable:Drawable = trekNativeAd.imgIconHd.drawable//size:300x300
+
+    var imgMainDrawable:Drawable = trekNativeAd.imgMain.drawable//size:1200x628
+    
+    var imgIconDrawable:Drawable = trekNativeAd.imgIcon.drawable//size:82x82
+    
+    val callToAction:String = trekNativeAd.callToAction
+    
+    val sponsor:String = trekNativeAd.sponsor
+       
+}
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+@Override
+public void onAdLoaded(TrekNativeAd trekNativeAd) {
+
+    String advertiserName = trekNativeAd.advertiserName;
+
+    String title = trekNativeAd.title;
+    
+    String text = trekNativeAd.text;
+    
+    Uri imgMainUri = trekNativeAd.getImgMain().getUri(); //size:1200x628
+
+    Uri imgIconUri = trekNativeAd.getImgIcon().getUri(); //size:82x82
+
+    Uri imgIconHdUri = trekNativeAd.getImgIconHd().getUri(); //size:300x300
+      
+    Drawable imgMainDrawable = trekNativeAd.getImgMain().getDrawable(); //size:1200x628
+
+    Drawable imgIconDrawable = trekNativeAd.getImgIcon().getDrawable(); //size:82x82
+
+    Drawable imgIconHdDrawable = trekNativeAd.getImgIconHd().getDrawable(); //size:300x300
+
+    String callToAction = trekNativeAd.callToAction;
+    
+    String sponsor = trekNativeAd.sponsor;
+    
+    
+}
+```
+{% endtab %}
+{% endtabs %}
+
+This final step registers the TrekNativeAd object with the view that's responsible for displaying it:
 
 {% tabs %}
 {% tab title="Kotlin" %}
