@@ -149,4 +149,19 @@ viewBinding.trekBannerAdView.refreshTime = RefreshTime.REFRESH_TIME_15000_MS
 viewBinding.trekBannerAdView.loadAd(trekAdRequest)
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```java
+//autoRefresh's default value is false
+viewBinding.trekBannerAdView.autoRefresh = true;
+
+//refresh each every time 
+//RefreshTime.REFRESH_TIME_15000_MS , 15 sec
+//RefreshTime.REFRESH_TIME_30000_MS , 30 sec
+//RefreshTime.REFRESH_TIME_60000_MS , 60 sec
+viewBinding.trekBannerAdView.refreshTime = RefreshTime.REFRESH_TIME_15000_MS;
+
+viewBinding.trekBannerAdView.loadAd(trekAdRequest);
+```
+{% endtab %}
 {% endtabs %}
