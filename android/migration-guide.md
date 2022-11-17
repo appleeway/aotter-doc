@@ -28,9 +28,9 @@ Dependencies library is upgraded to version 4.x. Version 3.x is no longer be upd
 {% endhint %}
 
 {% hint style="warning" %}
-**We are about to deprecated versions prior to 4.4.5.**
+**We are about to deprecated versions prior to 4.4.5**
 
-**Recommend developer install above version 4.7.2.**
+**Recommend developer install above version 4.7.2**
 {% endhint %}
 
 **Before version 4.4.5 ,please refer to the following.**
@@ -48,7 +48,7 @@ implementation 'com.aotter.net:trek-sdk-android-kotlin:4.4.5'
 ```groovy
 dependencies {
 
-implementation 'com.aotter.android:trek-ads:4.7.2'
+implementation 'com.aotter.android:trek-ads:4.8.1'
 
 }
 ```
@@ -71,21 +71,22 @@ We add a completion callback in version 4 which is useful for publishers who wan
 {% tab title="Kotlin" %}
 ```kotlin
 // Version 4.x
-TrekAds.initialize(context,"YOUR_CLIENT_ID"){
-   //aotter service init finished callback.
-}
+TrekAds.initialize(this, Trek_client_id ,object :TrekAds.OnInitializationCompleteListener{
+            override fun onInitializationComplete() {
+
+            }
+        })
 ```
 {% endtab %}
 
 {% tab title="Java" %}
 ```java
 // Version 4.x
-TrekAds.INSTANCE.initialize(this, "YOUR_CLIENT_ID", () -> {
-
-            // init finished callback.
-
-            return Unit.INSTANCE;
-
+TrekAds.INSTANCE.initialize(this, Trek_client_id ,new TrekAds.OnInitializationCompleteListener(){
+            @Override
+            public void onInitializationComplete() {
+                
+            }
         });
 ```
 {% endtab %}
@@ -110,12 +111,6 @@ In version 4, we use **TrekMediaView** instead of TKMediaView.
 **- Methods**
 
 When setting ad listener, version 4 uses **setTrekAdListener** method instead of _setAdListener_. **** Furthermore, **** inject interface to listener use **TrekAdListener** interface instead of _TKAdListener._
-
-When registering ad, _registerAdView_ method is deprecated. In version 4, the register method is as below.
-
-```kotlin
- TrekAdViewBinder.registerAdView(adContainer,trekMediaView,trekNativeAd)
-```
 
 ### Create `TrekAdRequest`&#x20;
 
