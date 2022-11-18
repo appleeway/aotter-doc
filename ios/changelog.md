@@ -1,6 +1,6 @@
 # Changelog
 
-## 2022/09/30 release - SDK `3.8.1`
+## 2022/11/17 release - SDK `3.8.1`
 
 * OM SDK renewed
 * VAST support multiple impression & videoTracking
