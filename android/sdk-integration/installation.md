@@ -25,7 +25,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 {% hint style="warning" %}
 **We are about to deprecated versions prior to 4.4.5**
 
-**Recommend developer install above version 4.7.2**
+**Recommend developer install above version 4.8.0**
 {% endhint %}
 
 **Before version 4.4.5 ,please refer to the following.**
@@ -36,7 +36,7 @@ Add the following dependencies to your **app-level** build.gradle (not project!)
 </strong>
 }</code></pre>
 
-**Above version 4.7.2 ,please refer to the following.**
+**Above version 4.5.0 ,please refer to the following.**
 
 <pre class="language-groovy"><code class="lang-groovy">dependencies {
 

@@ -22,7 +22,7 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 {% hint style="warning" %}
 **We are about to deprecated versions prior to 4.4.5**
 
-**Recommend developer install above version 4.7.2**
+**Recommend developer install above version 4.8.0**
 {% endhint %}
 
 *   Class Name \
@@ -35,7 +35,7 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
       * **com.admob.mediation.kotlin.ads.TrekAdmobCustomEventBanner**\
         ****
 
-    &#x20;  **above version 4.7.2**
+    &#x20;  **above version 4.5.0**
 
     * Native Ads:&#x20;
       * **com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative**
@@ -43,6 +43,6 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
       * **com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner**\
         ****
 * Parameter
-  * {"clientId":"**YOUR\_TREK\_CLIENT\_ID**","placeUid":"**YOUR\_TREK\_PLACE\_UUID**"}
+  * {"clientId":"**YOUR\_TREK\_CLIENT\_ID**","placeUid":"**YOUR\_TREK\_SUPRAD\_PLACE\_UUID**"}
 
 ![](<../../.gitbook/assets/image (11) (1).png>)
