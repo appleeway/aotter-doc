@@ -96,7 +96,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
 
 ## Full Example
 
-```markup
+```html
 <body>
     <div id="adContainer"></div>
     <!-- start: trek sdk -->
@@ -126,5 +126,52 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
           }
         })
     </script>
+</body>
+```
+
+## Full Example with Passback
+
+```html
+<body>
+    <!-- start: trek sdk -->
+    <script>
+        (function(w, d, s, src, n) {
+            var js, ajs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(n)) return;
+            js = d.createElement(s); js.id = n;
+            w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
+            js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
+        })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.1/sdk.js', 'AotterTrek');
+
+        AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
+        AotterTrek('send');
+    </script>
+    <!-- end: trek sdk -->
+
+    <!-- 載入 passback 使用的函式庫 -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    
+    <!-- 廣告開始 -->
+    <div id="gpt-passback">
+        <div id="adContainer"></div>
+        <script>
+            AotterTrek('suprAd', { 
+              selector: '#adContainer',
+              place: 'placement_UUID',
+              onAdLoad: () => { },
+              onAdFail: () => {
+                // 觸發 passback code
+                window.googletag = window.googletag || {cmd: []};
+                googletag.cmd.push(function() {
+                    // gpt-passback 包在 adContainer 的外層，因此這段 passback code 會把未填充的 aseal 廣告佔的位置乾淨清除，讓出空間給下一家廣告呈現
+                    googletag.defineSlot('slot_name', [[300, 250], [336, 280]], 'gpt-passback').addService(googletag.pubads());
+                    googletag.enableServices();
+                    googletag.display('gpt-passback');
+                });
+              }
+            })
+        </script>
+    </div>
+    <!-- 廣告結束 -->
 </body>
 ```
