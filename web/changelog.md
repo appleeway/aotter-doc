@@ -1,5 +1,12 @@
 # Changelog
 
+## 2022/12/2 release - SDK `3.5.4`&#x20;
+
+* Feat Popup new UI and aspect ratio
+* Fix adm missing width and height
+* Fix iframe postMessage will lose act sometime
+* Fix imp will not send
+
 ## 2022/09/30 release - SDK `3.5.1`
 
 * Fix Popup when close not clean up iframe src&#x20;
