@@ -108,10 +108,8 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 ## 2022/04/15 release - SDK `4.4.5`&#x20;
 
 {% hint style="info" %}
-Below this version:
-
 **minSdkVersion 21** \
-**targetSdkVersion 30**
+**targetSdkVersion 31**
 {% endhint %}
 
 * Optimized implementation
