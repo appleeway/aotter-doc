@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022/12/22 release - SDK `3.8.2`
+
+* VAST support progress tracking
+
 ## 2022/11/17 release - SDK `3.8.1`
 
 * OM SDK renewed
