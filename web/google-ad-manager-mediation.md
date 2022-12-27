@@ -38,7 +38,7 @@ Step 3: [Create Ad Unit and Generate Publisher Tag](google-ad-manager-mediation.
 
 ```html
 <div id="gpt-passback">
-   <div id="adContainer"></div>
+   <div id="supr-ad-containe"></div>
 </div>
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script>
