@@ -28,7 +28,7 @@ Please use **your client id** for initialization which can be found in the [appl
     js = d.createElement(s); js.id = n;
     w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
     js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
-  })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.1/sdk.js', 'AotterTrek');
+  })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.4/sdk.js', 'AotterTrek');
 
   // Notice: replace your own client id or use our test id.
   AotterTrek('init', 'CLIENT_ID');
@@ -107,7 +107,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
             js = d.createElement(s); js.id = n;
             w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
             js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
-        })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.1/sdk.js', 'AotterTrek');
+        })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.4/sdk.js', 'AotterTrek');
 
         // Notice: This client ID is for test only. Replace it to your own for official operation.
         AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
@@ -141,7 +141,7 @@ AotterTrek web SDK will parse `<div id="adContainer">` to an ad view.
             js = d.createElement(s); js.id = n;
             w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].l = 1 * new Date();
             js.async = 1; js.src = src; ajs.parentNode.insertBefore(js, ajs)
-        })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.1/sdk.js', 'AotterTrek');
+        })(window, document, 'script', 'https://static.aottercdn.com/trek/sdk/3.5.4/sdk.js', 'AotterTrek');
 
         AotterTrek('init', 'yEFcFoJaruNorh5RqtuR');
         AotterTrek('send');
