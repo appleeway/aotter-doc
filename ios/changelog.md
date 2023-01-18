@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023/01/18 release - SDK `3.8.3`
+
+* Support Apple Silicon device's emulator
+
 ## 2022/12/22 release - SDK `3.8.2`
 
 * VAST support progress tracking
