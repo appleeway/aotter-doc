@@ -40,7 +40,7 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 
 * Add friendly obstrction method
 * Fix Mediation low in view rate in OM SDK
-* `TrekAdViewUtils` instead of `TrekAdViewBinder`
+* Replace `TrekAdViewBinder` with `TrekAdViewUtils`
 
 ## 2022/11/17 release - SDK `4.8.1`
 
@@ -93,14 +93,14 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 {% endhint %}
 
 * New Sensor
-* `TrekAdLoader` instead of `TrekAd`
+* Replace `TrekAd` with `TrekAdLoader`
 * The `TrekAdLoader.loadAds()` method sends a request for multiple ads (up to 5)
-* `TrekNativeAd` instead of `AdData`
-* `TrekAds.initialize() method` instead of `AotterService.initialize() method`
-* `TrekBannerAdView` instead of `TrekBannerView`
+* Replace `AdData` with `TrekNativeAd`
+* Replace `AotterService.initialize() method` with `TrekAds.initialize() method`
+* Replace `TrekBannerView` with `TrekBannerAdView`
 * New `TrekAdViewBinder` object (Using the object register ad layout)
-* `TrekJsonObject` instead of `JsonObject`
-* Kotlinx-serialization instead of Gson
+* Replace `JsonObject` with `TrekJsonObject`
+* Replace Gson with Kotlinx-serialization
 * Updating ExoPlayer version to `2.17.1`
 * Updating Kotlin version to `1.6.21`
 
@@ -144,7 +144,7 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 
 ## 2021/12/23 release - SDK `4.3.4`
 
-* Use Activity page (instead of DialogFragment page) when context comes from the application
+* Use Activity page  when context comes from the application
 
 ## 2021/12/01 release - SDK `4.3.2`
 
