@@ -39,6 +39,11 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 **Change log**
 
 * Add friendly obstrction method
+
+{% hint style="info" %}
+If there are any native elements which you would consider to be part of the ad, such as a close button, some logo text, or another decoration, you should register them as friendly obstructions to prevent them from counting towards coverage of the ad. This applies to any ancestor or peer views in the view hierarchy (all sub-views of the adView will be automatically treated as part of the ad):
+{% endhint %}
+
 * Fix Mediation low in view rate in OM SDK
 * Replace `TrekAdViewBinder` with `TrekAdViewUtils`
 
