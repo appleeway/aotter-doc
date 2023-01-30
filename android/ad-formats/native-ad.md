@@ -361,15 +361,19 @@ trekNativeAdView.setNativeAd(trekNativeAd)
 
 ```kotlin
 
+//create a viewStateTracker object.
+val viewStateTracker = TrekAdViewUtils.createViewStateTracker(trekNativeAd)
+
+// add Friendly Obstruction view
+// we recommend add all child view of your custom layout to friendly obstruction method,it can increase impression rate.
+viewStateTracker.addFriendlyObstruction(view)
+
 //containerView is your custom layout.
 //if you don't want inject TrekMediaView ,please inject null.
-val trekAdViewBinder = TrekAdViewBinder(containerView, trekMediaView, trekNativeAd)
-
 //Registering the views in this way allows the SDK to automatically handle tasks such as:
 //Recording clicks
 //Recording impressions
-trekAdViewBinder.bindAdView()
-
+viewStateTracker.launchViewStateTracker(containerView , trekMediaView)
 ```
 {% endtab %}
 
@@ -392,14 +396,19 @@ trekNativeAdView.setNativeAd(trekNativeAd);
 
 ```java
 
+//create a viewStateTracker object.
+ViewStateTracker  viewStateTracker = TrekAdViewUtils.createViewStateTracker(trekNativeAd);
+
+// add Friendly Obstruction view
+// we recommend add all child view of your custom layout to friendly obstruction method,it can increase impression rate.
+viewStateTracker.addFriendlyObstruction(view);
+
 //containerView is your custom layout.
 //if you don't want inject TrekMediaView ,please inject null.
-val trekAdViewBinder = new TrekAdViewBinder(containerView, trekMediaView, trekNativeAd);
-
 //Registering the views in this way allows the SDK to automatically handle tasks such as:
 //Recording clicks
 //Recording impressions
-trekAdViewBinder.bindAdView();
+viewStateTracker.launchViewStateTracker(containerView , trekMediaView);
 ```
 {% endtab %}
 {% endtabs %}
@@ -417,7 +426,7 @@ trekNativeAdView.destroy()
 * Custom layout
 
 ```kotlin
-trekAdViewBinder.destroy()
+TrekAdViewUtils.destroyAd(trekNativeAd)
 ```
 {% endtab %}
 
@@ -431,7 +440,7 @@ trekNativeAdView.destroy();
 * Custom layout
 
 ```java
-trekAdViewBinder.destroy();
+TrekAdViewUtils.destroyAd(trekNativeAd);
 ```
 {% endtab %}
 {% endtabs %}
