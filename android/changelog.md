@@ -29,7 +29,20 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 * **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
 {% endhint %}
 
-## 2022/11/17 release - SDK `4.8.1`(Recommend)
+## 2023/01/30 release - SDK `4.8.3`(Recommend)
+
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 31**
+{% endhint %}
+
+**Change log**
+
+* Add friendly obstrction method
+* Fix Mediation low in view rate in OM SDK
+* `TrekAdViewUtils` instead of `TrekAdViewBinder`
+
+## 2022/11/17 release - SDK `4.8.1`
 
 {% hint style="info" %}
 **minSdkVersion 21** \
