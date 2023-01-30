@@ -404,6 +404,7 @@ ViewStateTracker  viewStateTracker = TrekAdViewUtils.createViewStateTracker(trek
 
 // add Friendly Obstruction view
 // we recommend add all child view of your custom layout to friendly obstruction method,it can increase impression rate.
+// If there are any native elements which you would consider to be part of the ad, such as a close button, some logo text, or another decoration, you should register them as friendly obstructions to prevent them from counting towards coverage of the ad. This applies to any ancestor or peer views in the view hierarchy (all sub-views of the adView will be automatically treated as part of the ad)
 viewStateTracker.addFriendlyObstruction(view);//child view1
 viewStateTracker.addFriendlyObstruction(view);//child view2
 viewStateTracker.addFriendlyObstruction(view);//child view3
