@@ -366,7 +366,9 @@ val viewStateTracker = TrekAdViewUtils.createViewStateTracker(trekNativeAd)
 
 // add Friendly Obstruction view
 // we recommend add all child view of your custom layout to friendly obstruction method,it can increase impression rate.
-viewStateTracker.addFriendlyObstruction(view)
+viewStateTracker.addFriendlyObstruction(view)//child view1
+viewStateTracker.addFriendlyObstruction(view)//child view2
+viewStateTracker.addFriendlyObstruction(view)//child view3
 
 //containerView is your custom layout.
 //if you don't want inject TrekMediaView ,please inject null.
@@ -401,7 +403,9 @@ ViewStateTracker  viewStateTracker = TrekAdViewUtils.createViewStateTracker(trek
 
 // add Friendly Obstruction view
 // we recommend add all child view of your custom layout to friendly obstruction method,it can increase impression rate.
-viewStateTracker.addFriendlyObstruction(view);
+viewStateTracker.addFriendlyObstruction(view);//child view1
+viewStateTracker.addFriendlyObstruction(view);//child view2
+viewStateTracker.addFriendlyObstruction(view);//child view3
 
 //containerView is your custom layout.
 //if you don't want inject TrekMediaView ,please inject null.
