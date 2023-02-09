@@ -347,7 +347,7 @@ This final step registers the TrekNativeAd object with the view that's responsib
 
 ```kotlin
 
-//if you don't want set TrekMediaView ,please skip it.
+//if you don't want set TrekMediaView ,please inject null.
 trekNativeAdView.setTrekMediaView(trekMediaView)
 
 //Registering the views in this way allows the SDK to automatically handle tasks such as:
@@ -385,7 +385,7 @@ viewStateTracker.launchViewStateTracker(containerView , trekMediaView)
 
 ```java
 
-//if you don't want set TrekMediaView ,please skip it.
+//if you don't want set TrekMediaView ,please inject null.
 trekNativeAdView.setTrekMediaView(trekMediaView);
 
 //Registering the views in this way allows the SDK to automatically handle tasks such as:
