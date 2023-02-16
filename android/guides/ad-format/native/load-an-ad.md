@@ -4,9 +4,9 @@ Native ads are loaded via the **`TrekAdLoader`** class, which has its own **`Bui
 
 Implementing native ads in your app following steps:
 
-* [**Build a TrekAdLoader**](load-an-ad.md#build-an-trekadloader)****
-* [**Build a TrekAdRequest**](load-an-ad.md#build-an-trekadrequest)****
-* [**Loading ads**](load-an-ad.md#loading\_ads)****
+* ****[**Build a TrekAdLoader**](load-an-ad.md#build-an-trekadloader)****
+* ****[**Build a TrekAdRequest**](load-an-ad.md#build-an-trekadrequest)****
+* ****[**Loading ads**](load-an-ad.md#loading\_ads)****
 * ****[**Always test with test ads**](load-an-ad.md#always\_test\_with\_test\_ads)****
 
 ### Build an TrekAdLoader
@@ -183,4 +183,4 @@ trekAdLoader.loadAds(trekAdRequest,3);
 
 The easiest way to load test ads is to use our test client id and test place uid for Native Advanced.
 
-For more information about how the Trek Ads SDK's test ads work, see [**Enable test ads**](broken-reference)**.**
+For more information about how the Trek Ads SDK's test ads work, see [**Enable test ads**](../../../enable-test-ads.md)**.**

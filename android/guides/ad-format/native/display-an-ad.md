@@ -5,8 +5,8 @@ When a native ad loads, the Trek Ads SDK invokes the listener for the correspond
 Implementing native ads in your app following steps:
 
 * ****[**Setting ad layout**](display-an-ad.md#setting-ad-layout)****
-* [**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
-* [**Register TrekMediaView and TrekNativeAd**](display-an-ad.md#register-trekmediaview-and-treknativead)****
+* ****[**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
+* ****[**Register TrekMediaView and TrekNativeAd**](display-an-ad.md#register-trekmediaview-and-treknativead)****
 * ****[**Destroy ad**](display-an-ad.md#destroy-ad)****
 
 ### **Setting ad layout**
