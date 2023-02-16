@@ -24,7 +24,7 @@ Step 3: [Render ad  layout](native-ad.md#step-3-render-ad-layout)
 | `callToAction`   | String | Ex: "瞭解詳情"      | Yes                    | Recommended               |
 | `sponsor`        | String | Sponsored       | Yes                    | Required                  |
 
-![](../../.gitbook/assets/%E6%88%AA%E5%9C%96%202021-09-10%20%E4%B8%8B%E5%8D%885.36.49.png)
+![](broken-reference)
 
 #### - isExpired
 
