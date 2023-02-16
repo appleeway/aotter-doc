@@ -2,9 +2,9 @@
 
 AotterTrek allows you to monetize your Web apps with ads. This prerequisites section will walk you through all necessary steps before integrating the SDK.
 
-**Step 1:** [**Register AotterTrek Account**](../../android/sdk-integration/prerequisites.md#step-1-register-aottertrek-account)****\
-**Step 2:** [**Set Up New Application**](../../android/sdk-integration/prerequisites.md#step-2-set-up-new-application)****\
-**Step 3:** [**Create an Ad Slot**](../../android/sdk-integration/prerequisites.md#step-3-create-an-ad-slot)
+**Step 1:** [**Register AotterTrek Account**](broken-reference)****\
+**Step 2:** [**Set Up New Application**](broken-reference)****\
+**Step 3:** [**Create an Ad Slot**](broken-reference)
 
 ### **Step 1: Register AotterTrek Account**
 
