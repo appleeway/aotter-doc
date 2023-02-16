@@ -9,15 +9,15 @@ description: >-
 
 ### Learn more about:
 
-*   [**Prerequisites**](broken-reference)****
+*   ****[**Prerequisites**](../sdk-integration/prerequisites.md)****
 
     Learn how to prepare your app
-*   ****[**Installation**](broken-reference)****
+*   ****[**Installation**](installation.md)****
 
     Learn how to initialize the Trek Ads SDK.
-*   [**Tracker**](broken-reference)****
+*   ****[**Tracker**](copy-of-copy-of-page-1.md)****
 
     Learn more about data tracking.
-*   [**ProGuard**](broken-reference)****
+*   ****[**ProGuard**](proguard.md)****
 
     Learn more about proguard.

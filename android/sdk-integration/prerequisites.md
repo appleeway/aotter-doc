@@ -24,11 +24,11 @@ Register your app  following steps:
 
 <div>
 
-<figure><img src="../../.gitbook/assets/step 1.png" alt=""><figcaption><p><strong>Step 1</strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong>Step 1</strong></p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/step 2.png" alt=""><figcaption><p><strong>Step 2</strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong>Step 2</strong></p></figcaption></figure>
 
 </div>
 
@@ -38,7 +38,7 @@ After entering the list, you might find the ad status is test ad only. For the p
 #### **When activated, there will be ad slot management in the right column as shown** <a href="#after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma" id="after-entering-the-list-you-will-find-that-when-the-advertisement-is-activated-there-will-be-slot-ma"></a>
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/step 3.png" alt=""><figcaption><p><strong>Step 3</strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong>Step 3</strong></p></figcaption></figure>
 
 ## **Create an Ad place**
 
@@ -49,8 +49,8 @@ AotterTrek currently provides three types of ad and different sizes:
 * **Supr.Ad (1200x628)**
 * **Banner Ad (320x50)**
 
-<figure><img src="../../.gitbook/assets/step 4.png" alt=""><figcaption><p><strong>Step 4</strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong>Step 4</strong></p></figcaption></figure>
 
 After the ad place is created, you will see a list of ad places as shown.
 
-<figure><img src="../../.gitbook/assets/step 5.jpg" alt=""><figcaption><p><strong>Step 5</strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong>Step 5</strong></p></figcaption></figure>

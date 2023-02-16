@@ -25,13 +25,13 @@ This is a app-ads.txt file example:
 **Note**: Your app-ads.txt file must be formatted as specified by the IAB Tech Lab in order to be verified. If you need additional help, review the [Authorized Sellers for Apps specification](https://www.iabtechlab.com/wp-content/uploads/2019/03/app-ads.txt-v1.0-final-.pdf) provided by the IAB Tech Lab.&#x20;
 {% endhint %}
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/app-ads.png" alt=""><figcaption></figcaption></figure>
 
 ## Set up an app-ads.txt file for your app
 
 * If you haven't already ,we provide app-ads.txt file for publisher .
 
-{% file src="broken-reference" %}
+{% file src="../../.gitbook/assets/app-ads.txt" %}
 app-ads.txt
 {% endfile %}
 
