@@ -2,7 +2,7 @@
 
 Implementing native ads in your app following steps:
 
-* ****[**Prerequisite**](broken-reference)****
-* ****[**Integrating Trek with AdMob Mediation**](broken-reference)****
-* ****[**Load an ad**](broken-reference)****
-* ****[**Display an ad**](broken-reference)****
+* ****[**Prerequisite**](../../prerequisites.md)****
+* ****[**Integrating Trek with AdMob Mediation**](../../integrating-trek-with-admob-mediation.md)****
+* ****[**Load an ad**](load-an-ad.md)****
+* ****[**Display an ad**](display-an-ad.md)****

@@ -3,7 +3,7 @@
 Implementing native ads in your app following steps:
 
 * ****[**Build an AdLoader**](load-an-ad.md#build-an-adloader)****
-* ****[**Build an AdRequest**](load-an-ad.md#build-an-trekadrequest)****
+* ****[**Build an AdRequest**](load-an-ad.md#build-an-adrequest)****
 * ****[**Loading ads**](load-an-ad.md#loading-ads)****
 
 ### Build an AdLoader
