@@ -10,6 +10,6 @@ They're shown using the same types of views with which you're already building y
 
 Implementing native ads in your app following steps:
 
-* ****[**Complete Get Started guide**](../../../get-started/)****
-* ****[**Load an ad**](load-an-ad.md)****
-* ****[**Display an ad**](display-an-ad.md)****
+* [**Complete Get Started guide.**](broken-reference)****
+* ****[**Load an ad**](broken-reference)****
+* ****[**Display an ad**](broken-reference)****

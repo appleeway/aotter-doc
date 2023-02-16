@@ -25,8 +25,8 @@ Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**
 ### **For more details please refer**
 
 * **Detail refer** [**Migration Guide**](migration-guide.md)****
-* **Detail refer** [**Trek installation**](sdk-integration/installation.md)****
-* **Detail refer** [**Admob mediation installation**](admob-mediation/installation.md)****
+* **Detail refer** [**Trek installation**](get-started/installation.md)****
+* **Detail refer** [**Admob mediation installation**](integration-of-third-party-ad-network/)****
 {% endhint %}
 
 ## 2023/01/30 release - SDK `4.8.3`(Recommend)
