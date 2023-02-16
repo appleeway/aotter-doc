@@ -10,6 +10,7 @@
   * [Installation](android/get-started/installation.md)
   * [Tracker](android/get-started/copy-of-copy-of-page-1.md)
   * [Proguard](android/get-started/proguard.md)
+* [Enable test ads](android/enable-test-ads.md)
 * [Migration Guide](android/migration-guide.md)
 * [Android SDK](android/sdk-integration/README.md)
   * [Prerequisites](android/sdk-integration/prerequisites.md)
