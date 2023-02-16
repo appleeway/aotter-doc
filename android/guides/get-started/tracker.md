@@ -4,9 +4,9 @@ Trek is shipped with a powerful big data tool that is free to all publishers. Se
 
 Implementing tracker in your app following steps:
 
-* ****[**Build a Tracker**](copy-of-copy-of-page-1.md#build-a-tracker)****
-* ****[**Build data for user profiling**](copy-of-copy-of-page-1.md#build-data-for-user-profiling)****
-* ****[**Send user profiling for Tracker**](copy-of-copy-of-page-1.md#send-user-profiling-for-tracker)****
+* ****[**Build a Tracker**](tracker.md#build-a-tracker)****
+* ****[**Build data for user profiling**](tracker.md#build-data-for-user-profiling)****
+* ****[**Send user profiling for Tracker**](tracker.md#send-user-profiling-for-tracker)****
 
 ### **Build a Tracker**
 
@@ -26,10 +26,10 @@ Tracker tracker = new Tracker(context);
 
 ### **Build data for user profiling**
 
-* #### [Entity](copy-of-copy-of-page-1.md#entity-1)
-* ****[**User**](copy-of-copy-of-page-1.md#user)****
-* ****[**Loaction**](copy-of-copy-of-page-1.md#loaction)****
-* ****[**ActionType**](copy-of-copy-of-page-1.md#actiontype)****
+* #### [Entity](tracker.md#entity-1)
+* ****[**User**](tracker.md#user)****
+* ****[**Loaction**](tracker.md#loaction)****
+* ****[**ActionType**](tracker.md#actiontype)****
 
 #### Entity&#x20;
 

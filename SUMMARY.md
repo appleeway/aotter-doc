@@ -5,13 +5,16 @@
 
 ## 🤖  Android
 
-* [Get Started](android/get-started/README.md)
-  * [Prerequisites](android/get-started/prerequisites.md)
-  * [Installation](android/get-started/installation.md)
-  * [Tracker](android/get-started/copy-of-copy-of-page-1.md)
-  * [Proguard](android/get-started/proguard.md)
-* [Enable test ads](android/enable-test-ads.md)
-* [Demo](android/demo.md)
+* [Guides](android/guides/README.md)
+  * [Get Started](android/guides/get-started/README.md)
+    * [Prerequisites](android/guides/get-started/prerequisites.md)
+    * [Installation](android/guides/get-started/installation.md)
+    * [Tracker](android/guides/get-started/tracker.md)
+    * [Proguard](android/guides/get-started/proguard.md)
+  * [Enable test ads](android/guides/enable-test-ads.md)
+  * [Demo](android/guides/demo.md)
+* [Integration of third party ad network](android/integration-of-third-party-ad-network/README.md)
+  * [AdMob](android/integration-of-third-party-ad-network/admob.md)
 * [Migration Guide](android/migration-guide.md)
 * [Android SDK](android/sdk-integration/README.md)
   * [Prerequisites](android/sdk-integration/prerequisites.md)
