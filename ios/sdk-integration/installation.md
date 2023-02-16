@@ -12,7 +12,7 @@ Step 2: [Initiation & Settings](installation.md#step-2-initialzation-and-setting
 1\.  Add the following line to your project's Podfile:
 
 ```swift
-pod 'AotterTrek-iOS-SDK', '3.8.3'
+pod 'AotterTrek-iOS-SDK', '3.8.5'
 ```
 
 2\.  Run `pod install`&#x20;

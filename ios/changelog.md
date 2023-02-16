@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023/02/16 release - SDK `3.8.5`
+
+* VAST support OMID video event tracking.
+
 ## 2023/01/18 release - SDK `3.8.3`
 
 * Update framework to XCFramework to support Apple Silicon Simulator
