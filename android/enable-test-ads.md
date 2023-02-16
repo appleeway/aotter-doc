@@ -2,7 +2,7 @@
 
 Enabling test ads in your app following steps:
 
-* ****[**Complete Setup SDK**](get-started/installation.md)****
+* ****[**Complete installation**](get-started/installation.md)****
 * ****[**Test ad units**](enable-test-ads.md#test-ad-units)****
 
 ## Test ad units
