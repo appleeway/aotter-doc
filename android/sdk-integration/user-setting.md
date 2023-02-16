@@ -9,15 +9,16 @@ The following table is the user constructor parameter which including basic info
 
 #### User constructor parameter
 
-| Name       | Type           | description                                                                                                                   |
-| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `birthday` | String         | Ex: "1999/10/10"                                                                                                              |
-| `email`    | String         | Ex: "a111111@gmail.com"                                                                                                       |
-| `fbId`     | String         |                                                                                                                               |
-| `gender`   | String         | "M" for male, "F" for female.                                                                                                 |
-| `phone`    | String         | Ex: "09XXXXXXXXX"                                                                                                             |
+| Name       | Type           | description                                                                                                                    |
+| ---------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `birthday` | String         | Ex: "1999/10/10"                                                                                                               |
+| `email`    | String         | Ex: "a111111@gmail.com"                                                                                                        |
+| `fbId`     | String         |                                                                                                                                |
+| `gender`   | String         | "M" for male, "F" for female.                                                                                                  |
+| `phone`    | String         | Ex: "09XXXXXXXXX"                                                                                                              |
 | `meta`     | TrekJsonObject | <p>val jsonObject = TrekJsonObject()</p><pre><code>    jsonObject.put(KEY, VALUE)
-    jsonObject.put(KEY, VALUE)</code></pre> |
+    jsonObject.put(KEY, VALUE)
+</code></pre> |
 
 ### Step 1: Create a User object instance
 

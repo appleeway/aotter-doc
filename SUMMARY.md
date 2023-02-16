@@ -5,7 +5,11 @@
 
 ## 🤖  Android
 
-* [Get Started](android/get-started.md)
+* [Get Started](android/get-started/README.md)
+  * [Prerequisites](android/get-started/prerequisites.md)
+  * [Installation](android/get-started/installation.md)
+  * [Copy of Copy of Page 1](android/get-started/copy-of-copy-of-page-1.md)
+  * [Copy of Copy of Copy of Page 1](android/get-started/copy-of-copy-of-copy-of-page-1.md)
 * [Migration Guide](android/migration-guide.md)
 * [Android SDK](android/sdk-integration/README.md)
   * [Prerequisites](android/sdk-integration/prerequisites.md)
