@@ -9,7 +9,7 @@ description: >-
 
 ### Learn more about:
 
-*   ****[**Prerequisites**](../sdk-integration/prerequisites.md)****
+*   ****[**Prerequisites**](prerequisites.md)****
 
     Learn how to prepare your app
 *   ****[**Installation**](installation.md)****
