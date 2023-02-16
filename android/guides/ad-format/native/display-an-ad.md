@@ -13,7 +13,7 @@ Implementing native ads in your app following steps:
 
 Here is an example layout style:
 
-<figure><img src="../../../../.gitbook/assets/example.png" alt=""><figcaption><p>Example layout style</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Example layout style</p></figcaption></figure>
 
 | View | TrekNativeAd asset                    |
 | ---- | ------------------------------------- |

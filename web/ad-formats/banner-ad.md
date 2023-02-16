@@ -48,4 +48,4 @@ We also provide **top** of the page ads by simply change the `fixed: 'bottom'`  
 
 ### Done! 👏🏼
 
-![](broken-reference)
+![](<../../.gitbook/assets/截圖 2022-06-10 上午11.28.47.png>)

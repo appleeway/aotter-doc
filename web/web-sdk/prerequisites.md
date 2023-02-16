@@ -34,7 +34,7 @@ AotterTrek currently provides three types of ad and different sizes:
 * Supr.Ad (336x280 / 300x250)
 * Banner Ad (320x50 / 640x100)
 
-![](broken-reference)
+![](../../.gitbook/assets/%E6%88%AA%E5%9C%96%202021-09-17%20%E4%B8%8A%E5%8D%8811.55.35.png)
 
 After the ad slot is created, you will see a list of ad slots as shown.
 
