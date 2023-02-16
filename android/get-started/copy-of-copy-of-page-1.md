@@ -26,7 +26,7 @@ Tracker tracker = new Tracker(context);
 
 ### **Build data for user profiling**
 
-* #### [Entity](copy-of-copy-of-page-1.md#entity-1)
+* ****[**Entity**](copy-of-copy-of-page-1.md#entity)****
 * ****[**User**](copy-of-copy-of-page-1.md#user)****
 * ****[**Loaction**](copy-of-copy-of-page-1.md#loaction)****
 * ****[**ActionType**](copy-of-copy-of-page-1.md#actiontype)****
