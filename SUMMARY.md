@@ -5,6 +5,7 @@
 
 ## 🤖  Android
 
+* [Get Started](android/get-started.md)
 * [Migration Guide](android/migration-guide.md)
 * [Android SDK](android/sdk-integration/README.md)
   * [Prerequisites](android/sdk-integration/prerequisites.md)
