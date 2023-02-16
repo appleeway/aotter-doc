@@ -35,7 +35,7 @@ Add **`adUnit`** in your mediation group and fill in **`Class Name`**, **`Parame
 
 <figure><img src="../../../.gitbook/assets/admob.png" alt=""><figcaption><p><strong>AdMob</strong></p></figcaption></figure>
 
-<table data-card-size="large" data-view="cards"><thead><tr><th>Ad formet</th><th>Class Name</th><th>Parameter</th><th data-type="select"></th></tr></thead><tbody><tr><td>Native Ads</td><td><strong>com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative</strong></td><td>{"clientId":"<strong>[Trek client id]</strong>","placeUid":"<strong>[Trek SuprAd PlaceUid]</strong>"}</td><td></td></tr><tr><td>Banner Ads</td><td><strong>com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner</strong></td><td>{"clientId":"<strong>[Trek client id]</strong>","placeUid":"<strong>[Trek SuprAd PlaceUid]</strong>"}</td><td></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th>Ad formet</th><th>Class Name</th><th>Parameter</th><th data-type="select"></th></tr></thead><tbody><tr><td>Native Ads</td><td><strong>com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative</strong></td><td>{"clientId":"<strong>[Trek client id]</strong>","placeUid":"<strong>[Trek SuprAd PlaceUid]</strong>"}</td><td></td></tr><tr><td>Banner Ads</td><td><strong>com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner</strong></td><td>{"clientId":"<strong>[Trek client id]</strong>","placeUid":"<strong>[Trek Banner Ad PlaceUid]</strong>"}</td><td></td></tr></tbody></table>
 
 ### **Always test with test ads**
 
