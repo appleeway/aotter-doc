@@ -4,15 +4,15 @@ AdMob Mediation is a feature that lets you serve ads to your apps from multiple 
 
 ### Learn more about:
 
-*   ****[**Prerequisites**](broken-reference)****
+*   ****[**Prerequisites**](prerequisites.md)****
 
     Learn how to prepare prerequisites.
-*   ****[**Integrating Trek with AdMob Mediation**](broken-reference)****
+*   ****[**Integrating Trek with AdMob Mediation**](integrating-trek-with-admob-mediation.md)****
 
     Learn how to integrate Trek with AdMob Mediation.
-*   [**Ad format**](broken-reference)****
+*   ****[**Ad format**](ad-format/)****
 
     Learn more about ad format.
-*   ****[**Proguard**](broken-reference)****
+*   ****[**Proguard**](proguard.md)****
 
     Learn more about proguard.
