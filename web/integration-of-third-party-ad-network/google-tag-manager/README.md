@@ -4,9 +4,9 @@ Google Tag Manager is a [tag management system](https://en.wikipedia.org/wiki/Ta
 
 ### Learn more about:
 
-*   ****[**Prerequisites**](broken-reference)****
+*   ****[**Prerequisites**](prerequisites.md)****
 
     Learn how to prepare prerequisites.
-*   ****[**Event Tag**](broken-reference)****
+*   ****[**Event Tag**](event-tag.md)****
 
     Learn how to use Google Tag Manager integrate event tag with Trek.

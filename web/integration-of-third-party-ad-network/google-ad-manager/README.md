@@ -4,9 +4,9 @@ Google Ad Manager is an ad management platform for large publishers who have sig
 
 ### Learn more about:
 
-*   ****[**Prerequisites**](broken-reference)****
+*   ****[**Prerequisites**](prerequisites.md)****
 
     Learn how to prepare prerequisites.
-*   ****[**Third-party Creative**](broken-reference)****
+*   ****[**Third-party Creative**](third-party-creative.md)****
 
     Learn how to use Google Ad Manager integrate third-party creative with Trek.

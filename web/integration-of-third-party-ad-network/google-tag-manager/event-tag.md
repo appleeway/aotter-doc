@@ -7,12 +7,12 @@ Create [Event](broken-reference) with Google Tag Manager Creative following step
 
 ### Create Basic Tag
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 1.webp" alt=""><figcaption></figcaption></figure>
 
 1. Click on `Tags` in the sidebar.
 2. Click the `New` button on the right to add a Tag.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 2.webp" alt=""><figcaption></figcaption></figure>
 
 3\. Click `Tag Configuration`.
 
