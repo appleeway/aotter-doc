@@ -63,7 +63,7 @@
 ## 🖥  Web
 
 * [Guides](web/guides/README.md)
-  * [Get Started](web/guides/get-started/README.md)
+  * [Get Started](web/guides/get-started.md)
     * [Prerequisites](web/guides/get-started/prerequisites.md)
     * [Installation](web/guides/get-started/installation.md)
     * [Tracker](web/guides/get-started/tracker.md)

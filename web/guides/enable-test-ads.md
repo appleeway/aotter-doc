@@ -2,7 +2,7 @@
 
 This guide explains how to enable test ads in your ads integration.Enabling test ads in your website following steps:
 
-* ****[**​Complete Installation**](broken-reference)****
+* **​**[**Complete Installation**](get-started/installation.md)****
 * ****[**​Test ad units​**](enable-test-ads.md#test-ad-units)****
 
 ### Test ad units <a href="#test-ad-units" id="test-ad-units"></a>
