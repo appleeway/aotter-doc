@@ -7,20 +7,20 @@ Create [ads](broken-reference) with Google Ad Manager Creative following steps:
 
 ### Find where can create third-party creative in Google Ad Manager
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Third-party Creative step1.webp" alt=""><figcaption></figcaption></figure>
 
 1. Click on `Delivery` in the sidebar.
 2. `Creatives` This subcategory will appear, click on it.
 3. The content on the right will change to Creative and we will click `New creative` button.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Third-party Creative step2.png" alt=""><figcaption></figcaption></figure>
 
 1. Next, choose the advertiser that Creative belongs to.
 2. Then find the category Third-party and select the link `Select`.
 
 ### Create a new third-party creative
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Third-party Creative step3.webp" alt=""><figcaption></figcaption></figure>
 
 1. After filling in the other information, it is important to note that the Standard field should be filled in with our Google Ad Manager special HTML content.
 
