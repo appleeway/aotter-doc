@@ -2,6 +2,6 @@
 
 Implementing banner ads in your website following steps:
 
-* ****[**Prerequisites**](broken-reference)****
-* ****[**Installation**](broken-reference)****
-* ****[**Display an ad**](broken-reference)****
+* ****[**Prerequisites**](../../get-started/prerequisites.md)****
+* ****[**Installation**](../../get-started/installation.md)****
+* ****[**Display an ad**](display-an-ad.md)****
