@@ -87,18 +87,6 @@
 * [Support](web/support/README.md)
   * [Change logs](web/support/change-logs.md)
   * [ads.txt](web/support/ads.txt.md)
-* [Web SDK](web/web-sdk/README.md)
-  * [Prerequisites](web/web-sdk/prerequisites.md)
-  * [Installation](web/web-sdk/sdk-integration.md)
-  * [User Setting](web/web-sdk/user-setting.md)
-  * [Tkadn](web/web-sdk/tkadn.md)
-  * [APIs](web/web-sdk/apis.md)
-* [Ad Formats](web/ad-formats/README.md)
-  * [Supr.Ad](web/ad-formats/supr.ad.md)
-  * [Banner Ad](web/ad-formats/banner-ad.md)
-* [Google Ad Manager Mediation](web/google-ad-manager-mediation.md)
-* [WordPress Integration](web/wordpress.md)
-* [Changelog](web/changelog.md)
 
 ## 📺 Legacy SDK
 

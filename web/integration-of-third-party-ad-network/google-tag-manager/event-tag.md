@@ -16,11 +16,11 @@ Create [Event](broken-reference) with Google Tag Manager Creative following step
 
 3\. Click `Tag Configuration`.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 3.webp" alt=""><figcaption></figcaption></figure>
 
 4\. After the Drawer slides out, select `Custom HTML` in the list.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 4.png" alt=""><figcaption></figcaption></figure>
 
 5\. After the Drawer is closed, paste the following code into the `HTML` block.
 
@@ -37,11 +37,11 @@ Create [Event](broken-reference) with Google Tag Manager Creative following step
 </script>
 ```
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 5.png" alt=""><figcaption></figcaption></figure>
 
 6\. After pasting the code, click on the `Triggering` section below to add a trigger condition.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Event Tag setp 6.png" alt=""><figcaption></figcaption></figure>
 
 7\. When the Drawer slides out, select `All Pages`in the list.
 
