@@ -63,7 +63,11 @@
 ## 🖥  Web
 
 * [Guides](web/guides/README.md)
-  * [Get Started](web/guides/get-started.md)
+  * [Get Started](web/guides/get-started/README.md)
+    * [Prerequisites](web/guides/get-started/prerequisites.md)
+    * [Installation](web/guides/get-started/installation.md)
+    * [Tracker](web/guides/get-started/tracker.md)
+    * [Event](web/guides/get-started/event.md)
   * [Enable test ads](web/guides/enable-test-ads.md)
   * [Ad format](web/guides/ad-format/README.md)
     * [Supr.Ad](web/guides/ad-format/supr.ad/README.md)
