@@ -62,6 +62,11 @@
 
 ## 🖥  Web
 
+* [Guides](web/guides/README.md)
+  * [Get Started](web/guides/get-started.md)
+  * [Enable test ads](web/guides/enable-test-ads.md)
+  * [Ad format](web/guides/ad-format.md)
+  * [Demo](web/guides/demo.md)
 * [Web SDK](web/web-sdk/README.md)
   * [Prerequisites](web/web-sdk/prerequisites.md)
   * [Installation](web/web-sdk/sdk-integration.md)
