@@ -2,14 +2,17 @@
 
 When a native ad loads, the Trek Ads SDK invokes the listener for the corresponding ad format. Your app is then responsible for displaying the ad. To make displaying system-defined ad formats easier, the SDK offers some useful resources, as described below.
 
-Implementing native ads in your app following steps:
+## Implementing native ads in your app following steps:
 
-* ****[**Setting ad layout**](display-an-ad.md#setting-ad-layout)****
-* ****[**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
-* ****[**Register TrekMediaView and TrekNativeAd**](display-an-ad.md#register-trekmediaview-and-treknativead)****
-* ****[**Destroy ad**](display-an-ad.md#destroy-ad)****
+#### Step 1.[**Setting ad layout**](display-an-ad.md#setting-ad-layout)****
 
-### **Setting ad layout**
+#### Step 2.[**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
+
+#### Step 3.[**Register TrekMediaView and TrekNativeAd**](display-an-ad.md#register-trekmediaview-and-treknativead)****
+
+#### Step 4.[**Destroy ad**](display-an-ad.md#destroy-ad)****
+
+### ****[**Setting ad layout**](display-an-ad.md#step-1.setting-ad-layout)****
 
 Here is an example layout style:
 
@@ -96,7 +99,7 @@ Here is an example layout style:
 
 </details>
 
-### **Populating the asset view with the asset in the ad object**
+### ****[**Populating the asset view with the asset in the ad object**](display-an-ad.md#step-2.populating-the-asset-view-with-the-asset-in-the-ad-object)****
 
 Here is an example function that displays a **`TrekNativeAd`**:
 
@@ -152,7 +155,7 @@ private void displayAd(TrekNativeAd trekNativeAd) {
 {% endtab %}
 {% endtabs %}
 
-### Register TrekMediaView and TrekNativeAd
+### [Register TrekMediaView and TrekNativeAd](display-an-ad.md#step-3.register-trekmediaview-and-treknativead)
 
 This final step registers the TrekNativeAd object with the view that's responsible for displaying it:
 
@@ -234,7 +237,7 @@ viewStateTracker.launchViewStateTracker(containerView , trekMediaView);
 {% endtab %}
 {% endtabs %}
 
-### Destroy ad
+### [Destroy ad](display-an-ad.md#step-4.destroy-ad)
 
 {% tabs %}
 {% tab title="Kotlin" %}

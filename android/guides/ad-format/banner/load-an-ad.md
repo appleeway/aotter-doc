@@ -1,12 +1,14 @@
 # Load an ad
 
-Implementing banner ads in your app following steps:
+## Implementing banner ads in your app following steps:
 
-* ****[**Add TrekBannerAdView to layout**](load-an-ad.md#add-trekbanneradview-to-layout)****
-* ****[**Loading ads**](load-an-ad.md#loading-ads)****
-* ****[**Destroy ad**](load-an-ad.md#destroy-ad)****
+#### **Step 1.**[**Add TrekBannerAdView to layout**](load-an-ad.md#add-trekbanneradview-to-layout)****
 
-### Add **`TrekBannerAdView`** to layout
+#### **Step 2.**[**Loading ads**](load-an-ad.md#loading-ads)****
+
+#### **Step 3.**[**Destroy ad**](load-an-ad.md#destroy-ad)****
+
+### [Add **`TrekBannerAdView`** to layout](load-an-ad.md#step-1.add-trekbanneradview-to-layout)
 
 The first step toward displaying a banner is to place **`TrekBannerAdView`** in the layout for the **`Activity`** or **`Fragment`** in which you'd like to display it. &#x20;
 
@@ -20,7 +22,7 @@ Here's an example that shows an activity's **`TrekBannerAdView`**:
 />
 ```
 
-### **Loading ads**
+### ****[**Loading ads**](load-an-ad.md#step-2.loading-ads)****
 
 {% hint style="info" %}
 If request ad is  success , TrekBannerAdView is going to render view automatically.
@@ -114,7 +116,7 @@ viewBinding.trekBannerAdView.loadAd(trekAdRequest);
 {% endtab %}
 {% endtabs %}
 
-### Destroy ad
+### [Destroy ad](load-an-ad.md#step-3.destroy-ad)
 
 {% tabs %}
 {% tab title="Kotlin" %}

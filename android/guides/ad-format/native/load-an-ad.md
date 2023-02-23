@@ -2,14 +2,17 @@
 
 Native ads are loaded via the **`TrekAdLoader`** class, which has its own **`Builder`** class to customize it during creation. By adding listeners to the **`TrekAdLoader`** while building it, an app specifies which types of native ads it is ready to receive. The **`TrekAdLoader`** then requests just those types.
 
-Implementing native ads in your app following steps:
+## Implementing native ads in your app following steps:
 
-* ****[**Build a TrekAdLoader**](load-an-ad.md#build-an-trekadloader)****
-* ****[**Build a TrekAdRequest**](load-an-ad.md#build-an-trekadrequest)****
-* ****[**Loading ads**](load-an-ad.md#loading\_ads)****
-* ****[**Always test with test ads**](load-an-ad.md#always\_test\_with\_test\_ads)****
+#### **Step 1.**[**Build a TrekAdLoader**](load-an-ad.md#build-an-trekadloader)****
 
-### Build an TrekAdLoader
+#### **Step 2.**[**Build a TrekAdRequest**](load-an-ad.md#build-an-trekadrequest)****
+
+#### **Step 3.**[**Loading ads**](load-an-ad.md#loading\_ads)****
+
+#### **Step 4.**[**Always test with test ads**](load-an-ad.md#always\_test\_with\_test\_ads)****
+
+### [Build an TrekAdLoader](load-an-ad.md#step-1.build-a-trekadloader)
 
 {% hint style="info" %}
 **Key Point:** Make sure all call to the Trek ads SDK on the main thread.
@@ -111,7 +114,7 @@ TrekAdLoader trekAdLoader  = new TrekAdLoader.Builder(context,"[Your Trek Native
 {% endtab %}
 {% endtabs %}
 
-### Build an **TrekAdRequest**
+### [Build an **TrekAdRequest**](load-an-ad.md#step-2.build-a-trekadrequest)****
 
 {% hint style="info" %}
 These methods are optional. You can skip it if you don't want to set it.
@@ -143,7 +146,7 @@ TrekAdRequest trekAdRequest = new TrekAdRequest.Builder()
 {% endtab %}
 {% endtabs %}
 
-### Loading ads <a href="#loading_ads" id="loading_ads"></a>
+### [Loading ads](load-an-ad.md#step-3.loading-ads) <a href="#loading_ads" id="loading_ads"></a>
 
 Once you've finished building an **`TrekAdLoader`**, it's time to use it to load ads. There are two methods available for this: **`loadAd()`** and **`loadAds()`**.
 
@@ -179,8 +182,8 @@ trekAdLoader.loadAds(trekAdRequest,3);
 {% endtab %}
 {% endtabs %}
 
-### Always test with test ads <a href="#always_test_with_test_ads" id="always_test_with_test_ads"></a>
+### [Always test with test ads](load-an-ad.md#step-4.always-test-with-test-ads) <a href="#always_test_with_test_ads" id="always_test_with_test_ads"></a>
 
 The easiest way to load test ads is to use our test client id and test place uid for Native Advanced.
 
-For more information about how the Trek Ads SDK's test ads work, see [**Enable test ads**](../../../enable-test-ads.md)**.**
+For more information about how the Trek Ads SDK's test ads work, see [**Enable test ads**](broken-reference)**.**
