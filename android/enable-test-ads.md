@@ -1,11 +1,12 @@
 # Enable test ads
 
-Enabling test ads in your app following steps:
+## Enabling test ads in your app following steps:
 
-* ****[**Complete installation**](get-started/installation.md)****
-* ****[**Test ad units**](enable-test-ads.md#test-ad-units)****
+#### **Step 1.**[**Complete Installation**](broken-reference)****
 
-## Test ad units
+#### **Step 2.**[**Test ad units**](enable-test-ads.md#test-ad-units)****
+
+## [Test ad units](enable-test-ads.md#step-2.test-ad-units)
 
 {% hint style="info" %}
 **Key Point:** Make sure you replace these client id and place uid with your own ad unit ID before publishing your app.

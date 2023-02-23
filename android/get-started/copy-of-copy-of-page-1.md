@@ -2,13 +2,15 @@
 
 Trek is shipped with a powerful big data tool that is free to all publishers. Sending the first party data of your users not only enables personalized ad experience even in the absence of AdID/IDFA, but also unlocks more revenue shares from out DMP partners.
 
-Implementing tracker in your app following steps:
+### Implementing tracker in your app following steps:
 
-* ****[**Build a Tracker**](copy-of-copy-of-page-1.md#build-a-tracker)****
-* ****[**Build data for user profiling**](copy-of-copy-of-page-1.md#build-data-for-user-profiling)****
-* ****[**Send user profiling for Tracker**](copy-of-copy-of-page-1.md#send-user-profiling-for-tracker)****
+#### **Step 1.**[**Build a Tracker**](copy-of-copy-of-page-1.md#build-a-tracker)****
 
-### **Build a Tracker**
+#### **Step 2.**[**Build data for user profiling**](copy-of-copy-of-page-1.md#build-data-for-user-profiling)****
+
+#### **Step 3.**[**Send user profiling for Tracker**](copy-of-copy-of-page-1.md#send-user-profiling-for-tracker)****
+
+## ****[**Build a Tracker**](copy-of-copy-of-page-1.md#step-1.build-a-tracker)****
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -24,9 +26,9 @@ Tracker tracker = new Tracker(context);
 {% endtab %}
 {% endtabs %}
 
-### **Build data for user profiling**
+## ****[**Build data for user profiling**](copy-of-copy-of-page-1.md#step-2.build-data-for-user-profiling)****
 
-* ****[**Entity**](copy-of-copy-of-page-1.md#entity)****
+* #### [Entity](copy-of-copy-of-page-1.md#entity-1)
 * ****[**User**](copy-of-copy-of-page-1.md#user)****
 * ****[**Loaction**](copy-of-copy-of-page-1.md#loaction)****
 * ****[**ActionType**](copy-of-copy-of-page-1.md#actiontype)****
@@ -201,7 +203,7 @@ Loaction loaction = new Loaction(address,categories,id,lat,lng,meta,title,url);
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ActionType | <p>Tracker provides the following options.</p><p>1. <strong>ActionType.READ_POST.action</strong></p><p>2. <strong>ActionType.CREATE_POST.action</strong></p><p>3. <strong>ActionType.INITIAL_USAGE.action</strong></p><p>4. <strong>ActionType.VISIT_PLACE.action</strong></p><p>5. <strong>ActionType.PLAY_GAME.action</strong></p><p>6. <strong>ActionType.LISTEN_MUSIC.action</strong></p><p>7. <strong>ActionType.WATCH_VIDEO.action</strong></p><p>8. <strong>ActionType.CALL_MERCHANT.action</strong></p><p>9. <strong>ActionType.BUY_ITEM.action</strong></p><p>10. <strong>ActionType.UNKNOWN.action</strong></p> |
 
-### **Send user profiling for Tracker**
+### ****[**Send user profiling for Tracker**](copy-of-copy-of-page-1.md#step-3.send-user-profiling-for-tracker)****
 
 {% tabs %}
 {% tab title="Kotlin" %}

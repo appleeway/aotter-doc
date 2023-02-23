@@ -1,11 +1,12 @@
 # Installation
 
-Setup SDK in your app following steps:
+### Setup SDK in your app following steps:
 
-* ****[**Configure your app**](installation.md#import\_the\_mobile\_ads\_sdk)****
-* ​[**Initialize the Trek Ads SDK**](installation.md#initialize\_the\_mobile\_ads\_sdk)****
+#### **Step 1.**[**Configure your app**](installation.md#import\_the\_mobile\_ads\_sdk)****
 
-## Configure your app <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
+#### ​**Step 2.**[**Initialize the Trek Ads SDK**](installation.md#initialize\_the\_mobile\_ads\_sdk)****
+
+## [Configure your app](installation.md#step-1.configure-your-app) <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
 
 1. In your project-level **`build.gradle`** file, add the following block:
 
@@ -43,7 +44,7 @@ Setup SDK in your app following steps:
 &#x3C;/manifest>
 </code></pre>
 
-## Initialize the Trek Ads SDK <a href="#initialize_the_mobile_ads_sdk" id="initialize_the_mobile_ads_sdk"></a>
+## [Initialize the Trek Ads SDK](installation.md#step-2.initialize-the-trek-ads-sdk) <a href="#initialize_the_mobile_ads_sdk" id="initialize_the_mobile_ads_sdk"></a>
 
 Before loading ads, have your app initialize the Trek Ads SDK by calling **`TrekAds.initialize()`** which initializes the SDK and calls back a completion listener once initialization is complete. This needs to be done only once, ideally at app launch.
 
@@ -51,41 +52,39 @@ Here's an example of how to call the **`initialize()`** method in an Activity:
 
 {% tabs %}
 {% tab title="Kotlin" %}
-```kotlin
-class MainActivity : AppCompatActivity() {
+<pre class="language-kotlin"><code class="lang-kotlin">class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Please fill in trek clent id.
-        TrekAds.initialize(context,"[Trek client id]",object :TrekAds.OnInitializationCompleteListener{
-            override fun onInitializationComplete() {
-
-            }
-        })
-        
+<strong>        //Please fill in trek clent id.
+</strong><strong>        TrekAds.initialize(context,"[Trek client id]",object :TrekAds.OnInitializationCompleteListener{
+</strong><strong>            override fun onInitializationComplete() {
+</strong><strong>
+</strong><strong>            }
+</strong><strong>        })
+</strong>        
     }
 }
-```
+</code></pre>
 {% endtab %}
 
 {% tab title="Java" %}
-```java
-public class MainActivity extends AppCompatActivity {
+<pre class="language-java"><code class="lang-java">public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Please fill in trek clent id.
-       TrekAds.INSTANCE.initialize(context,"[Trek client id]",new TrekAds.OnInitializationCompleteListener(){
-            @Override
-            public void onInitializationComplete() {
-                
-            }
-        });
-        
+<strong>        //Please fill in trek clent id.
+</strong><strong>       TrekAds.INSTANCE.initialize(context,"[Trek client id]",new TrekAds.OnInitializationCompleteListener(){
+</strong><strong>            @Override
+</strong><strong>            public void onInitializationComplete() {
+</strong><strong>                
+</strong><strong>            }
+</strong><strong>        });
+</strong>        
     }
 }
-```
+</code></pre>
 {% endtab %}
 {% endtabs %}
