@@ -1,11 +1,12 @@
 # Integrating Trek with AdMob Mediation
 
-Integrating Trek with AdMob Mediation in your app following steps:
+## Integrating Trek with AdMob Mediation in your app following steps:
 
-* ****[**Configure your app**](integrating-trek-with-admob-mediation.md#import\_the\_mobile\_ads\_sdk)****
-* ****[**Initialize the Google Mobile Ads SDK**](integrating-trek-with-admob-mediation.md#initialize\_the\_mobile\_ads\_sdk)****
+#### **Step 1.**[**Configure your app**](integrating-trek-with-admob-mediation.md#import\_the\_mobile\_ads\_sdk)****
 
-## Configure your app <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
+#### **Step 2.**[**Initialize the Google Mobile Ads SDK**](integrating-trek-with-admob-mediation.md#initialize\_the\_mobile\_ads\_sdk)****
+
+## [Configure your app](integrating-trek-with-admob-mediation.md#step-1.configure-your-app) <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
 
 1. In your project-level **`build.gradle`** file, include maven  in both your **`allprojects`** sections:
 
@@ -44,7 +45,7 @@ Integrating Trek with AdMob Mediation in your app following steps:
 &#x3C;/manifest>
 </code></pre>
 
-### Initialize the Google Mobile Ads SDK <a href="#initialize_the_mobile_ads_sdk" id="initialize_the_mobile_ads_sdk"></a>
+### [Initialize the Google Mobile Ads SDK](integrating-trek-with-admob-mediation.md#step-2.initialize-the-google-mobile-ads-sdk) <a href="#initialize_the_mobile_ads_sdk" id="initialize_the_mobile_ads_sdk"></a>
 
 Before loading ads, have your app initialize the Google Mobile Ads SDK by calling **`MobileAds.initialize()`** which initializes the SDK and calls back a completion listener once initialization is complete (or after a 30-second timeout). This needs to be done only once, ideally at app launch.
 

@@ -1,12 +1,14 @@
 # Load an ad
 
-Implementing native ads in your app following steps:
+## Implementing native ads in your app following steps:
 
-* ****[**Build an AdLoader**](load-an-ad.md#build-an-adloader)****
-* ****[**Build an AdRequest**](load-an-ad.md#build-an-adrequest)****
-* ****[**Loading ads**](load-an-ad.md#loading-ads)****
+#### **Step 1.**[**Build an AdLoader**](load-an-ad.md#build-an-adloader)****
 
-### Build an AdLoader
+#### **Step 2.**[**Build an AdRequest**](load-an-ad.md#build-an-trekadrequest)****
+
+#### **Step 3.**[**Loading ads**](load-an-ad.md#loading-ads)****
+
+### [Build an AdLoader](load-an-ad.md#step-1.build-an-adloader)
 
 {% hint style="info" %}
 **Key Point:** Make sure all call to the AdMob SDK on the main thread.
@@ -44,7 +46,7 @@ AdLoader adLoader = new AdLoader.Builder(context,"[Your AdMob AdUnit]")
 {% endtab %}
 {% endtabs %}
 
-### Build an **AdRequest**
+### [Build an **AdRequest**](load-an-ad.md#step-2.build-an-adrequest)****
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -78,7 +80,7 @@ AdRequest adRequest = new AdRequest
 {% endtab %}
 {% endtabs %}
 
-### **Loading ads**
+### ****[**Loading ads**](load-an-ad.md#step-3.loading-ads)****
 
 {% tabs %}
 {% tab title="Kotlin" %}

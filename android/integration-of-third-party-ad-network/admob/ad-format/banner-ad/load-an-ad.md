@@ -1,12 +1,14 @@
 # Load an ad
 
-Implementing banner ads in your app following steps:
+## Implementing banner ads in your app following steps:
 
-* ****[**Add AdView to layout**](load-an-ad.md#add-adview-to-layout)****
-* ****[**Loading ads**](load-an-ad.md#loading-ads)****
-* ****[**Destroy ad**](load-an-ad.md#destroy-ad)****
+#### **Step 1.**[**Add AdView to layout**](load-an-ad.md#add-adview-to-layout)****
 
-### Add `AdView` to layout
+#### **Step 2.**[**Loading ads**](load-an-ad.md#loading-ads)****
+
+#### **Step 3.**[**Destroy ad**](load-an-ad.md#destroy-ad)****
+
+### [Add `AdView` to layout](load-an-ad.md#step-1.add-adview-to-layout)
 
 The first step toward displaying a banner is to place **`AdView`** in the layout for the **`Activity`** or **`Fragment`** in which you'd like to display it.&#x20;
 
@@ -21,7 +23,7 @@ Here's an example that shows an activity's **`AdView`**:
 </strong>/>
 </code></pre>
 
-### **Loading ads**
+### ****[**Loading ads**](load-an-ad.md#step-2.loading-ads)****
 
 {% hint style="info" %}
 If request ad is  success , AdView is going to render view automatically.
@@ -85,7 +87,7 @@ bannerAdView.loadAd(adRequest);
 {% endtab %}
 {% endtabs %}
 
-### **Destroy ad**
+### ****[**Destroy ad**](load-an-ad.md#step-3.destroy-ad)****
 
 {% tabs %}
 {% tab title="Kotlin" %}

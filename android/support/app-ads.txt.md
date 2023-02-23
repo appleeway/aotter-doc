@@ -1,13 +1,16 @@
 # app-ads.txt
 
-Implementing app-ads.txt in your app following steps:
+## Implementing app-ads.txt in your app following steps:
 
-* ****[**Overview**](app-ads.txt.md#overview)****
-* ****[**Set up an app-ads.txt file for your app**](app-ads.txt.md#set-up-an-app-ads.txt-file-for-your-app)****
-* ****[**Publish your app-ads.txt file on your developer website**](app-ads.txt.md#publish-your-app-ads.txt-file-on-your-developer-website)****
-* ****[**Add your developer website in your app store listing**](app-ads.txt.md#add-your-developer-website-in-your-app-store-listing)****
+#### **Step 1.**[**Overview**](app-ads.txt.md#overview)****
 
-## Overview
+#### **Step 2.**[**Set up an app-ads.txt file for your app**](app-ads.txt.md#set-up-an-app-ads.txt-file-for-your-app)****
+
+#### **Step 3.**[**Publish your app-ads.txt file on your developer website**](app-ads.txt.md#publish-your-app-ads.txt-file-on-your-developer-website)****
+
+#### **Step 4.**[**Add your developer website in your app store listing**](app-ads.txt.md#add-your-developer-website-in-your-app-store-listing)****
+
+## [Overview](app-ads.txt.md#step-1.overview)
 
 [Authorized Sellers for Apps, or app-ads.txt](https://iabtechlab.com/wp-content/uploads/2019/03/app-ads.txt-v1.0-final-.pdf), is an IAB Tech Lab initiative that helps ensure your app ad inventory is only sold through channels you’ve identified as authorized. Creating an app-ads.txt file gives you more control over who’s allowed to sell ads on your app and helps prevent counterfeit inventory from being presented to advertisers.&#x20;
 
@@ -25,9 +28,9 @@ This is a app-ads.txt file example:
 **Note**: Your app-ads.txt file must be formatted as specified by the IAB Tech Lab in order to be verified. If you need additional help, review the [Authorized Sellers for Apps specification](https://www.iabtechlab.com/wp-content/uploads/2019/03/app-ads.txt-v1.0-final-.pdf) provided by the IAB Tech Lab.&#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/app-ads.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
-## Set up an app-ads.txt file for your app
+## [Set up an app-ads.txt file for your app](app-ads.txt.md#step-2.set-up-an-app-ads.txt-file-for-your-app)
 
 * If you haven't already ,we provide app-ads.txt file for publisher .
 
@@ -35,7 +38,7 @@ This is a app-ads.txt file example:
 app-ads.txt
 {% endfile %}
 
-## Publish your app-ads.txt file on your developer website
+## [Publish your app-ads.txt file on your developer website](app-ads.txt.md#step-3.publish-your-app-ads.txt-file-on-your-developer-website)
 
 The hostname is determined from your app's developer website.Here is a example.
 
@@ -44,7 +47,7 @@ The hostname is determined from your app's developer website.Here is a example.
 | **https://<\<hostname>>/app-ads.txt**[&#xD;](https://example.com/app-ads.txthttp://example.com/app-ads.txt) | **https://example.com/app-ads.txt** |
 | **http://<\<hostname>>/app-ads.txt**                                                                        | **http://example.com/app-ads.txt**  |
 
-## **Add your developer website in your app store listing**
+## ****[**Add your developer website in your app store listing**](app-ads.txt.md#step-4.add-your-developer-website-in-your-app-store-listing)****
 
 To add your developer website in your app store listing:
 

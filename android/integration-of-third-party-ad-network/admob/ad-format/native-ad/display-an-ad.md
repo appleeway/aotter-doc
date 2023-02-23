@@ -1,12 +1,14 @@
 # Display an ad
 
-Implementing native ads in your app following steps:
+## Implementing native ads in your app following steps:
 
-* ****[**Setting ad layout**](display-an-ad.md#setting-ad-layout)****
-* ****[**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
-* ****[**Destroy ad**](display-an-ad.md#destroy-ad)****
+#### **Step 1.**[**Setting ad layout**](display-an-ad.md#setting-ad-layout)****
 
-### **Setting ad layout**
+#### **Step 2.**[**Populating the asset view with the asset in the ad object**](display-an-ad.md#populating-the-asset-view-with-the-asset-in-the-ad-object)****
+
+#### **Step 3.**[**Destroy ad**](display-an-ad.md#destroy-ad)****
+
+### ****[**Setting ad layout**](display-an-ad.md#step-1.setting-ad-layout)****
 
 {% hint style="warning" %}
 **Notice:** Please use **NativeAdView** as the container of your layout
@@ -14,7 +16,7 @@ Implementing native ads in your app following steps:
 
 Here is an example layout style:
 
-<figure><img src="../../../../../.gitbook/assets/example.png" alt=""><figcaption><p>Example layout style</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Example layout style</p></figcaption></figure>
 
 | View | NativeAd asset                                      |
 | ---- | --------------------------------------------------- |
@@ -54,7 +56,7 @@ Here is an example layout style:
 </com.google.android.gms.ads.nativead.NativeAdView>
 ```
 
-### **Populating the asset view with the asset in the ad object**
+### ****[**Populating the asset view with the asset in the ad object**](display-an-ad.md#step-2.populating-the-asset-view-with-the-asset-in-the-ad-object)****
 
 Here is an example function that displays a **`NativeAd`**:
 
@@ -158,7 +160,7 @@ private void displayAd(NativeAd nativeAd) {
 {% endtab %}
 {% endtabs %}
 
-### **Destroy ad**
+### ****[**Destroy ad**](display-an-ad.md#step-3.destroy-ad)****
 
 {% tabs %}
 {% tab title="Kotlin" %}
