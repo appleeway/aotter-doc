@@ -1,8 +1,10 @@
 # Prerequisites
 
+## Before you begin <a href="#before_you_begin" id="before_you_begin"></a>
+
 To prepare your app, complete the steps in the following sections.
 
-#### App prerequisites <a href="#app_prerequisites" id="app_prerequisites"></a>
+### App prerequisites <a href="#app_prerequisites" id="app_prerequisites"></a>
 
 * Use Android Studio **`3.x`** or **`higher`**
 * Make sure that your app's build file uses the following values:
@@ -10,15 +12,17 @@ To prepare your app, complete the steps in the following sections.
   * A **`compileSdkVersion` ** of **`33`** or **`higher`**
   * A **`kotlin version`** of **1.6.x** or **`higher`**
 
-#### Set up your app in your Trek account <a href="#set_up_your_app_in_your_admob_account" id="set_up_your_app_in_your_admob_account"></a>
+### Set up your app in your Trek account <a href="#set_up_your_app_in_your_admob_account" id="set_up_your_app_in_your_admob_account"></a>
 
 Register your app  following steps:
 
-1. [**Sign in to**](https://trek.aotter.net/) **** or [**sign up for**](https://trek.aotter.net/) **** an Trek account.
-2. [**Set up new application**](prerequisites.md#set-up-new-application)
-3. ​[**Create an Ad place**](prerequisites.md#create-an-ad-place)****
+#### Step 1.[**Sign in to**](https://trek.aotter.net/) **** or [**sign up for**](https://trek.aotter.net/) **** an Trek account.
 
-## **Set up new application**
+#### Step 2.[**Set up new application**](prerequisites.md#set-up-new-application)
+
+#### ​Step 3.[**Create an Ad place**](prerequisites.md#create-an-ad-place)****
+
+## ****[**Set up new application**](prerequisites.md#step-2.set-up-new-application)****
 
 <div>
 
@@ -38,9 +42,9 @@ After entering the list, you might find the ad status is test ad only. For the p
 
 <figure><img src="../../.gitbook/assets/step 3.png" alt=""><figcaption><p><strong>Step 3</strong></p></figcaption></figure>
 
-## **Create an Ad place**
+## ****[**Create an Ad place**](prerequisites.md#step-3.create-an-ad-place)****
 
-Entering the ad slots management and then creating ad slots. Name the ad slot with lowercase letters **`a-z`** , number **`0-9`** and underscore **`_`** .\
+Entering the ad slots management and then creating ad place. Name the ad place with lowercase letters **`a-z`** , number **`0-9`** and underscore **`_`** .\
 AotterTrek currently provides three types of ad and different sizes:
 
 * **Native Ad**
