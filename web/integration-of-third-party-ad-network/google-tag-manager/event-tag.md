@@ -1,11 +1,12 @@
 # Event Tag
 
-Create [Event](broken-reference) with Google Tag Manager Creative following steps:
+### Create [Event](broken-reference) with Google Tag Manager Creative following steps:
 
-* ****[**Create Basic Tag**](event-tag.md#create-basic-tag)****
-* ****[**Create Event T**](event-tag.md#create-event-trigger)****[**ag**](event-tag.md#create-event-tag)****
+#### **Step 1.**[**Create Basic Tag**](event-tag.md#create-basic-tag)****
 
-### Create Basic Tag
+#### **Step 2.**[**Create Event Tag**](event-tag.md#create-event-tag)****
+
+### [Create Basic Tag](event-tag.md#step-1.create-basic-tag)
 
 <figure><img src="../../../.gitbook/assets/Event Tag setp 1.webp" alt=""><figcaption></figcaption></figure>
 
@@ -49,7 +50,7 @@ Create [Event](broken-reference) with Google Tag Manager Creative following step
 
 8\. Click the `Save` button in the upper right corner to set the Basic Tag required to complete Trek.
 
-### Create Event Tag
+### [Create Event Tag](event-tag.md#step-2.create-event-tag)
 
 <figure><img src="../../../.gitbook/assets/Event Tag setp 8.png" alt=""><figcaption></figcaption></figure>
 

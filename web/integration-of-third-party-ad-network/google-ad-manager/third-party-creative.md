@@ -1,11 +1,12 @@
 # Third-party Creative
 
-Create [ads](broken-reference) with Google Ad Manager Creative following steps:
+### Create [ads](broken-reference) with Google Ad Manager Creative following steps:
 
-* ****[**Find where can create third-party creative in Google Ad Manager**](third-party-creative.md#find-where-can-create-third-party-creative-in-google-ad-manager)****
-* ****[**Create a new third-party creative**](third-party-creative.md#create-a-new-third-party-creative)****
+#### **Step 1.**[**Find where can create third-party creative in Google Ad Manager**](third-party-creative.md#find-where-can-create-third-party-creative-in-google-ad-manager)****
 
-### Find where can create third-party creative in Google Ad Manager
+#### **Step 2.**[**Create a new third-party creative**](third-party-creative.md#create-a-new-third-party-creative)****
+
+### [Find where can create third-party creative in Google Ad Manager](third-party-creative.md#step-1.find-where-can-create-third-party-creative-in-google-ad-manager)
 
 <figure><img src="../../../.gitbook/assets/Third-party Creative step1.webp" alt=""><figcaption></figcaption></figure>
 
@@ -18,7 +19,7 @@ Create [ads](broken-reference) with Google Ad Manager Creative following steps:
 1. Next, choose the advertiser that Creative belongs to.
 2. Then find the category Third-party and select the link `Select`.
 
-### Create a new third-party creative
+### [Create a new third-party creative](third-party-creative.md#step-2.create-a-new-third-party-creative)
 
 <figure><img src="../../../.gitbook/assets/Third-party Creative step3.webp" alt=""><figcaption></figcaption></figure>
 

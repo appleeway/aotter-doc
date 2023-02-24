@@ -1,16 +1,18 @@
 # Prerequisites
 
-Before you begin
+## Before you begin <a href="#before_you_begin" id="before_you_begin"></a>
 
-To prepare your website, complete the steps in the following sections.
+To prepare your app, complete the steps in the following sections.
 
-#### Set up your website in your Trek account <a href="#set_up_your_app_in_your_admob_account" id="set_up_your_app_in_your_admob_account"></a>
+### Set up your app in your Trek account <a href="#set_up_your_app_in_your_admob_account" id="set_up_your_app_in_your_admob_account"></a>
 
-Register your website application following steps:
+Register your app  following steps:
 
-1. [**Sign in to**](https://trek.aotter.net/) **** or [**sign up for**](https://trek.aotter.net/) **** an Trek account.
-2. [**Set up new application**](prerequisites.md#set-up-new-application)
-3. ​[**Create an Ad place**](prerequisites.md#create-an-ad-place)****
+#### Step 1.[**Sign in to**](https://trek.aotter.net/) **** or [**sign up for**](https://trek.aotter.net/) **** an Trek account.
+
+#### Step 2.[**Set up new application**](prerequisites.md#set-up-new-application)
+
+#### ​Step 3.[**Create an Ad place**](prerequisites.md#create-an-ad-place)****
 
 ## **Set up new application**
 

@@ -1,11 +1,12 @@
 # Display an ad
 
-Implementing banner ads in your website following steps:
+### Implementing banner ads in your website following steps:
 
-* ****[**Insert \<div>\</div> Tag**](display-an-ad.md#insert-less-than-div-greater-than-less-than-div-greater-than-tag)****
-* ****[**Execute ad request**](display-an-ad.md#execute-ad-request)****
+#### **Step 1.**[**Insert \<div>\</div> Tag**](display-an-ad.md#insert-less-than-div-greater-than-less-than-div-greater-than-tag)****
 
-### **Insert \<div>\</div> Tag**
+#### **Step 2.**[**Execute ad request**](display-an-ad.md#execute-ad-request)****
+
+### ****[**Insert \<div>\</div> Tag**](display-an-ad.md#step-1.insert-less-than-div-greater-than-less-than-div-greater-than-tag)****
 
 The first step toward displaying a suprAd is to place `<div></div>` in the website's `<body></body>` in which you'd like to display it.
 
@@ -15,7 +16,7 @@ Here's an example that shows an `<div></div>`
 <div id="supr-ad-container"></div>
 ```
 
-### Execute ad request
+### [Execute ad request](display-an-ad.md#step-2.execute-ad-request)
 
 The second step is to execute AotterTrek('suprAd') . When SDK was loaded, SDK will attach an AotterTrek method in a global window. So you can call it method in page anywhere.
 

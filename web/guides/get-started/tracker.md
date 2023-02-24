@@ -2,12 +2,13 @@
 
 Trek is shipped with a powerful big data tool that is free to all publishers. Sending the first party data of your users not only enables personalized ad experience even in the absence of AdID/IDFA, but also unlocks more revenue shares from out DMP partners.
 
-Implementing tracker in your website following steps:
+### Implementing tracker in your website following steps:
 
-* ****[**Build user profiling data**](tracker.md#build-user-profiling-data)****
-* ****[**Send user profiling**](tracker.md#send-user-profiling)****
+#### **Step 1.**[**Build user profiling data**](tracker.md#build-user-profiling-data)****
 
-### **Build user profiling data**
+#### **Step 2.**[**Send user profiling**](tracker.md#send-user-profiling)****
+
+### ****[**Build user profiling data**](tracker.md#step-1.build-user-profiling-data)****
 
 Call `AotterTrek('setUser', USER_OBJECT)` and pass in user information via the second parameter to set User.
 
@@ -48,7 +49,7 @@ Here is an example code:
 | zip         | String | User's residential postal code.                                                     |
 | fbId        | String | User's fbId. We Won't be hashed this attribute.                                     |
 
-### **Send user profiling**
+### ****[**Send user profiling**](tracker.md#step-2.send-user-profiling)****
 
 If you have called `AotterTrek('setUser', USER_OBJECT)` and set up user profile, just call `AotterTrek('send')` and you're done!
 

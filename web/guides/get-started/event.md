@@ -6,11 +6,11 @@ If you are a publisher and also own a website, you might want to track the conve
 Notice that this feature will not work properly when the page is **redirect-needed**.
 {% endhint %}
 
-Implementing tracker in your website following steps:
+### Implementing tracker in your website following steps:
 
-* ****[**Send event**](event.md#send-event)****
+#### **Step 1.**[**Send event**](event.md#send-event)****
 
-### **Send event**
+### ****[**Send event**](event.md#step-1.send-event)****
 
 Call `AotterTrek('tkadn', 'EVENT_NAME')` and pass event name via the second parameter.
 
