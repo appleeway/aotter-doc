@@ -1,12 +1,14 @@
 # ads.txt
 
-Implementing ads.txt in your website following steps:
+### Implementing ads.txt in your website following steps:
 
-* ****[**Overview**](ads.txt.md#overview)****
-* ****[**Set up an ads.txt file**](ads.txt.md#set-up-an-app.txt-file)****
-* ****[**Publish your ads.txt file on your website**](ads.txt.md#publish-your-ads.txt-file-on-your-website)****
+#### **Step 1.**[**Overview**](ads.txt.md#overview)****
 
-## Overview
+#### **Step 2.**[**Set up an ads.txt file**](ads.txt.md#set-up-an-app.txt-file)****
+
+#### **Step 3.**[**Publish your ads.txt file on your website**](ads.txt.md#publish-your-ads.txt-file-on-your-website)****
+
+## [Overview](ads.txt.md#step-1.overview)
 
 [Authorized Digital Sellers, or ads.txt](https://iabtechlab.com/ads-txt/) is an IAB Tech Lab initiative that helps ensure that your digital ad inventory is only sold through sellers (such as AdSense) who you've identified as authorized. Creating your own ads.txt file gives you more control over who's allowed to sell ads on your site and helps prevent counterfeit inventory from being presented to advertisers.
 
@@ -22,13 +24,13 @@ This is a ads.txt file example:
 
 <figure><img src="../../.gitbook/assets/app-ads.png" alt=""><figcaption></figcaption></figure>
 
-## Set up an ads.txt file
+## [Set up an ads.txt file](ads.txt.md#step-2.set-up-an-ads.txt-file)
 
 * If you haven't already ,we provide ads.txt file for publisher download.
 
-{% file src="../../.gitbook/assets/app-ads.txt" %}
+{% file src="../../.gitbook/assets/ads.txt" %}
 
-## Publish your ads.txt file on your website
+## [Publish your ads.txt file on your website](ads.txt.md#step-3.publish-your-ads.txt-file-on-your-website)
 
 The hostname is determined from your website.Here is a example.
 
