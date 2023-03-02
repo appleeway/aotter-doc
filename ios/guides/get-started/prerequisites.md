@@ -71,8 +71,8 @@ After the ad place is created, you will see a list of ad place as shown.
 
 * Follow our guides for installation SDK
 
-{% content-ref url="../../sdk-integration/installation.md" %}
-[installation.md](../../sdk-integration/installation.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 

@@ -2,13 +2,13 @@
 
 Follow these steps to build a banner ad layout and then requests it.
 
-Step 1: [Initialize AotterTrek SDK](banner-ad.md#step-1-initialize-aottertrek-sdk)\
-Step 2: [Customize _ViewController_](banner-ad.md#step-2-customize-viewcontroller)__
+Step 1: [Initialize AotterTrek SDK](broken-reference)\
+Step 2: [Customize _ViewController_](broken-reference)__
 
 ### Step 1: Initialize AotterTrek SDK&#x20;
 
 {% tabs %}
-{% tab title="ObjC" %}
+{% tab title="Objective-C" %}
 _File: AppDelegate.m_
 
 ```objectivec
@@ -52,7 +52,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 \- **GoogleMobileAds SDK version 8 and above**
 
 {% tabs %}
-{% tab title="ObjC" %}
+{% tab title="Objective-C" %}
 ```objectivec
 //Ex:BannerViewController
 #import "BannerViewController.h"

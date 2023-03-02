@@ -1,4 +1,6 @@
-# Installation
+# GoogleAds integration
+
+## Installation
 
 ### Including AdMob Mediation
 

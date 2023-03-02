@@ -6,7 +6,7 @@ description: This guide explains how to enable test ads in your ads integration.
 
 Enabling test ads in your app following steps :
 
-* ****[**Complete Installation**](../sdk-integration/installation.md)****
+* ****[**Complete Installation**](broken-reference)****
 * ****[**Test ad units**](enable-test-ads.md#test-ad-units)****
 
 ## Test ad units

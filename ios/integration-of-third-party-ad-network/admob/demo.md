@@ -10,12 +10,12 @@ What you need to do with this demo is to configure ** **_**GADApplicationIdentif
 
 * **GADApplicationIdentifier** (_File: Info.plist_)
 
-![](../../.gitbook/assets/GoogleMediationDemoAppInfo.png)
+![](../../../.gitbook/assets/GoogleMediationDemoAppInfo.png)
 
 * **AdMob Ad Unit**
 
-![](../../.gitbook/assets/GoogleMediationDemoAppViewController.png)
+![](../../../.gitbook/assets/GoogleMediationDemoAppViewController.png)
 
 * **Client Info** (_File: AppDelegate.m_)
 
-![](../../.gitbook/assets/120173914-1ff3e700-c237-11eb-9d55-9af9f6bcb243.png)
+![](../../../.gitbook/assets/120173914-1ff3e700-c237-11eb-9d55-9af9f6bcb243.png)

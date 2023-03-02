@@ -6,10 +6,10 @@ The Native Ad API allows you to build a customized experience for the ads you sh
 
 Follow these steps to build a native ad layout that fits your application and then requests it.
 
-Step 1: [Create `TKAdNative` Object](../../ad-formats/native-ad.md#step-1-create-adnative-object)\
-Step 2: [Render `TKAdNatvie` UI Object](../../ad-formats/native-ad.md#step-2-render-adnatvie-ui-object)\
-Step 3: [Ad Fail Delegates](../../ad-formats/native-ad.md#step-3-ad-fail-delegates)\
-Step 4: [Remove and Release](../../ad-formats/native-ad.md#step-4-remove-and-release)
+Step 1: [Create `TKAdNative` Object](broken-reference)\
+Step 2: [Render `TKAdNatvie` UI Object](broken-reference)\
+Step 3: [Ad Fail Delegates](broken-reference)\
+Step 4: [Remove and Release](broken-reference)
 
 ### **AdData Parameter**
 

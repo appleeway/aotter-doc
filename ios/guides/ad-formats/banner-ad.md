@@ -2,11 +2,11 @@
 
 Follow these steps to build a banner ad layout and then requests it.
 
-Step 1: [Create `TKAdSuprAd` Object](../../ad-formats/banner-ad.md#step-1-create-tkadsuprad-object)\
-Step 2: [Register AdView and TKMediaView](../../ad-formats/banner-ad.md#step-2-register-adview-and-tkmediaview)\
-Step 3: [Ad Loading Completion Callback](../../ad-formats/banner-ad.md#step-3-ad-loading-completion-callback)\
-Step 4: [Error Callback](../../ad-formats/banner-ad.md#step-4-error-callback)\
-Step 5: [Destroy Ad (Optional)](../../ad-formats/banner-ad.md#step-5-optional-destroy-ad)
+Step 1: [Create `TKAdSuprAd` Object](broken-reference)\
+Step 2: [Register AdView and TKMediaView](broken-reference)\
+Step 3: [Ad Loading Completion Callback](broken-reference)\
+Step 4: [Error Callback](broken-reference)\
+Step 5: [Destroy Ad (Optional)](broken-reference)
 
 ### Functions
 

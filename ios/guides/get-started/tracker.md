@@ -121,12 +121,12 @@ A tracker event usually contains the following attributes.
 
 **Follow the following steps to send a tracker event.**
 
-Step 1: [Create Objects of Tracker Event](../../sdk-integration/tracker.md#step-1-create-objects-of-tracker-event)\
-Step 2: [Engage Tracker Event with Objects](../../sdk-integration/tracker.md#step-2-engage-trakcer-event-with-these-parts)\
-Step 3: [Update Tracker Items' Specific Part (Optional)](../../sdk-integration/tracker.md#step3-optional-update-the-tracker-items39-specific-part-if-needed)\
-Step 4: [Exit Tracker item (Optional)](../../sdk-integration/tracker.md#step-4-optional-exit-tracker-item-if-the-tracker-event-has-clear-end-time)\
-Step 5: [Send Tracker Items](../../sdk-integration/tracker.md#step-5-send-tracker-items)\
-[Full Example](../../sdk-integration/tracker.md#example)
+Step 1: [Create Objects of Tracker Event](broken-reference)\
+Step 2: [Engage Tracker Event with Objects](broken-reference)\
+Step 3: [Update Tracker Items' Specific Part (Optional)](broken-reference)\
+Step 4: [Exit Tracker item (Optional)](broken-reference)\
+Step 5: [Send Tracker Items](broken-reference)\
+[Full Example](broken-reference)
 
 ### Step 1. Create Objects of Tracker Event
 

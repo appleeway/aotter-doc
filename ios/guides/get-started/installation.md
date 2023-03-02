@@ -12,7 +12,7 @@ description: Follow these steps to download and include SDK in your project
 
 ****
 
-### [Step 1 : Download & Install AotterTrek SDK](../../sdk-integration/installation.md)
+### [Step 1 : Download & Install AotterTrek SDK](broken-reference)
 
 #### - Using Cocoapods
 
@@ -39,7 +39,7 @@ pod 'AotterTrek-iOS-SDK', '3.8.5'
 | AVKit                    | AVFoundation        | Foundation    |
 | UIKit                    |                     |               |
 
-### [Step 2 : **Import AotterTrek SDK**](../../sdk-integration/installation.md)****
+### [Step 2 : **Import AotterTrek SDK**](broken-reference)****
 
 * **Objective-C :**&#x20;
 
@@ -57,7 +57,7 @@ Add header.h as [Objective-C bridging header](https://developer.apple.com/docume
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
 ```
 
-### [Step 3 : Initialzation & Settings AotterTrek SDK](../../sdk-integration/installation.md)
+### [Step 3 : Initialzation & Settings AotterTrek SDK](broken-reference)
 
 Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
 
@@ -112,8 +112,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ## Next Steps
 
 * Follow our guides for integrating different Ad Formats in your app:
-  * [Native Ad](../../ad-formats/banner-ad.md)
-  * [Supr.Ad](../../ad-formats/supr.ad.md)
-  * [Banner Ad](../../ad-formats/banner-ad.md)
+  * [Native Ad](broken-reference)
+  * [Supr.Ad](broken-reference)
+  * [Banner Ad](broken-reference)
 * Or you would like to check out the demo app:
-  * [Demo](../../sdk-integration/demo-working.md)
+  * [Demo](broken-reference)

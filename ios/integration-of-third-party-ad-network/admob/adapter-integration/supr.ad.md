@@ -1,16 +1,32 @@
-# Native Ad
+# Supr.Ad
 
-Follow these steps to build a native ad layout that fits your application and then requests it.
+Follow these steps to build a Supr.Ad layout and then requests it.
 
-Step 1: [Initialize AotterTrek SDK](native-ad.md#step-1-initialize-aottertrek-sdk) \
-Step 2: [Customize _TableViewCell_ / _CollectionViewCell_ / _ViewController_](native-ad.md#step-2-customize-tableviewcell-collectionviewcell-viewcontroller)__
+Step 1: [Initialize AotterTrek SDK ](broken-reference)\
+Step 2: [Customize _TableViewCell_ / _CollectionViewCell_ / _ViewController_](broken-reference)
+
+{% hint style="info" %}
+When executing Supr.Ad, a multimedia ad, you might receive video ads. You might not like the audio of the video ad to intervene in your user's background music. Moreover, If your app combines various audio playing conditions, it is recommended to choose [the category](https://developer.apple.com/documentation/avfaudio/avaudiosessioncategory) that most accurately describes the audio behavior you want.&#x20;
+
+In the code snippet above, we choose `AVAudioSessionCategoryAmbient` which means audio from other apps mixes with audio from ads.
+{% endhint %}
+
+{% hint style="warning" %}
+Notice: If your project is based on Swift, please import _Aotter-iOS-SDK.h_ in the bridge file.
+{% endhint %}
+
+```swift
+#import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
+```
 
 ### Step 1: Initialize AotterTrek SDK&#x20;
 
+_File: AppDelegate.m_
+
 {% tabs %}
-{% tab title="ObjC" %}
+{% tab title="Objective-C" %}
 ```objectivec
-File: AppDelegate.m
+File:Appdelegate.m
 
 /// Need to import Lib
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
@@ -36,7 +52,6 @@ File: AppDelegate.m
 {% endtab %}
 
 {% tab title="Swift" %}
-{% code overflow="wrap" %}
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     GADMobileAds.sharedInstance().start()
@@ -45,7 +60,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
  return true
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -58,7 +72,7 @@ Here we customize **TableViewCell** : `TrekNativeAdTableViewCell`
 GoogleMobileAds SDK version 8 and above: `GADNativeAdView`&#x20;
 {% endhint %}
 
-![](../../../.gitbook/assets/109942288-03671200-7d0f-11eb-8606-f5689a98ecec.png)
+![](../../../../.gitbook/assets/109942288-03671200-7d0f-11eb-8606-f5689a98ecec.png)
 
 **- TrekNativeAdTableViewCell**
 
@@ -77,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TrekNativeAdTableViewCell : UITableViewCell
 @property(nonatomic, strong) GADNativeAdView *nativeAdView; 
 
-- (void)setGADNativeAdData:(GADNativeAd *)nativeAd;
+- (void)setGADNativeAdData:(GADNativeAd *)nativeAd withViewSize:(CGSize)size;
 
 @end
 
@@ -91,53 +105,30 @@ NS_ASSUME_NONNULL_END
 #### - **GoogleMobileAds SDK version 8 and above** <a href="#declare-a-gadunifiednativead-data-method" id="declare-a-gadunifiednativead-data-method"></a>
 
 ```swift
-// Google Mediation NativeAd
-
-- (void)setGADNativeAdData:(GADNativeAd *)nativeAd {
+- (void)setGADNativeAdData:(GADNativeAd *)nativeAd withViewSize:(CGSize)size {
     
-    NSArray *nibObjects =
-    [[NSBundle mainBundle] loadNibNamed:@"UnifiedNativeAdView" owner:nil options:nil];
-    [self setAdView:[nibObjects firstObject]];
-    
-    //NSString *img_icon = nativeAd.extraAssets[kTKAdImage_iconKey];//82x82
-    //NSString *img_icon_hd = nativeAd.extraAssets[kTKAdImage_icon_hdKey];//300x300
-    //NSString *img_main = nativeAd.extraAssets[kTKAdImage_mainKey];//1200x628
-    //NSString *sponser = nativeAd.extraAssets[kTKAdSponser];
-    
-    ((UIImageView *)self.nativeAdView.iconView).image = nativeAd.icon.image;
-    ((UILabel *)self.nativeAdView.headlineView).text = nativeAd.headline;
-    ((UILabel *)self.nativeAdView.bodyView).text = nativeAd.body;
-    ((UILabel *)self.nativeAdView.advertiserView).text = nativeAd.advertiser;
-    self.nativeAdView.nativeAd = nativeAd;
+    for (UIView *subView in self.contentView.subviews) {
+        [subView removeFromSuperview];
+    }
 
-    [self addSubview:self.nativeAdView];
-}
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    GADMediaView *gADMediaView = [[GADMediaView alloc]initWithFrame:rect];
+    gADMediaView.mediaContent = nativeAd.mediaContent;
+    [self.contentView addSubview:gADMediaView];
 
-// Common Method
-- (void)setAdView:(GADUnifiedNativeAdView *)view {
-    // Remove previous ad view.
-    [self.nativeAdView removeFromSuperview];
-    self.nativeAdView = view;
+    [gADMediaView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    // Add new ad view and set constraints to fill its container.
-    [self addSubview:view];
-    [self.nativeAdView setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_nativeAdView);
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_nativeAdView]|"
-      options:0
-      metrics:nil
-      views:viewDictionary]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_nativeAdView]|"
-      options:0
-      metrics:nil
-      views:viewDictionary]];
+    [gADMediaView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [gADMediaView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
+    [gADMediaView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor].active = YES;
+    [gADMediaView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+    [gADMediaView.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
 }
 ```
 {% endtab %}
 
 {% tab title="TrekNativeAdTableViewCell.xib" %}
-![TrekNativeAdTableViewCell](../../../.gitbook/assets/109943071-c2233200-7d0f-11eb-894f-2ccd4ff701ee.png)
+![TrekNativeAdTableViewCell](../../../../.gitbook/assets/109943071-c2233200-7d0f-11eb-894f-2ccd4ff701ee.png)
 {% endtab %}
 
 {% tab title="Swift" %}
@@ -176,24 +167,23 @@ func setGADNativeAdData(_ nativeAd: GADNativeAd){
 
 {% tabs %}
 {% tab title="YourViewController.m" %}
-Rendering the ad view process:
-
 #### **- GoogleMobileAds SDK version 8 and above**
 
-```objectivec
+```swift
 // Define the display position of the ad in the TableView
-static NSInteger googleMediationNativeAdPosition = 6;
+static NSInteger googleMediationSuprAdPosition = 8;
 .
 .
 .
-@interface YourViewController ()<GADNativeAdLoaderDelegate, UITableViewDataSource, UITableViewDelegate> {
-
-    GADNativeAd *_gADUnifiedNativeAd; 
-
+@interface SuprAdViewController ()<GADNativeAdLoaderDelegate, UITableViewDataSource, UITableViewDelegate> {
+    
+    GADNativeAd *_gADUnifiedSuprAd;
+    UIView *_suprAdView;
 }
+
 @property UIRefreshControl *refreshControl;
 @property (atomic, strong) GADAdLoader *adLoader;
-@property (weak, nonatomic) IBOutlet UITableView *nativeAdTableView;
+@property (weak, nonatomic) IBOutlet UITableView *suprAdTableView;
 
 @end
 
@@ -210,24 +200,27 @@ static NSInteger googleMediationNativeAdPosition = 6;
 #pragma mark : Setup TableView
 
 - (void)setupTableVie {
-    self.nativeAdTableView.dataSource = self;
-    self.nativeAdTableView.delegate = self;
+    self.suprAdTableView.dataSource = self;
+    self.suprAdTableView.delegate = self;
     
-    [self.nativeAdTableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"Cell"];
-    [self.nativeAdTableView registerNib:[UINib nibWithNibName:@"TrekNativeAdTableViewCell" bundle:nil] forCellReuseIdentifier:@"TrekNativeAdTableViewCell"];
+    
+    [self.suprAdTableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"Cell"];
+    
+    [self.suprAdTableView registerNib:[UINib nibWithNibName:@"TrekSuprAdTableViewCell" bundle:nil] forCellReuseIdentifier:@"TrekSuprAdTableViewCell"];
 }
 
 - (void)setupRefreshControl {
     self.refreshControl = [[UIRefreshControl alloc]init];
     
     [self.refreshControl addTarget:self action:@selector(onRefreshTable) forControlEvents:UIControlEventValueChanged];
-    [self.nativeAdTableView addSubview:self.refreshControl];
+    [self.suprAdTableView addSubview:self.refreshControl];
 }
 
 #pragma mark : Setup GADAdLoader
 
 - (void)setupGADAdLoader {
-                                             
+    
+    // GoogleMobileAds version 8 above
     self.adLoader = [[GADAdLoader alloc]initWithAdUnitID: @"<Your adUnit Id>"
                                       rootViewController: self
                                                  adTypes: @[kGADAdLoaderAdTypeNative]
@@ -246,19 +239,6 @@ static NSInteger googleMediationNativeAdPosition = 6;
     [request registerAdNetworkExtras:extra];
 }
 
-#pragma mark - Action
-
-- (void)onRefreshTable {
-    [self.refreshControl beginRefreshing];
-    
-    if (_gADUnifiedNativeAd) {
-        _gADUnifiedNativeAd = nil;
-    }
-    
-    [self adLoaderLoadRequest];
-    [self.refreshControl endRefreshing];
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -270,15 +250,31 @@ static NSInteger googleMediationNativeAdPosition = 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row == googleMediationNativeAdPosition) {
-        if (_gADUnifiedNativeAd != nil) {
-            TrekNativeAdTableViewCell *trekNativeAdTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"TrekNativeAdTableViewCell" forIndexPath:indexPath];
+    if (indexPath.row == googleMediationSuprAdPosition) {
+        if(_gADUnifiedSuprAd != nil) {
+            TrekSuprAdTableViewCell *trekSuprAdTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"TrekSuprAdTableViewCell" forIndexPath:indexPath];
             
-            [trekNativeAdTableViewCell setGADNativeAdData:_gADUnifiedNativeAd];
-            return trekNativeAdTableViewCell;
+            if ([[_gADUnifiedSuprAd.extraAssets allKeys]containsObject:@"adSizeWidth"] &&
+                [[_gADUnifiedSuprAd.extraAssets allKeys]containsObject:@"adSizeHeight"]) {
+                
+                // get ad prefered AdSize
+                NSString *width = _gADUnifiedSuprAd.extraAssets[@"adSizeWidth"];
+                NSString *height = _gADUnifiedSuprAd.extraAssets[@"adSizeHeight"];
+                double adSizeWidth = [width doubleValue];
+                double adSizeHeight = [height doubleValue];
+
+                CGFloat viewWidth = UIScreen.mainScreen.bounds.size.width;
+                CGFloat viewHeight = viewWidth * adSizeHeight/adSizeWidth;
+                int adheight = (int)viewHeight;
+                CGSize preferedMediaViewSize = CGSizeMake(viewWidth, adheight);
+                
+                [trekSuprAdTableViewCell setGADNativeAdData:_gADUnifiedSuprAd withViewSize:preferedMediaViewSize];
+            }
+            
+            return trekSuprAdTableViewCell;
         }
     }
+    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.textLabel.text = [[NSString alloc]initWithFormat:@"index:%ld",(long)indexPath.row];
@@ -289,32 +285,58 @@ static NSInteger googleMediationNativeAdPosition = 6;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == googleMediationNativeAdPosition) {
-        return _gADUnifiedNativeAd == nil ? 0:80;
+    if (indexPath.row == googleMediationSuprAdPosition) {
+        if ([[_gADUnifiedSuprAd.extraAssets allKeys]containsObject:@"adSizeWidth"] &&
+            [[_gADUnifiedSuprAd.extraAssets allKeys]containsObject:@"adSizeHeight"]) {
+            
+            // get ad prefered AdSize
+            NSString *width = _gADUnifiedSuprAd.extraAssets[@"adSizeWidth"];
+            NSString *height = _gADUnifiedSuprAd.extraAssets[@"adSizeHeight"];
+            double adSizeWidth = [width doubleValue];
+            double adSizeHeight = [height doubleValue];
+
+            CGFloat viewWidth = UIScreen.mainScreen.bounds.size.width;
+            CGFloat viewHeight = viewWidth * adSizeHeight/adSizeWidth;
+            
+            return _gADUnifiedSuprAd == nil ? 0:viewHeight;
+        }
     }
-  
+    
     return 80;
+}
+
+// Supr.Ad need to be notified when the ad view is scrolled, 
+// you should always add this method:
+#pragma mark : ScrlloView delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (_gADUnifiedSuprAd != nil) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"SuprAdScrolled"
+                                                           object:nil
+                                                         userInfo:nil];
+    }
 }
 
 
 #pragma mark - GADNativeAdLoaderDelegate
 
 - (void)adLoader:(GADAdLoader *)adLoader didReceiveNativeAd:(GADNativeAd *)nativeAd {
-    // Delegate 回來的 nativeAd 已經可以接取到自己的 Custom Ad View，
-    // 這部分可以將 nativeAd 放到 CustomTableViewCell 去接資料
+
+    // Delegated nativeAd are able to receive its Custom Ad View，
+    // This part can put nativeAd into CustomTableViewCell to get data.
 
     if (nativeAd != nil) {
 
         if ([[nativeAd.extraAssets allKeys]containsObject:@"trekAd"]) {
             NSString *adType = nativeAd.extraAssets[@"trekAd"];
 
-            if ([adType isEqualToString:@"nativeAd"]) {
-                _gADUnifiedNativeAd = nativeAd;
+            if ([adType isEqualToString:@"suprAd"]) {
+                _gADUnifiedSuprAd = nativeAd;
             }
         }
     }
 
-    [self.nativeAdTableView reloadData];
+    [self.suprAdTableView reloadData];
 }
 
 - (void)adLoader:(GADAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {
@@ -330,14 +352,14 @@ Note: In`YourViewController.m` - `adLoaderLoadRequest`\
 When requesting ads, the label parameter should be corresponding to the label set in the AdMob dashboard.
 {% endhint %}
 
-![](../../../.gitbook/assets/132634590-ddef116f-0b74-4877-a218-f9c232a28045.png)
+![](../../../../.gitbook/assets/132634590-ddef116f-0b74-4877-a218-f9c232a28045.png)
 
-![](../../../.gitbook/assets/132634585-ad98552e-3239-4f4d-abc4-842163179328.png)
+![](../../../../.gitbook/assets/132634585-ad98552e-3239-4f4d-abc4-842163179328.png)
 {% endtab %}
 
 {% tab title="Swift" %}
 ```swift
-class YourViewController: UIViewController,GADNativeAdLoaderDelegate, UITableViewDataSource, UITableViewDelegate{
+class YourViewController: UIViewController,GADNativeAdLoaderDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
     var gADUnifiedNativeAd:GADNativeAd
     var refreshControl:UIRefreshControl
     var adLoader:GADAdLoader
@@ -379,13 +401,25 @@ class YourViewController: UIViewController,GADNativeAdLoaderDelegate, UITableVie
         guard let adType = nativeAd.extraAssets?["trekAd"] else{
             return;
         }
-        if(adType == "nativeAd"){
+        if(adType == "suprAd"){
             self.gADUnifiedNativeAd = nativeAd
         }
 
         self.nativeAdTableView.reloadData()
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if(self.gADUnifiedNativeAd){
+            NotificationCenter.default.post(name: "SuprAdScrolled", object: nil)
+        }
+    }
 }
 ```
 {% endtab %}
 {% endtabs %}
+
+### Special Cases
+
+There are some special cases when implementing Supr.Ad in your app. \
+Please read the section [Special Cases](broken-reference)
+

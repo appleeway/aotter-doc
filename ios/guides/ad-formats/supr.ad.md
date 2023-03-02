@@ -2,14 +2,14 @@
 
 Follow these steps to build a Supr.Ad layout and then requests it.
 
-Step 1: [Create `TKAdSuprAd` Object](../../ad-formats/supr.ad.md#step-1-create-tkadsuprad-object)\
-Step 2: [Fetch Ad](../../ad-formats/supr.ad.md#step-2-fetch-ad)\
-Step 3: [Register AdView and TKMediaView](../../ad-formats/supr.ad.md#step-3-register-adview-and-tkmediaview)\
-Step 4: [Ad Loading Completion Callback](../../ad-formats/supr.ad.md#step-4-ad-loading-completed)\
-Step 5: [Error Callback](../../ad-formats/supr.ad.md#step-5-error-callback)\
-Step 6: [Notify Ad Scroll Event (Optional)](../../ad-formats/supr.ad.md#step-6-optional-notify-ad-scroll-event)\
-Step 7: [Destroy Ad (Optional)](../../ad-formats/supr.ad.md#step-7-optional-destroy-ad)\
-[Special Cases](../../ad-formats/supr.ad.md#special-cases)
+Step 1: [Create `TKAdSuprAd` Object](broken-reference)\
+Step 2: [Fetch Ad](broken-reference)\
+Step 3: [Register AdView and TKMediaView](broken-reference)\
+Step 4: [Ad Loading Completion Callback](broken-reference)\
+Step 5: [Error Callback](broken-reference)\
+Step 6: [Notify Ad Scroll Event (Optional)](broken-reference)\
+Step 7: [Destroy Ad (Optional)](broken-reference)\
+[Special Cases](broken-reference)
 
 {% hint style="info" %}
 When executing Supr.Ad, a multimedia ad, you might receive video ads. You might not like the audio of the video ad to intervene in your user's background music. Moreover, If your app combines various audio playing conditions, it is recommended to choose [the category](https://developer.apple.com/documentation/avfaudio/avaudiosessioncategory) that most accurately describes the audio behavior you want.&#x20;
