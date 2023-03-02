@@ -10,27 +10,27 @@ description: >-
 
 To prepare your app, complete the steps in the following sections.&#x20;
 
-**Step 0 :** [**Check SDK Version Requirements**](prerequisites.md#step-0-check-sdk-version-requirements)****
+#### **Step 0 :** [**Check SDK Version Requirements**](prerequisites.md#step-0-check-sdk-version-requirements)****
 
-**Step 1 :** [**Register AotterTrek Account**](prerequisites.md#step-1-register-aottertrek-account)****
+#### **Step 1 :** [**Register AotterTrek Account**](prerequisites.md#step-1-register-aottertrek-account)****
 
-**Step 2 :** [**Set Up New Application**](prerequisites.md#step-2-set-up-new-application)****
+#### **Step 2 :** [**Set Up New Application**](prerequisites.md#step-2-set-up-new-application)****
 
-**Step 3 :** [**Create an Ad place**](prerequisites.md#step-3-create-an-ad-place)****
+#### **Step 3 :** [**Create an Ad place**](prerequisites.md#step-3-create-an-ad-place)****
 
 ****
 
-### ****[**Step 0 : Check SDK Version R**equirements](broken-reference)
+### ****[**Step 0 : Check SDK Version R**equirements](prerequisites.md#step-0-check-sdk-version-requirements)
 
 Noticed the AotterTrek SDK version requirements is **iOS 9.0 and later**
 
-### ****[**Step 1 : Register AotterTrek Account**](broken-reference)****
+### ****[**Step 1 : Register AotterTrek Account**](prerequisites.md#step-1-register-aottertrek-account)****
 
 Register for AotterTrek Account **** [**here**](https://trek.aotter.net)**.**
 
 ![Resgister account](<../../../.gitbook/assets/Resgister Account.png>)
 
-### ****[**Step 2 : Set up New Application**](broken-reference)****
+### ****[**Step 2 : Set up New Application**](prerequisites.md#step-2-set-up-new-application)****
 
 Set up a new application in the application list.
 
@@ -52,7 +52,7 @@ After entering the list, you might find the ad status is test ad only. For the p
 
 ![New application step 3](<../../../.gitbook/assets/截圖 2021-09-14 下午2.48.18.png>)
 
-### ****[**Step 3 : Create an Ad place**](prerequisites.md#before\_you\_begin)****
+### ****[**Step 3 : Create an Ad place**](prerequisites.md#step-3-create-an-ad-place)****
 
 Entering the ad slots management and then creating ad place. Name the ad place with lowercase letters **`a-z`** , number **`0-9`** and underscore **`_`** .\
 AotterTrek currently provides three types of ad and different sizes:
@@ -66,14 +66,3 @@ AotterTrek currently provides three types of ad and different sizes:
 After the ad place is created, you will see a list of ad place as shown.
 
 ![Ad slots list](../../../.gitbook/assets/1636012205218.jpg)
-
-## Next Steps
-
-* Follow our guides for installation SDK
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-
-
