@@ -3,11 +3,6 @@ criteo.com, B-057890, DIRECT, 9fac4a4a87c2a44f
 
 #openX
 openx.com, 557752905, RESELLER, 6a698e2ec38604c6
-openx.com, 557752905, DIRECT, 6a698e2ec38604c6
-
-#Pangle
-pangleglobal.com, Account ID, DIRECT
-pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
 
 #SF
 sales-frontier.com, SF21693702494, DIRECT
