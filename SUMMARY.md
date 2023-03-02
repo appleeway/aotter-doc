@@ -37,6 +37,17 @@
 
 ## 📱  iOS
 
+* [Guides](ios/guides/README.md)
+  * [Get Started](ios/guides/get-started/README.md)
+    * [Prerequisites](ios/guides/get-started/prerequisites.md)
+    * [Installation](ios/guides/get-started/installation.md)
+    * [Tracker](ios/guides/get-started/tracker.md)
+  * [Enable test ads](ios/guides/enable-test-ads.md)
+  * [Ad formats](ios/guides/ad-formats/README.md)
+    * [Native Ad](ios/guides/ad-formats/native-ad.md)
+    * [Supr.Ad](ios/guides/ad-formats/supr.ad.md)
+    * [Banner Ad](ios/guides/ad-formats/banner-ad.md)
+  * [Demo](ios/guides/demo.md)
 * [Migration Guide](ios/aottertrek-3.x-migration-guide.md)
 * [iOS SDK](ios/sdk-integration/README.md)
   * [Prerequisites](ios/sdk-integration/prerequisites.md)
