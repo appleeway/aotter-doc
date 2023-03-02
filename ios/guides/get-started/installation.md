@@ -4,15 +4,15 @@ description: Follow these steps to download and include SDK in your project
 
 # Installation
 
-**Step 1 :** [**Download & Install AotterTrek SDK**](installation.md#step-1-download-and-install-aottertrek-sdk)****
+#### **Step 1 :** [**Download & Install AotterTrek SDK**](installation.md#step-1-download-and-install-aottertrek-sdk)****
 
-**Step 2 :** [**Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)****
+#### **Step 2 :** [**Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)****
 
-**Step 3 :** [**Initiation & Settings AotterTrek SDK**](installation.md#step-3-initialzation-and-settings-aottertrek-sdk)****
+#### **Step 3 :** [**Initiation & Settings AotterTrek SDK**](installation.md#step-3-initialzation-and-settings-aottertrek-sdk)****
 
 ****
 
-### [Step 1 : Download & Install AotterTrek SDK](broken-reference)
+### [Step 1 : Download & Install AotterTrek SDK](installation.md#step-1-download-and-install-aottertrek-sdk)
 
 #### - Using Cocoapods
 
@@ -39,7 +39,7 @@ pod 'AotterTrek-iOS-SDK', '3.8.5'
 | AVKit                    | AVFoundation        | Foundation    |
 | UIKit                    |                     |               |
 
-### [Step 2 : **Import AotterTrek SDK**](broken-reference)****
+### [Step 2 : **Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)****
 
 * **Objective-C :**&#x20;
 
@@ -57,7 +57,7 @@ Add header.h as [Objective-C bridging header](https://developer.apple.com/docume
 #import <AotterTrek-iOS-SDK/AotterTrek-iOS-SDK.h>
 ```
 
-### [Step 3 : Initialzation & Settings AotterTrek SDK](broken-reference)
+### [Step 3 : Initialzation & Settings AotterTrek SDK](installation.md#step-3-initiation-and-settings-aottertrek-sdk)
 
 Please use **your client id** for initialization which can be found in the [application list](https://trek.aotter.net/publisher/list/app).&#x20;
 
@@ -108,12 +108,3 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 {% endtab %}
 {% endtabs %}
-
-## Next Steps
-
-* Follow our guides for integrating different Ad Formats in your app:
-  * [Native Ad](broken-reference)
-  * [Supr.Ad](broken-reference)
-  * [Banner Ad](broken-reference)
-* Or you would like to check out the demo app:
-  * [Demo](broken-reference)
