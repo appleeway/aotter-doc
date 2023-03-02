@@ -22,7 +22,7 @@ Find out what is the prerequisites and how to initialize SDK, and then check out
 
 ### Changelogs
 
-{% content-ref url="../changelog.md" %}
-[changelog.md](../changelog.md)
+{% content-ref url="../support/changelog.md" %}
+[changelog.md](../support/changelog.md)
 {% endcontent-ref %}
 

@@ -48,6 +48,12 @@
     * [Supr.Ad](ios/guides/ad-formats/supr.ad.md)
     * [Banner Ad](ios/guides/ad-formats/banner-ad.md)
   * [Demo](ios/guides/demo.md)
+* [Support](ios/support/README.md)
+  * [Change logs](ios/support/changelog.md)
+  * [Others](ios/support/others/README.md)
+    * [Logger](ios/support/others/logger.md)
+    * [Prepare for iOS 14+](ios/support/others/prepare-for-ios-14+.md)
+    * [Trek SDK migration 3.x](ios/support/others/trek-sdk-migration-3.x.md)
 * [Migration Guide](ios/aottertrek-3.x-migration-guide.md)
 * [iOS SDK](ios/sdk-integration/README.md)
   * [Prerequisites](ios/sdk-integration/prerequisites.md)
@@ -69,7 +75,6 @@
   * [Demo](ios/admob-mediation/demo.md)
 * [MyApp Ads Integration](ios/myapp-ads-integration.md)
 * [Prepare for iOS 14](ios/prepare-for-ios-14.md)
-* [Changelog](ios/changelog.md)
 
 ## 🖥  Web
 
