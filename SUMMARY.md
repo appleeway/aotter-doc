@@ -65,6 +65,7 @@
     * [Logger](ios/support/others/logger.md)
     * [Prepare for iOS 14+](ios/support/others/prepare-for-ios-14+.md)
     * [Trek SDK migration 3.x](ios/support/others/trek-sdk-migration-3.x.md)
+  * [app-ads.txt](ios/support/app-ads.txt.md)
 
 ## 🖥  Web
 
