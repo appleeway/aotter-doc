@@ -6,10 +6,13 @@ The Native Ad API allows you to build a customized experience for the ads you sh
 
 Follow these steps to build a native ad layout that fits your application and then requests it.
 
-Step 1: [Create `TKAdNative` Object](broken-reference)\
-Step 2: [Render `TKAdNatvie` UI Object](broken-reference)\
-Step 3: [Ad Fail Delegates](broken-reference)\
-Step 4: [Remove and Release](broken-reference)
+#### Step 1: [Create `TKAdNative` Object](native-ad.md#step-1-create-tkadnative-object-1)
+
+#### Step 2: [Render `TKAdNatvie` UI Object](native-ad.md#step-2-render-tkadnatvie-ui-object-1)
+
+#### Step 3: [Ad Fail Delegates](native-ad.md#step-3-ad-fail-delegates-1)
+
+#### **Step 4:** [**Remove and Release**](native-ad.md#step-4-remove-and-release)
 
 ### **AdData Parameter**
 
@@ -73,7 +76,7 @@ func tkAdNativeWillLogImpression(_ ad: TKAdNative!) {
 {% endtab %}
 {% endtabs %}
 
-### Step 1: Create `TKAdNative` Object
+### [Step 1: Create `TKAdNative` Object](native-ad.md#step-1-create-tkadnative-object)
 
 In the following code snippet, replace the value in `initWithPlace` to your **UUID**.\
 Setting category is optional. You can fill in `nil` if you don't want to set it.
@@ -116,7 +119,7 @@ self.myAdNative?.fetchAd()
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Render `TKAdNatvie` UI Object
+### [Step 2: Render `TKAdNatvie` UI Object](native-ad.md#step-2-render-tkadnatvie-ui-object)
 
 {% tabs %}
 {% tab title="Objective-C" %}
@@ -174,7 +177,7 @@ self.myAdNative?.fetchAd()
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Ad Fail Delegates
+### [Step 3: Ad Fail Delegates](native-ad.md#step-3-ad-fail-delegates)
 
 {% tabs %}
 {% tab title="Objective-C" %}
@@ -194,7 +197,7 @@ func tkAdNative(_ ad: TKAdNative!, fetchError error: TKAdError!) {
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Remove and Release
+### [Step 4: Remove and Release](native-ad.md#step-4-remove-and-release)
 
 {% tabs %}
 {% tab title="Objective-C" %}
