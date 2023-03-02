@@ -9,12 +9,12 @@ description: >-
 
 ### Learn more about:
 
-*   ****[**Prerequisites**](broken-reference)****
+*   ****[**Prerequisites**](prerequisites.md)****
 
     Learn how to prepare your app
-*   ****[**Installation**](broken-reference)****
+*   ****[**Installation**](installation.md)****
 
     Learn how to initialize the Trek Ads SDK.
-*   ****[**Tracker**](broken-reference)****
+*   ****[**Tracker**](tracker.md)****
 
     Learn more about data tracking.
