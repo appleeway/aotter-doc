@@ -2,9 +2,9 @@
 
 ### Setup SDK in your app following steps:
 
-#### **Step 1.**[**Configure your app**](installation.md#import\_the\_mobile\_ads\_sdk)****
+#### **Step 1.**[**Configure your app**](installation.md#import\_the\_mobile\_ads\_sdk)
 
-#### ​**Step 2.**[**Initialize the Trek Ads SDK**](installation.md#initialize\_the\_mobile\_ads\_sdk)****
+#### ​**Step 2.**[**Initialize the Trek Ads SDK**](installation.md#initialize\_the\_mobile\_ads\_sdk)
 
 ## [Configure your app](installation.md#step-1.configure-your-app) <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
 
@@ -26,7 +26,7 @@
 2\. Add the dependencies for the Trek SDK to your module's app-level Gradle file, normally **`app/build.gradle`**:
 
 <pre class="language-groovy" data-overflow="wrap"><code class="lang-groovy">dependencies {
-<strong>  implementation 'com.aotter.android:trek-ads:4.8.3'
+<strong>  implementation 'com.aotter.android:trek-ads:4.9.0'
 </strong>}
 </code></pre>
 

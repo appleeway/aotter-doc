@@ -13,17 +13,28 @@ trek admob mediation :
 
 **`implementation 'com.aotter.android:trek-admob-mediation:4.x.x'`**
 
-**``**
+
 
 #### **Above version 4.5.0 , we had been changed mediation custom class path**
 
 Native Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventNative`**
 
 Banner Ad : **`com.aotter.trek.admob.mediation.ads.TrekAdmobCustomEventBanner`**\
-**``**
+
 {% endhint %}
 
-## 2023/01/30 release - SDK `4.8.3`(Recommend)
+## 2023/05/18 release - SDK `4.9.0`(Recommend)
+
+{% hint style="info" %}
+**minSdkVersion 21** \
+**targetSdkVersion 31**
+{% endhint %}
+
+**Change log**
+
+* Resolve the issue of a low in-view rate caused by VAST obfuscation.
+
+## 2023/01/30 release - SDK `4.8.3`
 
 {% hint style="info" %}
 **minSdkVersion 21** \

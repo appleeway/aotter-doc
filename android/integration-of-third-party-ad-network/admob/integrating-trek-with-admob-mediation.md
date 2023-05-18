@@ -2,9 +2,9 @@
 
 ## Integrating Trek with AdMob Mediation in your app following steps:
 
-#### **Step 1.**[**Configure your app**](integrating-trek-with-admob-mediation.md#import\_the\_mobile\_ads\_sdk)****
+#### **Step 1.**[**Configure your app**](integrating-trek-with-admob-mediation.md#import\_the\_mobile\_ads\_sdk)
 
-#### **Step 2.**[**Initialize the Google Mobile Ads SDK**](integrating-trek-with-admob-mediation.md#initialize\_the\_mobile\_ads\_sdk)****
+#### **Step 2.**[**Initialize the Google Mobile Ads SDK**](integrating-trek-with-admob-mediation.md#initialize\_the\_mobile\_ads\_sdk)
 
 ## [Configure your app](integrating-trek-with-admob-mediation.md#step-1.configure-your-app) <a href="#import_the_mobile_ads_sdk" id="import_the_mobile_ads_sdk"></a>
 
@@ -26,7 +26,7 @@
 
 <pre class="language-groovy" data-overflow="wrap"><code class="lang-groovy">dependencies {
   
-<strong>  implementation 'com.aotter.android:trek-admob-mediation:4.8.3'
+<strong>  implementation 'com.aotter.android:trek-admob-mediation:4.9.0'
 </strong>  
 }
 </code></pre>
