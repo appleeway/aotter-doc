@@ -133,15 +133,25 @@ self.suprAd.registerPresenting(self)
 {% tab title="Objective-C" %}
 ```objectivec
 [self.suprAd fetchAd];
+
+//init supr.ad's cell(option)
+self.adCell = [self.mainTableView dequeueReusableCellWithIdentifier:@"demoAdCell"];
 ```
 {% endtab %}
 
 {% tab title="Swift" %}
 ```swift
 self.suprAd.fetchAd()
+
+//init supr.ad's cell(option)
+self.adCell = mainTableView.dequeueReusableCell(withIdentifier: "demoAdCell")
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+To enhance the loading speed and improve the user experience, the object( suprAd & adCell ) can be fetched and stored beforehand.
+{% endhint %}
 
 ### Step 3: Register AdView and TKMediaView
 
@@ -307,7 +317,7 @@ This function will destroy ads completely. In the condition that`TKAdSuprAd`mana
 
 * Top View & IMA SDK
 
-Supr.Ad includes video ad advertising, which uses VAST technology provided by the Google IMA SDK. In the implementation of VAST, AotterTrek iOS SDK needs to register _ViewController_ when requesting VAST ads from Google IMA. In the meantime, Google IMA SDK will compare _**TopViewController**_ with _**the ViewController shows ads**_. _This_ _ViewController_ should be ** **_**the same** ViewController that displays the video ads!_ If it's not the same one, might lead to a **CRASH** in your app but caused by Google IMA SDK.
+Supr.Ad includes video ad advertising, which uses VAST technology provided by the Google IMA SDK. In the implementation of VAST, AotterTrek iOS SDK needs to register _ViewController_ when requesting VAST ads from Google IMA. In the meantime, Google IMA SDK will compare _**TopViewController**_ with _**the ViewController shows ads**_. _This_ _ViewController_ should be _**the same** ViewController that displays the video ads!_ If it's not the same one, might lead to a **CRASH** in your app but caused by Google IMA SDK.
 
 ![](<../../../.gitbook/assets/截圖 2021-09-23 下午12.18.13.png>)
 
