@@ -1,5 +1,12 @@
 # Change logs
 
+## 2023/05/24 release - SDK `3.9.0`
+
+* Fixed the problem that the touch event would cause the player to be interrupted
+* Added support for VAST 4.1 (now support VAST 4.0 / 4.1)
+* Added friendlyObstruction API
+* Added video ad charging point data ( billableOffset )
+
 ## 2023/02/16 release - SDK `3.8.5`
 
 * VAST support OMID video event tracking.
