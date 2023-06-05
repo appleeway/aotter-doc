@@ -4,13 +4,13 @@ description: Follow these steps to download and include SDK in your project
 
 # Installation
 
-#### **Step 1 :** [**Download & Install AotterTrek SDK**](installation.md#step-1-download-and-install-aottertrek-sdk)****
+#### **Step 1 :** [**Download & Install AotterTrek SDK**](installation.md#step-1-download-and-install-aottertrek-sdk)
 
-#### **Step 2 :** [**Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)****
+#### **Step 2 :** [**Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)
 
-#### **Step 3 :** [**Initiation & Settings AotterTrek SDK**](installation.md#step-3-initialzation-and-settings-aottertrek-sdk)****
+#### **Step 3 :** [**Initiation & Settings AotterTrek SDK**](installation.md#step-3-initialzation-and-settings-aottertrek-sdk)
 
-****
+
 
 ### [Step 1 : Download & Install AotterTrek SDK](installation.md#step-1-download-and-install-aottertrek-sdk)
 
@@ -19,7 +19,7 @@ description: Follow these steps to download and include SDK in your project
 1\.  Add the following line to your project's Podfile:
 
 ```swift
-pod 'AotterTrek-iOS-SDK', '3.8.5'
+pod 'AotterTrek-iOS-SDK', '3.9.0'
 ```
 
 2\.  Run `pod install`&#x20;
@@ -32,14 +32,9 @@ pod 'AotterTrek-iOS-SDK', '3.8.5'
 2\. Link AotterTrek-iOS-SDK (if it's not auto-linked)\
 3\. Add linked frameworks and libraries to your target (See the table below)
 
-| Frameworks and Libraries |                     |               |
-| ------------------------ | ------------------- | ------------- |
-| CoreMedia                | SystemConfiguration | CoreTelephony |
-| WebKit                   | CoreTelephony       | AdSupport     |
-| AVKit                    | AVFoundation        | Foundation    |
-| UIKit                    |                     |               |
+<table data-header-hidden><thead><tr><th width="261">Frameworks and Libraries</th><th></th><th></th></tr></thead><tbody><tr><td>Frameworks and Libraries</td><td></td><td></td></tr><tr><td>CoreMedia</td><td>SystemConfiguration</td><td>CoreTelephony</td></tr><tr><td>WebKit</td><td>CoreTelephony</td><td>AdSupport</td></tr><tr><td>AVKit</td><td>AVFoundation</td><td>Foundation</td></tr><tr><td>UIKit</td><td></td><td></td></tr></tbody></table>
 
-### [Step 2 : **Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)****
+### [Step 2 : **Import AotterTrek SDK**](installation.md#step-2-import-aottertrek-sdk)
 
 * **Objective-C :**&#x20;
 
